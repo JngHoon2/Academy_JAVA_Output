@@ -1,0 +1,17 @@
+package chap02;
+
+public class ReseachTemp {
+	public static void main(String[] args) {
+		double[] temp = {-2.5, -0.2, 5.2, 21.1, 17.4, 21.9, 24.9, 29.4, 27.8, 14.4, 6.9, 0.2};
+		double max = 0;
+		double sum, avg;
+		
+		for(Double d : temp) {
+			if(max > d)
+				max = d;
+			sum += d;
+		}
+		avg = sum / temp.length;
+		System.out.println("최고온도: " + max + "평균온도: " + avg);
+	}
+}

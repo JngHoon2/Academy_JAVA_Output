@@ -1,0 +1,22 @@
+package var;
+
+public class sambesu {
+
+	public static void main(String[] args) {
+		int i = 1;
+		int sum = 0;
+		
+		while(true)
+		{
+			if(i % 3 == 0)
+				continue;
+			sum += i;
+			i++;
+			
+			if(i > 10)
+				break;
+		}
+		System.out.println(sum);
+	}
+
+}

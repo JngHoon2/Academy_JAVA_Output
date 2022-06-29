@@ -1,0 +1,21 @@
+package var;
+import java.util.Scanner;
+/**
+ * 두 수를 입력 받아서 어느 수가 큰지 판별하시오.
+ */
+public class LogicNegationExample {
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("두 개의 숫자를 입력하시오.");
+		
+		int a = scanner.nextInt(); //첫번째 숫자
+		int b = scanner.nextInt(); //두번째 숫자
+		
+		if(a < b) {
+			System.out.println("첫 번째 숫자가 큽니다.");
+		}else {
+			System.out.println("두 번째 숫자가 큽니다.");
+		}
+	}
+} 
