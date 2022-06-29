@@ -1,0 +1,23 @@
+package chap02;
+
+public class sheet {
+
+	public static void main(String[] args) {
+		int[] indexArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+		String[] nameArray = { "kim", "ellis", "park", "james", "tom", "steve", "john", "lee", "moon", "allen" };
+		int[] ageArray = { 27, 34, 28, 26, 29, 28, 27, 29, 29, 32 };
+		char[] sexArray = { 'F', 'M', 'F', 'M', 'M', 'F', 'M', 'M', 'F', 'M' };
+		String[] phoneArray = { "010-8532-0537", "010-9672-5257", "010-9932-4536", "010-4117-0975", "011-8975-7892",
+				"010-6251-6976", "010-9482-6059", "010-4845-0105", "010-6283-4849", "010-4510-1609" };
+		String[] jobArrayStrings = { "game", "java", "mobile", "it", "mobile", "java", "game", "java", "mobile", "it" };
+		int[] salaryArray = { 460, 200, 250, 300, 380, 200, 350, 200, 690, 440 };
+		String[] countryArrayStrings = { "JP", "FR", "JP", "US", "CN", "DE", "KR", "JP", "DE", "KR" };
+		
+		for(int i = 0; i < indexArray.length; i++) {
+			System.out.print(indexArray[i] + "\t" + nameArray[i] + "\t" + ageArray[i] + "\t" 
+		+ sexArray[i] + "\t" + phoneArray[i] + "\t" + jobArrayStrings[i] + "\t" + salaryArray[i] + "\t" + countryArrayStrings[i]);
+		}
+		
+	}
+
+}
