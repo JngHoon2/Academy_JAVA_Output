@@ -4,7 +4,12 @@
 <fullyQualifiedTypeName name="java.lang.Byte"/>
 <fullyQualifiedTypeName name="java.lang.Void"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.lang.Double"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+<fullyQualifiedTypeName name="java.util.PrimitiveIterator.OfDouble"/>
+<fullyQualifiedTypeName name="java.util.jar.Attributes.Name"/>
+<fullyQualifiedTypeName name="java.lang.SecurityException"/>
+<fullyQualifiedTypeName name="chap02.StringHandling"/>
+<fullyQualifiedTypeName name="javax.xml.ws.handler.MessageContext.Scope"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>
