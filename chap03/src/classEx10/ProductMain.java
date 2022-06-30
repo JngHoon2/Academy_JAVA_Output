@@ -1,6 +1,6 @@
 package classEx10;
 
-import classEx06.vo.*;
+import classEx10.vo.*;
 
 public class ProductMain {
 
