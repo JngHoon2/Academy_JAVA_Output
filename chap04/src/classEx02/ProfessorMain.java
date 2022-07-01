@@ -1,5 +1,4 @@
 package classEx02;
-import com.sun.jndi.url.iiopname.iiopnameURLContextFactory;
 
 import classEx02.vo.*;
 
