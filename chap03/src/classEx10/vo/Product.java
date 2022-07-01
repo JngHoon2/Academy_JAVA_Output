@@ -38,5 +38,10 @@ public class Product {
 
 	public void setQuantity(int quantity) {this.quantity = quantity;}
 	
-	
+	public void showInfo() {
+		System.out.println("id : " + id);
+		System.out.println("name : " + name);
+		System.out.println("price : " + price);
+		System.out.println("quantity : " + quantity);
+	}
 }

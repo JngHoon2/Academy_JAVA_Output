@@ -6,10 +6,11 @@ public class ProductMain {
 
 	public static void main(String[] args) {
 		Product product = new Product();
-		product.id = 202103001;
-		product.name = "냉장고";
-		product.price = 450;
-		product.quantity = 5;
+		product.setId(202103001);
+		product.setName("냉장고");
+		product.setPrice(450);
+		product.setQuantity(5);
+		
 		product.showInfo();
 		System.out.println();
 		
