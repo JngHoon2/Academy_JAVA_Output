@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.lang.Byte"/>
 <fullyQualifiedTypeName name="java.lang.Void"/>
-<fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="java.lang.Double"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
 <fullyQualifiedTypeName name="java.util.PrimitiveIterator.OfDouble"/>
@@ -12,12 +11,10 @@
 <fullyQualifiedTypeName name="javax.xml.ws.handler.MessageContext.Scope"/>
 <fullyQualifiedTypeName name="chap03.Car"/>
 <fullyQualifiedTypeName name="chap03.Car2"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="classex02.Student"/>
 <fullyQualifiedTypeName name="classEx03.Car"/>
 <fullyQualifiedTypeName name="classEx04.EmployeeMain"/>
 <fullyQualifiedTypeName name="classEx04.Employee"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="classEx05.Product"/>
 <fullyQualifiedTypeName name="classEx06.Product"/>
 <fullyQualifiedTypeName name="classEx07.Time"/>
@@ -25,4 +22,19 @@
 <fullyQualifiedTypeName name="classEx09.C"/>
 <fullyQualifiedTypeName name="classEx09.D"/>
 <fullyQualifiedTypeName name="classEx08.A"/>
+<fullyQualifiedTypeName name="org.omg.CORBA.PRIVATE_MEMBER"/>
+<fullyQualifiedTypeName name="apple.laf.JRSUIConstants.ShowArrows"/>
+<fullyQualifiedTypeName name="classEx11.FruitMain"/>
+<fullyQualifiedTypeName name="classEx11.vo.Fruit"/>
+<fullyQualifiedTypeName name="com.sun.xml.internal.ws.message.PayloadElementSniffer"/>
+<fullyQualifiedTypeName name="java.awt.event.ItemEvent"/>
+<fullyQualifiedTypeName name="classEx01.vo.Employee"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="classEx02.vo.Professor"/>
+<fullyQualifiedTypeName name="com.sun.java_cup.internal.runtime.Scanner"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="com.sun.jndi.url.iiopname.iiopnameURLContextFactory"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>
