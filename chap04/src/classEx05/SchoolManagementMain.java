@@ -81,13 +81,13 @@ public class SchoolManagementMain {
 				takes[9] = new Takes("1292303", "C102-01", "C");
 				takes[10] = new Takes("1292303", "C103-02", "B+");
 				takes[11] = new Takes("1292303", "C501-01", "A+");	
-				System.out.println("=================== 4.성적 데이터  =====================");
+				System.out.println("=================== 4.성적 데이터 =====================");
 				for(Takes t : takes) {
 					System.out.println(t.getId() + "\t" + t.getSubject() + " \t" + t.getScore());
 				}
 				
 				System.out.println();
-				System.out.println("=================== 5.학생정보와 소속 학과 명  =====================");
+				System.out.println("=================== 5.학생정보와 소속 학과 명 =====================");
 				for(Student s : students) {
 					for(Department d : departments) {
 						if(s.getDepartment() == d.getId()) {

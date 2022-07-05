@@ -34,8 +34,18 @@
 <fullyQualifiedTypeName name="com.sun.java_cup.internal.runtime.Scanner"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="com.sun.jndi.url.iiopname.iiopnameURLContextFactory"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="Assignment01.vo.Student"/>
+<fullyQualifiedTypeName name="org.w3c.dom.Attr"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.Character"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="classEx03.Member"/>
+<fullyQualifiedTypeName name="classEx04.vo.Department"/>
+<fullyQualifiedTypeName name="classEx04.vo.Task"/>
+<fullyQualifiedTypeName name="classEx04.vo.Takes"/>
+<fullyQualifiedTypeName name="sun.security.provider.JavaKeyStore.CaseExactJKS"/>
+<fullyQualifiedTypeName name="classEx05.vo.Department"/>
+<fullyQualifiedTypeName name="classEx05.vo.Takes"/>
+<fullyQualifiedTypeName name="classEx05.vo.Student"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>
