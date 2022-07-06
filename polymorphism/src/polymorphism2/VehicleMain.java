@@ -1,5 +1,7 @@
 package polymorphism2;
 
+import java.util.ArrayList;
+
 import polymorphism2.vo.*;
 
 public class VehicleMain {
@@ -17,6 +19,16 @@ public class VehicleMain {
 		Truck truck = new Truck();
 		driver.drive(truck);
 
+		
+		System.out.println("==== ArrayList에 넣어서 ====");
+		ArrayList<Vehicle> array = new ArrayList<Vehicle>();
+		array.add(taxi);
+		array.add(bus);
+		array.add(truck);
+			
+		for(Vehicle v : array) {
+			driver.drive(v);
+		}
 	}
 
 }
