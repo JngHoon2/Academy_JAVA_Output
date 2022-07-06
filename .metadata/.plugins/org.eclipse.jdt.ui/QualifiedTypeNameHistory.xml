@@ -5,7 +5,6 @@
 <fullyQualifiedTypeName name="java.lang.Double"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
 <fullyQualifiedTypeName name="java.util.PrimitiveIterator.OfDouble"/>
-<fullyQualifiedTypeName name="java.util.jar.Attributes.Name"/>
 <fullyQualifiedTypeName name="java.lang.SecurityException"/>
 <fullyQualifiedTypeName name="chap02.StringHandling"/>
 <fullyQualifiedTypeName name="javax.xml.ws.handler.MessageContext.Scope"/>
@@ -36,7 +35,6 @@
 <fullyQualifiedTypeName name="com.sun.jndi.url.iiopname.iiopnameURLContextFactory"/>
 <fullyQualifiedTypeName name="Assignment01.vo.Student"/>
 <fullyQualifiedTypeName name="org.w3c.dom.Attr"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.lang.Character"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="classEx03.Member"/>
@@ -47,5 +45,17 @@
 <fullyQualifiedTypeName name="classEx05.vo.Department"/>
 <fullyQualifiedTypeName name="classEx05.vo.Takes"/>
 <fullyQualifiedTypeName name="classEx05.vo.Student"/>
+<fullyQualifiedTypeName name="java.util.jar.Attributes.Name"/>
+<fullyQualifiedTypeName name="classEx01.PersonName"/>
+<fullyQualifiedTypeName name="classEx01.vo.PersonData"/>
+<fullyQualifiedTypeName name="classEx01.vo.Person"/>
+<fullyQualifiedTypeName name="classEx02.vo.ProductData"/>
+<fullyQualifiedTypeName name="classEx02.vo.Product"/>
+<fullyQualifiedTypeName name="classEx02.ProductMain"/>
+<fullyQualifiedTypeName name="classEx03.vo.BookData"/>
+<fullyQualifiedTypeName name="classEx03.vo.Book"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="classEx04.vo.Member"/>
 </qualifiedTypeNameHistroy>
