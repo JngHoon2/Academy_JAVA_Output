@@ -17,6 +17,12 @@ public class AnimalMain {
 		HouseDog houseDog = new HouseDog();
 		houseDog.setName("멍냥이");
 		houseDog.sleep(5);
+		
+		Animal a = new Animal();
+		
+		a.loud();
+		dogAnimal.loud();
+		
 	}
 
 }

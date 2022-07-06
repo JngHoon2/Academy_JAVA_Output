@@ -9,4 +9,5 @@ public class HouseDog extends Animal{
 	void sleep(int hour) {
 		System.out.println(this.name + "Zzzzz " + hour + "동안");
 	}
+	
 }

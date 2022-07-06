@@ -6,4 +6,8 @@ public class Animal {
 	void setName(String name) {
 		this.name = name;
 	}
+	
+	void loud() {
+		System.out.println("소리를 낸다.");
+	}
 }
