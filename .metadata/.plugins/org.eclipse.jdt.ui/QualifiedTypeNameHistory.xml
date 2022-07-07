@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.Byte"/>
-<fullyQualifiedTypeName name="java.lang.Void"/>
-<fullyQualifiedTypeName name="java.lang.Double"/>
-<fullyQualifiedTypeName name="java.lang.reflect.Array"/>
-<fullyQualifiedTypeName name="java.util.PrimitiveIterator.OfDouble"/>
-<fullyQualifiedTypeName name="java.lang.SecurityException"/>
-<fullyQualifiedTypeName name="chap02.StringHandling"/>
-<fullyQualifiedTypeName name="javax.xml.ws.handler.MessageContext.Scope"/>
-<fullyQualifiedTypeName name="chap03.Car"/>
-<fullyQualifiedTypeName name="chap03.Car2"/>
-<fullyQualifiedTypeName name="classex02.Student"/>
-<fullyQualifiedTypeName name="classEx03.Car"/>
-<fullyQualifiedTypeName name="classEx04.EmployeeMain"/>
-<fullyQualifiedTypeName name="classEx04.Employee"/>
-<fullyQualifiedTypeName name="classEx05.Product"/>
-<fullyQualifiedTypeName name="classEx06.Product"/>
-<fullyQualifiedTypeName name="classEx07.Time"/>
 <fullyQualifiedTypeName name="classEx09.B"/>
 <fullyQualifiedTypeName name="classEx09.C"/>
 <fullyQualifiedTypeName name="classEx09.D"/>
@@ -28,7 +11,6 @@
 <fullyQualifiedTypeName name="com.sun.xml.internal.ws.message.PayloadElementSniffer"/>
 <fullyQualifiedTypeName name="java.awt.event.ItemEvent"/>
 <fullyQualifiedTypeName name="classEx01.vo.Employee"/>
-<fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="classEx02.vo.Professor"/>
 <fullyQualifiedTypeName name="com.sun.java_cup.internal.runtime.Scanner"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
@@ -55,7 +37,27 @@
 <fullyQualifiedTypeName name="classEx03.vo.BookData"/>
 <fullyQualifiedTypeName name="classEx03.vo.Book"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="classEx04.vo.Member"/>
+<fullyQualifiedTypeName name="overloading.OverloadingMethod"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="Circle.vo.Circle"/>
+<fullyQualifiedTypeName name="Circle.vo.CircleStatic"/>
+<fullyQualifiedTypeName name="inheritance.Dog"/>
+<fullyQualifiedTypeName name="inheritance.HouseDog"/>
+<fullyQualifiedTypeName name="inheritance.Human"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="inheritance.Student"/>
+<fullyQualifiedTypeName name="inheritance.Animal"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="polymorphism.vo.Parent"/>
+<fullyQualifiedTypeName name="polymorphism.vo.TheFirst"/>
+<fullyQualifiedTypeName name="polymorphism.vo.TheSecond"/>
+<fullyQualifiedTypeName name="polymorphism.vo.TheThrid"/>
+<fullyQualifiedTypeName name="java.lang.OutOfMemoryError"/>
+<fullyQualifiedTypeName name="polymorphism2.Driver"/>
+<fullyQualifiedTypeName name="polymorphism2.vo.Taxi"/>
+<fullyQualifiedTypeName name="polymorphism2.vo.Bus"/>
+<fullyQualifiedTypeName name="polymorphism2.vo.Truck"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="polymorphism2.vo.Vehicle"/>
 </qualifiedTypeNameHistroy>
