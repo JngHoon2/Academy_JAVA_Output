@@ -19,7 +19,6 @@ INDEX VERSION 1.131+/Users/tuan/Documents/works/.metadata/.plugins/org.eclipse.j
 3966400456.index
 643915117.index
 1335909188.index
-2744426792.index
 2722983882.index
 526622925.index
 858504377.index

@@ -1,5 +1,7 @@
 package excel;
 
+import excel.vo.Customer;
+
 public class MainClass {
 
 	public static void main(String[] args) {
@@ -15,6 +17,8 @@ public class MainClass {
 		
 		String html = MethodClass.makeTags(mc.customers);
 		PrintClass.writeHtml(html);
+		
+		MethodClass.src(mc.customers);
 		
 	} catch (Exception e) {
 		// TODO: handle exception

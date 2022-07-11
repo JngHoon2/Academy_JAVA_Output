@@ -106,4 +106,13 @@ public class MethodClass {
 
 		return tags;
 	}
+	
+	public static void src(ArrayList<Customer> list) {
+		System.out.println("-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-");
+		for(Customer c : list) {
+			if(c.getJob().equals("services") && c.getMarital().equals("single") && c.getLoan().equals("no")) {
+				System.out.println(c.toString());
+			}
+		}
+	}
 }
