@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="classEx09.B"/>
-<fullyQualifiedTypeName name="classEx09.C"/>
-<fullyQualifiedTypeName name="classEx09.D"/>
-<fullyQualifiedTypeName name="classEx08.A"/>
-<fullyQualifiedTypeName name="org.omg.CORBA.PRIVATE_MEMBER"/>
-<fullyQualifiedTypeName name="apple.laf.JRSUIConstants.ShowArrows"/>
-<fullyQualifiedTypeName name="classEx11.FruitMain"/>
-<fullyQualifiedTypeName name="classEx11.vo.Fruit"/>
-<fullyQualifiedTypeName name="com.sun.xml.internal.ws.message.PayloadElementSniffer"/>
-<fullyQualifiedTypeName name="java.awt.event.ItemEvent"/>
-<fullyQualifiedTypeName name="classEx01.vo.Employee"/>
-<fullyQualifiedTypeName name="classEx02.vo.Professor"/>
 <fullyQualifiedTypeName name="com.sun.java_cup.internal.runtime.Scanner"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="com.sun.jndi.url.iiopname.iiopnameURLContextFactory"/>
@@ -36,10 +24,8 @@
 <fullyQualifiedTypeName name="classEx02.ProductMain"/>
 <fullyQualifiedTypeName name="classEx03.vo.BookData"/>
 <fullyQualifiedTypeName name="classEx03.vo.Book"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="classEx04.vo.Member"/>
 <fullyQualifiedTypeName name="overloading.OverloadingMethod"/>
-<fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="Circle.vo.Circle"/>
 <fullyQualifiedTypeName name="Circle.vo.CircleStatic"/>
 <fullyQualifiedTypeName name="inheritance.Dog"/>
@@ -58,6 +44,20 @@
 <fullyQualifiedTypeName name="polymorphism2.vo.Taxi"/>
 <fullyQualifiedTypeName name="polymorphism2.vo.Bus"/>
 <fullyQualifiedTypeName name="polymorphism2.vo.Truck"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="polymorphism2.vo.Vehicle"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="com.sun.java.util.jar.pack.Package.File"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="School.vo.Student"/>
+<fullyQualifiedTypeName name="School.vo.MakeData"/>
+<fullyQualifiedTypeName name="School.vo.Professor"/>
+<fullyQualifiedTypeName name="School.vo.Department"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="School.vo.Takes"/>
 </qualifiedTypeNameHistroy>
