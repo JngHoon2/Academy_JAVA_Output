@@ -12,6 +12,10 @@ public class MainClass {
 		str += "===========================================================\n";
 		System.out.println(str);
 		mc.loadExcel();
+		
+		String html = MethodClass.makeTags(mc.customers);
+		PrintClass.writeHtml(html);
+		
 	} catch (Exception e) {
 		// TODO: handle exception
 	}
