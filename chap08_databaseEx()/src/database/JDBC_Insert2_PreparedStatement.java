@@ -49,6 +49,7 @@ public class JDBC_Insert2_PreparedStatement {
 		} finally {
 			try {
 				// 작은 범위부터 차례로 닫아주는 것이 좋음. 변수들을 try 밖으로 빼두어 정의해둘것.
+				// 닫지 않아도 무방하나, 메모리 누수 및 보안으로 인해 닫아주는 습관을 들이는 것이 좋음.(실무)
 				if (rs != null) {
 					rs.close();
 				}

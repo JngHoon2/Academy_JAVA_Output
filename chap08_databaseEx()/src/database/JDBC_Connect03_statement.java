@@ -14,6 +14,7 @@ public class JDBC_Connect03_statement {
 		String dbID = "ky";
 		String dbPwd = "1234";
 		
+		// 아래 세줄 java.sql 패키지의 클래스를 import 해야함.
 		Connection con = null;
 		Statement stmt = null;
 		ResultSet rs = null;
@@ -52,6 +53,7 @@ public class JDBC_Connect03_statement {
 		} finally {
 			try {
 				// 작은 범위부터 차례로 닫아주는 것이 좋음. 변수들을 try 밖으로 빼두어 정의해둘것.
+				// 닫지 않아도 무방하나, 메모리 누수 및 보안으로 인해 닫아주는 습관을 들이는 것이 좋음.(실무)
 				if (rs != null) {
 					rs.close();
 				}
