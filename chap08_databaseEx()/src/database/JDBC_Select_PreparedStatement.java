@@ -30,18 +30,20 @@ public class JDBC_Select_PreparedStatement {
 			System.out.println("데이터베이스 연결 성공");
 			
 			
-			// 쿼리문에 인자 전 
+			// 쿼리문에 인자 전달 
 			int id = 1021;
 			sql = "select * from client where id = ?";
 			
 			// 쿼리문에 인자를 전달해서 실행해주는 객
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, id); 			// 예는 0이 아닌 1부터 시작, 첫번째 ?를 id로 치환하는 역
-			rs = pstmt.executeQuery(sql); 
 			
-			//6. rs.next 설명 
-			while (rs.next()) { 
-				System.out.println(rs.getString("id") + "\t" + rs.getShort("password") + "\t" + rs.getString("name"));
+			//prepareStatement 사용시 excuteQuery 메소드에 파마라미터가 들어가면 안됨. ex) rs = pstmt.executeQuery(sql);
+			rs = pstmt.executeQuery(); 
+			
+			while(rs.next()) {
+				System.out.println(rs.getString("id") + "\t" 
+						+ rs.getString("password") + "\t" + rs.getString("name"));
 			}
 
 		} catch (ClassNotFoundException e) {

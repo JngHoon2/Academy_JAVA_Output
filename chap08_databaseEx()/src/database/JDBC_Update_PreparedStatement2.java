@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class JDBC_Insert2_PreparedStatement {
+public class JDBC_Update_PreparedStatement2 {
 	public static void main(String[] args) {
 		String driver = "oracle.jdbc.driver.OracleDriver";
 		String url = "jdbc:oracle:thin:@127.0.0.1:1521:XE";
@@ -14,6 +14,8 @@ public class JDBC_Insert2_PreparedStatement {
 		String dbID = "ky";
 		String dbPwd = "1234";
 		String sql;
+		
+		int resultNo = 0;
 		
 		Connection con = null;
 		PreparedStatement pstmt = null; // sql문의 ?를 변수로 치환할 수 있는 클래
@@ -28,19 +30,25 @@ public class JDBC_Insert2_PreparedStatement {
 			con = DriverManager.getConnection(url, dbID, dbPwd);
 			System.out.println("데이터베이스 연결 성공");
 			
-			int id = 1025;
-			String password = "1998";
-			String name = "김정표";
+			int id = 1027;
+			String name = "이미나";
+			
+			// 쿼리문 작성에 유의!
+			sql = "update client set name = ? where id = ?";
 		
-			sql = "insert into client values(?, ?, ?)";
+			
 			pstmt = con.prepareStatement(sql);
-			pstmt.setInt(1, id);
-			pstmt.setString(2, password);
-			pstmt.setString(3, name);
 			
-			int result = pstmt.executeUpdate();
-			System.out.println("저장된 횟수 : " + result);
+			pstmt.setString(1, name);
+			pstmt.setInt(2, id);
 			
+			
+			resultNo = pstmt.executeUpdate();
+			if(resultNo > 0) {
+				System.out.println("수정 성공!");
+			} else {
+				System.out.println("수정 실패!");
+			}
 
 		} catch (ClassNotFoundException e) {
 			System.out.println("드라이버 로드 실패 : " + e.getMessage());
