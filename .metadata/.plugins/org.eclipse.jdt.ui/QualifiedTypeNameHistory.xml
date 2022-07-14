@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="classEx01.vo.Person"/>
-<fullyQualifiedTypeName name="classEx02.vo.ProductData"/>
-<fullyQualifiedTypeName name="classEx02.vo.Product"/>
-<fullyQualifiedTypeName name="classEx02.ProductMain"/>
-<fullyQualifiedTypeName name="classEx03.vo.BookData"/>
-<fullyQualifiedTypeName name="classEx03.vo.Book"/>
-<fullyQualifiedTypeName name="classEx04.vo.Member"/>
-<fullyQualifiedTypeName name="overloading.OverloadingMethod"/>
-<fullyQualifiedTypeName name="Circle.vo.Circle"/>
 <fullyQualifiedTypeName name="Circle.vo.CircleStatic"/>
 <fullyQualifiedTypeName name="inheritance.Dog"/>
 <fullyQualifiedTypeName name="inheritance.HouseDog"/>
@@ -54,10 +45,19 @@
 <fullyQualifiedTypeName name="jxl.Sheet"/>
 <fullyQualifiedTypeName name="jxl.Cell"/>
 <fullyQualifiedTypeName name="com.sun.javafx.jmx.MXNodeAlgorithmContext"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.io.FileWriter"/>
 <fullyQualifiedTypeName name="excel.PrintClass"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="excel.vo.Customer"/>
 <fullyQualifiedTypeName name="excel.MethodClass"/>
+<fullyQualifiedTypeName name="classTest.CustomerMain.Customer"/>
+<fullyQualifiedTypeName name="classTest.MethodClass"/>
+<fullyQualifiedTypeName name="classTest.Customer"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.NEW"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="file.vo.NewsClass"/>
+<fullyQualifiedTypeName name="file.MethodClass"/>
+<fullyQualifiedTypeName name="java.lang.InternalError"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>
