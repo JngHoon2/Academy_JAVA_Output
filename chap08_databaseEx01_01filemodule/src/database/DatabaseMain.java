@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class DatabaseMain {
 	
@@ -31,9 +33,9 @@ public class DatabaseMain {
 		
 		selectProductGroupByCategory();
 		
-		insertProduct();
+		//insertProduct();
 		
-		updateProduct();
+		//updateProduct();
 	}
 
 	private static void connectDB() {
@@ -219,10 +221,80 @@ public class DatabaseMain {
 	}
 	
 	private static void insertProduct() {
-		
+		try {
+			String sql = "";
+			
+			int p_id = 22;
+			String name = "양상";
+			int price = 2000;
+			int c_id = 5;
+			String date = "2022/07/18";
+
+			sql = "insert into product values(?, ?, ?, ?, ?)";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, p_id);
+			pstmt.setString(2, name);
+			pstmt.setInt(3, price);
+			pstmt.setString(4, name);
+			pstmt.setString(5, date);
+			
+			int result = pstmt.executeUpdate();
+			
+
+		} catch (SQLException e) {
+			System.out.println("SQL 오류 : " + e.getMessage());
+		} finally {
+			try {
+				// 작은 범위부터 차례로 닫아주는 것이 좋음. 변수들을 try 밖으로 빼두어 정의해둘것.
+				// 닫지 않아도 무방하나, 메모리 누수 및 보안으로 인해 닫아주는 습관을 들이는 것이 좋음.(실무)
+				if (rs != null) {
+					rs.close();
+				}
+				if (pstmt != null) {
+					pstmt.close();
+				}
+				if (con != null) {
+					con.close();
+				}
+			} catch (SQLException e) {
+				System.out.println("SQL 자원해제 오류 : " + e.getMessage());
+			}
+		}
 	}
 	
 	private static void updateProduct() {
-		
+		try {
+			String sql = "";
+			
+			int price = 505000;
+			String name = "탱크로리";
+
+			sql = "update product set price = ? where product_name = '?'";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, price);
+			pstmt.setString(2, name);
+			
+			pstmt.executeUpdate();
+			
+
+		} catch (SQLException e) {
+			System.out.println("SQL 오류 : " + e.getMessage());
+		} finally {
+			try {
+				// 작은 범위부터 차례로 닫아주는 것이 좋음. 변수들을 try 밖으로 빼두어 정의해둘것.
+				// 닫지 않아도 무방하나, 메모리 누수 및 보안으로 인해 닫아주는 습관을 들이는 것이 좋음.(실무)
+				if (rs != null) {
+					rs.close();
+				}
+				if (pstmt != null) {
+					pstmt.close();
+				}
+				if (con != null) {
+					con.close();
+				}
+			} catch (SQLException e) {
+				System.out.println("SQL 자원해제 오류 : " + e.getMessage());
+			}
+		}
 	}
 }
