@@ -2,59 +2,55 @@ package database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
-public class JDBC_Insert2_PreparedStatement {
+public class Select4 {
 	public static void main(String[] args) {
 		String driver = "oracle.jdbc.driver.OracleDriver";
 		String url = "jdbc:oracle:thin:@127.0.0.1:1521:XE";
 		//								아이피 번호 : 포트 번호 : SID
-		String dbID = "ky";
+		String dbID = "category";
 		String dbPwd = "1234";
-		String sql;
 		
+		// 아래 세줄 java.sql 패키지의 클래스를 import 해야함.
 		Connection con = null;
-		PreparedStatement pstmt = null; // sql문의 ?를 변수로 치환할 수 있는 클래
+		Statement stmt = null;
 		ResultSet rs = null;
 		
 		try {
-			//1. 드라이버 연결 
 			Class.forName(driver);
 			System.out.println("드라이버 로드 성공");
 			
-			//2. 데이터베이스 연결 
 			con = DriverManager.getConnection(url, dbID, dbPwd);
 			System.out.println("데이터베이스 연결 성공");
 			
-			int id = 7777;
-			String password = "7777";
-			String name = "한글";
-		
-			sql = "insert into client values(?, ?, ?)";
-			pstmt = con.prepareStatement(sql);
-			pstmt.setInt(1, id);
-			pstmt.setString(2, password);
-			pstmt.setString(3, name);
+			stmt = con.createStatement();
 			
-			int result = pstmt.executeUpdate();
-			System.out.println("저장된 횟수 : " + result);
+			String sql = "select c.category_name, sum(p.price) "
+					+ "from category c inner join product p on c.category_id = p.category_id "
+					+ "group by c.category_name "
+					+ "order by sum(p.price) desc";
 			
+			rs = stmt.executeQuery(sql); 
+			
+			while (rs.next()) { 
+				System.out.println(rs.getString("category_name") + "\t" 
+						+ rs.getString("sum(p.price)"));
+			}
 
 		} catch (ClassNotFoundException e) {
 			System.out.println("드라이버 로드 실패 : " + e.getMessage());
 		} catch (SQLException e) {
-			System.out.println("데이터베이스 연결 실패 : " + e.getMessage());
+			System.out.println("데이터베이스 오류 : " + e.getMessage());
 		} finally {
 			try {
-				// 작은 범위부터 차례로 닫아주는 것이 좋음. 변수들을 try 밖으로 빼두어 정의해둘것.
-				// 닫지 않아도 무방하나, 메모리 누수 및 보안으로 인해 닫아주는 습관을 들이는 것이 좋음.(실무)
 				if (rs != null) {
 					rs.close();
 				}
-				if (pstmt != null) {
-					pstmt.close();
+				if (stmt != null) {
+					stmt.close();
 				}
 				if (con != null) {
 					con.close();

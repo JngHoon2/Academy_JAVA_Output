@@ -40,6 +40,8 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="/Users/tuan/Desktop/assignment3.zip"/>
+			<item value="/Users/tuan/Desktop/chap08_databaseEx.zip"/>
 			<item value="/Users/tuan/Desktop/assginment.zip"/>
 		</list>
 	</section>

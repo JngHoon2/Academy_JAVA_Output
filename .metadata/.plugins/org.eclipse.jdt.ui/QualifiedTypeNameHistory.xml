@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="Circle.vo.CircleStatic"/>
-<fullyQualifiedTypeName name="inheritance.Dog"/>
-<fullyQualifiedTypeName name="inheritance.HouseDog"/>
-<fullyQualifiedTypeName name="inheritance.Human"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
-<fullyQualifiedTypeName name="inheritance.Student"/>
-<fullyQualifiedTypeName name="inheritance.Animal"/>
-<fullyQualifiedTypeName name="java.lang.Override"/>
-<fullyQualifiedTypeName name="polymorphism.vo.Parent"/>
 <fullyQualifiedTypeName name="polymorphism.vo.TheFirst"/>
 <fullyQualifiedTypeName name="polymorphism.vo.TheSecond"/>
 <fullyQualifiedTypeName name="polymorphism.vo.TheThrid"/>
@@ -60,4 +51,13 @@
 <fullyQualifiedTypeName name="file.MethodClass"/>
 <fullyQualifiedTypeName name="java.lang.InternalError"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.Class"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="sun.print.PSPrinterJob.PluginPrinter"/>
 </qualifiedTypeNameHistroy>
