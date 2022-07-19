@@ -67,19 +67,7 @@ public class MethodClass {
 		} catch (SQLException e) {
 			System.out.println("SQL 오류, " + e.getMessage());
 		} finally {
-			try {
-				if (rs != null) {
-					rs.close();
-				}
-				if (stmt != null) {
-					stmt.close();
-				}
-				if (con != null) {
-					con.close();
-				}
-			} catch (SQLException e) {
-				System.out.println("SQL 자원해제 오류 : " + e.getMessage());
-			}
+			resourceClose(rs, stmt);
 		}
 	}
 
@@ -144,19 +132,7 @@ public class MethodClass {
 		} catch (SQLException e) {
 			System.out.println("SQL 오류, " + e.getMessage());
 		} finally {
-			try {
-				if (rs != null) {
-					rs.close();
-				}
-				if (stmt != null) {
-					stmt.close();
-				}
-				if (con != null) {
-					con.close();
-				}
-			} catch (SQLException e) {
-				System.out.println("SQL 자원해제 오류 : " + e.getMessage());
-			}
+			resourceClose(rs, pstmt);
 		}
 	}
 
@@ -204,5 +180,39 @@ public class MethodClass {
 		} catch (SQLException e) {
 			System.out.println("SQL 오류, " + e.getMessage());
 		} 
+	}
+	
+	public static void resourceClose(ResultSet rs, Statement stmt) {
+		try {
+			rs.close();
+			stmt.close();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	public static void resourceClose(ResultSet rs, PreparedStatement pstmt) {
+		try {
+			rs.close();
+			pstmt.close();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	public static void resourceClose(PreparedStatement pstmt) {
+		try {
+			pstmt.close();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	public static void resourceClose() {
+		try {
+			con.close();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 }
