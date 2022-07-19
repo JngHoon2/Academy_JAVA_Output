@@ -12,7 +12,7 @@ public class PrintClass {
 	public void writeHtml(String tags) {
 		
 		// 파일이 만들어질 경로와 이름 지정하는 문자열
-		String  uri = "/Users/tuan/Documents/works/chap08_databaseEX02/src/quizList.html";
+		String  uri = "/Users/tuan/Documents/works/chap08_databaseEX02/src/quizList11.html";
 		// File을 만들고 내용을 쓰기 위한 FileWriter 스트림 변수 선언
 		FileWriter fw = null;	  
 		

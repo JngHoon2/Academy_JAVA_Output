@@ -85,7 +85,221 @@ public class DatabaseClass {
 		}
 		return null;		
 	} // quiz1() END
+	
+	public String quiz2() {
+		String query = "select distinct job "
+						+ " from emp ";
+		try {
+			this.stmt = this.conn.createStatement();
+			this.rs = this.stmt.executeQuery(query);
+			
+			// Resultset을 보내서 타이틀만 받아옴
+			String[] fieldNames = this.getFieldNames(this.rs);			
+			// 태그 생성 메소드 호출
+			String resultTags = MethodClass.makeTagsQ2(rs, fieldNames);	
+			return resultTags;
+		} catch (SQLException e) {
+			System.out.println("quiz1() ERR : "+e.getMessage());
+		} finally {
+			this.userClose(this.rs, this.stmt);
+		}
+		return null;		
+	} // quiz2() END
+	
+	public String quiz3() {
+		String query = "select empno, ename, sal "
+						+ " from emp where sal <= 300";
+		try {
+			this.stmt = this.conn.createStatement();
+			this.rs = this.stmt.executeQuery(query);
+			
+			// Resultset을 보내서 타이틀만 받아옴
+			String[] fieldNames = this.getFieldNames(this.rs);			
+			// 태그 생성 메소드 호출
+			String resultTags = MethodClass.makeTagsQ3(rs, fieldNames);	
+			return resultTags;
+		} catch (SQLException e) {
+			System.out.println("quiz1() ERR : "+e.getMessage());
+		} finally {
+			this.userClose(this.rs, this.stmt);
+		}
+		return null;		
+	} // quiz3() END
 
+	public String quiz4(String name) {
+		String query = "select empno, ename, sal "
+						+ " from emp where ename = '"+ name +"'";
+		try {
+			this.stmt = this.conn.createStatement();
+			this.rs = this.stmt.executeQuery(query);
+			
+			// Resultset을 보내서 타이틀만 받아옴
+			String[] fieldNames = this.getFieldNames(this.rs);			
+			// 태그 생성 메소드 호출
+			String resultTags = MethodClass.makeTagsQ4(rs, fieldNames);	
+			return resultTags;
+		} catch (SQLException e) {
+			System.out.println("quiz1() ERR : "+e.getMessage());
+		} finally {
+			this.userClose(this.rs, this.stmt);
+		}
+		return null;		
+	} // quiz3() END
+	
+	public String quiz5(int a, int b, int c) {
+		String query = "select empno, ename, sal "
+				+ " from emp where sal in (?, ?, ?)";
+		try {
+			this.pstmt = this.conn.prepareStatement(query);
+			this.pstmt.setInt(1, a);
+			this.pstmt.setInt(2, b);
+			this.pstmt.setInt(3, c);
+			
+			this.rs = pstmt.executeQuery();
+			
+			
+			// Resultset을 보내서 타이틀만 받아옴
+			String[] fieldNames = this.getFieldNames(this.rs);			
+			// 태그 생성 메소드 호출
+			String resultTags = MethodClass.makeTagsQ5(rs, fieldNames);	
+			return resultTags;
+		} catch (SQLException e) {
+			System.out.println("quiz1() ERR : "+e.getMessage());
+		} finally {
+			this.userClose(this.rs, this.stmt);
+		}
+		return null;		
+	} // quiz3() END
+	
+	public String quiz6(int a, int b, int c) {
+		String query = "select empno, ename, sal "
+				+ " from emp where sal not in (?, ?, ?)";
+		try {
+			this.pstmt = this.conn.prepareStatement(query);
+			this.pstmt.setInt(1, a);
+			this.pstmt.setInt(2, b);
+			this.pstmt.setInt(3, c);
+			
+			this.rs = pstmt.executeQuery();
+			
+			// Resultset을 보내서 타이틀만 받아옴
+			String[] fieldNames = this.getFieldNames(this.rs);			
+			// 태그 생성 메소드 호출
+			String resultTags = MethodClass.makeTagsQ6(rs, fieldNames);	
+			return resultTags;
+		} catch (SQLException e) {
+			System.out.println("quiz1() ERR : "+e.getMessage());
+		} finally {
+			this.userClose(this.rs, this.stmt);
+		}
+		return null;		
+	} // quiz3() END
+	
+	public String quiz7(String a, String b) {
+		String query = "select empno, ename"
+				+ " from emp where (ename like '" + a + "%' or ename like'%" + b +"%')";
+		try {
+			this.stmt = this.conn.createStatement();
+			
+			System.out.println(query);
+			
+			this.rs = stmt.executeQuery(query);
+			
+			// Resultset을 보내서 타이틀만 받아옴
+			String[] fieldNames = this.getFieldNames(this.rs);			
+			// 태그 생성 메소드 호출
+			String resultTags = MethodClass.makeTagsQ7(rs, fieldNames);	
+			return resultTags;
+		} catch (SQLException e) {
+			System.out.println("quiz7() ERR : "+e.getMessage());
+		} finally {
+			this.userClose(this.rs, this.stmt);
+		}
+		return null;		
+	} // quiz3() END
+	
+	public String quiz8() {
+		String query = "select empno, ename, job, hiredate "
+						+ " from emp order by hiredate desc";
+		try {
+			this.stmt = this.conn.createStatement();
+			this.rs = this.stmt.executeQuery(query);
+			
+			// Resultset을 보내서 타이틀만 받아옴
+			String[] fieldNames = this.getFieldNames(this.rs);			
+			// 태그 생성 메소드 호출
+			String resultTags = MethodClass.makeTagsQ8(rs, fieldNames);	
+			return resultTags;
+		} catch (SQLException e) {
+			System.out.println("quiz8() ERR : "+e.getMessage());
+		} finally {
+			this.userClose(this.rs, this.stmt);
+		}
+		return null;		
+	} // quiz3() END
+	
+	public String quiz9() {
+		String query = "select empno, ename, deptno, job, hiredate "
+				+ " from emp order by deptno asc, hiredate asc";
+		try {
+			this.stmt = this.conn.createStatement();
+			this.rs = this.stmt.executeQuery(query);
+			
+			// Resultset을 보내서 타이틀만 받아옴
+			String[] fieldNames = this.getFieldNames(this.rs);			
+			// 태그 생성 메소드 호출
+			String resultTags = MethodClass.makeTagsQ9(rs, fieldNames);	
+			return resultTags;
+		} catch (SQLException e) {
+			System.out.println("quiz9() ERR : "+e.getMessage());
+		} finally {
+			this.userClose(this.rs, this.stmt);
+		}
+		return null;		
+	} // quiz3() END
+	
+	public String quiz10() {
+		String query = "select empno, ename, sal, comm "
+				+ " from emp where sal >= 500 and sal < 1000 AND comm > 0";
+		try {
+			this.stmt = this.conn.createStatement();
+			this.rs = this.stmt.executeQuery(query);
+			
+			// Resultset을 보내서 타이틀만 받아옴
+			String[] fieldNames = this.getFieldNames(this.rs);			
+			// 태그 생성 메소드 호출
+			String resultTags = MethodClass.makeTagsQ10(rs, fieldNames);	
+			return resultTags;
+		} catch (SQLException e) {
+			System.out.println("quiz9() ERR : "+e.getMessage());
+		} finally {
+			this.userClose(this.rs, this.stmt);
+		}
+		return null;		
+	} // quiz3() END
+	
+	public String quiz11() {
+		String query = "select dname, count(*) as count, sum(sal) as sum, round(avg(sal), 2) as avg "
+				+ "FROM dept d inner JOIN emp e ON d.deptno = e.deptno "
+				+ "GROUP BY dname "
+				+ "having sum(sal) > 2400";
+		try {
+			this.stmt = this.conn.createStatement();
+			this.rs = this.stmt.executeQuery(query);
+			
+			// Resultset을 보내서 타이틀만 받아옴
+			String[] fieldNames = this.getFieldNames(this.rs);			
+			// 태그 생성 메소드 호출
+			String resultTags = MethodClass.makeTagsQ11(rs, fieldNames);	
+			return resultTags;
+		} catch (SQLException e) {
+			System.out.println("quiz11() ERR : "+e.getMessage());
+		} finally {
+			this.userClose(this.rs, this.stmt);
+		}
+		return null;		
+	} // quiz3() END
+	
 	private void userClose(ResultSet rs, Statement stmt) {
 		try {
 			rs.close();
