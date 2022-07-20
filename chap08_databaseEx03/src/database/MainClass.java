@@ -15,6 +15,13 @@ public class MainClass {
 		
 		PrintClass pc = new PrintClass();
 		pc.makeHTML(tag);
+		
+		dbc.connectDB();
+		dbc.countData('Y');
+		
+		dbc.connectDB();
+		dbc.countData('N');
+		
 	}
 
 }

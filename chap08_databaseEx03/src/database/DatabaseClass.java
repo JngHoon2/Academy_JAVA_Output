@@ -132,4 +132,43 @@ public class DatabaseClass {
 		}
 		return null;
 	}
+	
+	public void countData(char flag) {
+
+		// 1. 삽입 SQL 구문
+		String Query = "select count(*) from gas_station where self = '" + flag + "'";
+
+		// 2. PreparedStatement 객체 얻고, 인자 세팅 작업
+		try {
+			stmt = con.createStatement();
+			
+			rs = stmt.executeQuery(Query);
+			
+			rs.next();
+			if (flag == 'Y') {
+				System.out.println("셀프가능 주유소 : " + rs.getString("count(*)"));
+			} else if (flag == 'N') {
+				System.out.println("셀프불가능 주유소 : "+ rs.getString("count(*)"));
+			}
+			
+		} catch (Exception e) {
+			System.out.println("SELECT ERR : " + e.getMessage());
+		} finally {
+			try {
+				// 작은 범위부터 차례로 닫아주는 것이 좋음. 변수들을 try 밖으로 빼두어 정의해둘것.
+				// 닫지 않아도 무방하나, 메모리 누수 및 보안으로 인해 닫아주는 습관을 들이는 것이 좋음.(실무)
+				if (rs != null) {
+					rs.close();
+				}
+				if (pstmt != null) {
+					pstmt.close();
+				}
+				if (con != null) {
+					con.close();
+				}
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+		}
+	}
 }
