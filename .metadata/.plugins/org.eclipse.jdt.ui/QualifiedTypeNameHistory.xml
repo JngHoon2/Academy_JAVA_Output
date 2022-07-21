@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="jxl.write.WritableSheet"/>
-<fullyQualifiedTypeName name="com.sun.xml.internal.ws.org.objectweb.asm.Label"/>
-<fullyQualifiedTypeName name="jxl.write.Label"/>
-<fullyQualifiedTypeName name="excelEx01.ExcelWriterClass"/>
-<fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
 <fullyQualifiedTypeName name="jxl.write.biff.RowsExceededException"/>
 <fullyQualifiedTypeName name="jxl.write.WriteException"/>
 <fullyQualifiedTypeName name="excelEx01.ExcelReaderClass"/>
@@ -32,7 +27,6 @@
 <fullyQualifiedTypeName name="com.sun.org.apache.xml.internal.serialize.Method"/>
 <fullyQualifiedTypeName name="jdbc.db.MethodClass"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
-<fullyQualifiedTypeName name="database.db.DatabaseClass"/>
 <fullyQualifiedTypeName name="database.util.PrintClass"/>
 <fullyQualifiedTypeName name="abstract02.vo.TwoGPhone"/>
 <fullyQualifiedTypeName name="abstract02.vo.SmartPhone"/>
@@ -40,7 +34,6 @@
 <fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="java.sql.Statement"/>
 <fullyQualifiedTypeName name="database.DatabaseClass"/>
-<fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
 <fullyQualifiedTypeName name="database.PrintClass"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
@@ -53,11 +46,18 @@
 <fullyQualifiedTypeName name="database.db.Jdbc"/>
 <fullyQualifiedTypeName name="database.db.LocalFileReaderClass"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="database.vo.CafeClass"/>
 <fullyQualifiedTypeName name="database.vo.DataClass"/>
-<fullyQualifiedTypeName name="java.sql.ResultSet"/>
-<fullyQualifiedTypeName name="database.db.PrintClass"/>
 <fullyQualifiedTypeName name="java.io.FileWriter"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="database.db.DatabaseClass"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="database.vo.EmpClass"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="database.db.PrintClass"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="database.vo.TempClass"/>
+<fullyQualifiedTypeName name="interface01.vo.LGTV"/>
+<fullyQualifiedTypeName name="interface01.vo.SamsungTV"/>
+<fullyQualifiedTypeName name="interface01.vo.TV"/>
 </qualifiedTypeNameHistroy>
