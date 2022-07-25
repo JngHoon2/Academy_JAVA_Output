@@ -2765,3 +2765,12 @@ Caused by: java.lang.NullPointerException
 	at org.eclipse.jst.jee.model.internal.mergers.WebApp3Merger.mergeServlets(WebApp3Merger.java:36)
 	at org.eclipse.jst.jee.model.internal.mergers.WebAppMerger.process(WebAppMerger.java:79)
 	... 171 more
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-25 15:59:16.736
+!MESSAGE Port 8080 required by Tomcat v9.0 Server at localhost is already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-25 15:59:39.854
+!MESSAGE Port 8080 required by Tomcat v9.0 Server at localhost is already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-25 18:14:45.526
+!MESSAGE Port 8080 required by Tomcat v9.0 Server at localhost is already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).

@@ -41,6 +41,11 @@ public class FirstServlet extends HttpServlet {
 		out.println("</html>");
 		
 	}
+	
+	@Override
+	public void destroy() {
+		System.out.println("destroy() 메소드 호출");
+	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type= "text/javascript">
+	
+	function fn_validation(){
+		var frmLogin = document.frmLogin;
+		var user_id = frmLogin.user_id.value;
+		var user_pw = frmLogin.user_pw.value;
+		
+		var contextPath = getContextPath();
+		//alert(contextPath);
+		
+		if(user_id.length == 0 || user_id == ""){
+			alert("아이디를 입력하세요.");
+		} else if((user_pw.length == 0 || user_pw == "")){
+			alert("비밀번호를 입력하세요.")
+		} else{
+			frmLogin.method = "post";
+			frmLogin.action = contextPath + "/login5";
+			frmLogin.submit();
+		}
+	}
+	
+	function getContextPath(){
+		alter(window.location.pathname);
+		return window.location.pathname.substring(0, window.location.pathname.indexOf("/",2)));
+	}
+</script>
+
+</head>
+<body>
+	<h1>Login5</h1>
+	<form name="frmLogin" action="/chap10_servlet_web02/login5" encType="UTF-8" method="post" encType="UTF-8">
+		아이디 : <input type = "text" name = "user_id"><br>
+		비밀번호:<input type = "password" name = "user_pw"><br>
+		<input type = "button" onclick = "fn_validation();" value = "로그인">
+		<input type = "reset" value = "다시 입력">
+		<input type = "hidden" value = "user_address" value = "서울시 구로구"/>
+	</form>
+</body>
+</html>
