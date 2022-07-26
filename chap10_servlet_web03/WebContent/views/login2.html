@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<title>로그인창</title>
 <script type= "text/javascript">
 	
 	function fn_validation(){
@@ -19,7 +20,7 @@
 			alert("비밀번호를 입력하세요.")
 		} else{
 			frmLogin.method = "post";
-			frmLogin.action = contextPath + "/login5";
+			frmLogin.action = contextPath + "/LoginAdmin";
 			frmLogin.submit();
 		}
 	}
@@ -32,8 +33,8 @@
 
 </head>
 <body>
-	<h1>Login5</h1>
-	<form name="frmLogin" action="/chap10_servlet_web02/login5" encType="UTF-8" method="post" encType="UTF-8">
+	<h1>LoginAdmin</h1>
+	<form name="frmLogin" action="/chap10_servlet_web02/LoginAdmin" encType="UTF-8" method="post" encType="UTF-8">
 		아이디 : <input type = "text" name = "user_id"><br>
 		비밀번호:<input type = "password" name = "user_pw"><br>
 		<input type = "button" onClick = "fn_validation();" value = "로그인">
