@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원 가입폼</title>
+
+<script type="text/javascript">
+
+	function fn_saveMember() {
+		// form 태그의 참조를 얻어옴
+		var frmMember = document.frmMember;
+		
+		// form태그 안에 있는 요소들의 값을 갖고옴
+		var id = frmMember.id.value;
+		var pwd = frmMember.pwd.value;
+		var name = frmMember.name.value;
+		var email = frmMember.email.value;
+	
+		// 컨텍스트 경로를 가져오는 방법 
+		var contextPath = getContextPath();
+		
+		// 요소들의 값 체크
+		if (id.length == 0 || id == "") {
+			alert("아이디는 필수입니다.");
+		} else if (pwd.length == 0 || pwd == "") {
+			alert("비밀번호는 필수입니다.");
+		} else if (name.length == 0 || name == "") {
+			alert("이름은 필수입니다.");
+		} else if (email.length == 0 || email == "") {
+			alert("이메일은 필수입니다.");
+		} else {
+			frmMember.method = "post";	// action 설정
+			frmMember.action = contextPath + "/member";	// 서블릿 요청명
+			frmMember.submit();	// submit()
+		}
+	}
+	
+	// 자바스크립트에서 컨텍스트 경로 가져오는 방법
+	function getContextPath() {
+	    return window.location.pathname
+	    		.substring(0, window.location.pathname.indexOf("/",2));
+	}	
+	
+</script>
+</head>
+<body>
+	<form name="frmMember">
+		<table>
+			<th>회원가입폼</th>
+			<tr>
+				<td>아이디</td>
+				<td><input type="text" name="id" required="required"></td>
+			</tr>
+			<tr>
+				<td>비밀번호</td>
+				<td><input type="password" name="pwd" required="required" ></td>
+			</tr>
+			<tr>
+				<td>이름</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td>이메일</td>
+				<td><input type="text" name="email"></td>
+			</tr>
+		</table>
+		
+		<input type="button" value="가입하기" onclick="fn_saveMember()"> 
+		<input type="reset" value="다시입력"> 
+		<input type="hidden" name="command" value="addMember" />
+	</form>
+</body>
+</html>

@@ -3119,3 +3119,109 @@ java.lang.NullPointerException
 
 !ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 15:12:18.139
 !MESSAGE Port 8080 required by Tomcat v9.0 Server at localhost is already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:05:11.420
+!MESSAGE Could not publish server configuration for Tomcat v9.0 Server at localhost.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:05:11.420
+!MESSAGE Multiple Contexts have a path of "/chap10_servlet_web04".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:05:12.945
+!MESSAGE Two or more Web modules defined in the configuration have the same context root (/chap10_servlet_web04). To start this server you will need to remove the duplicate(s).
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:05:27.436
+!MESSAGE Could not publish server configuration for Tomcat v9.0 Server at localhost.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:05:27.436
+!MESSAGE Multiple Contexts have a path of "/chap10_servlet_web04".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:08:27.268
+!MESSAGE Could not publish server configuration for Tomcat v9.0 Server at localhost.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:08:27.268
+!MESSAGE Multiple Contexts have a path of "/chap10_servlet_web04".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:08:54.973
+!MESSAGE Could not publish server configuration for Tomcat v9.0 Server at localhost.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:08:54.973
+!MESSAGE Multiple Contexts have a path of "/chap10_servlet_web04".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:09:48.880
+!MESSAGE Could not publish server configuration for Tomcat v9.0 Server at localhost.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:09:48.880
+!MESSAGE Multiple Contexts have a path of "/chap10_servlet_web04".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:12:56.322
+!MESSAGE Could not publish server configuration for Tomcat v9.0 Server at localhost.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:12:56.322
+!MESSAGE Multiple Contexts have a path of "/chap10_servlet_web04".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:13:03.231
+!MESSAGE Could not publish server configuration for Tomcat v9.0 Server at localhost.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:13:03.231
+!MESSAGE Multiple Contexts have a path of "/chap10_servlet_web04".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:13:20.647
+!MESSAGE Could not publish server configuration for Tomcat v9.0 Server at localhost.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:13:20.647
+!MESSAGE Multiple Contexts have a path of "/chap10_servlet_web04".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:13:46.064
+!MESSAGE Could not publish server configuration for Tomcat v9.0 Server at localhost.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:13:46.064
+!MESSAGE Multiple Contexts have a path of "/chap10_servlet_web04".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:14:23.259
+!MESSAGE Could not publish server configuration for Tomcat v9.0 Server at localhost.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:14:23.259
+!MESSAGE Multiple Contexts have a path of "/chap10_servlet_web04".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:18:56.704
+!MESSAGE Could not publish server configuration for Tomcat v9.0 Server at localhost.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:18:56.705
+!MESSAGE Multiple Contexts have a path of "/chap10_servlet_web04".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:19:41.072
+!MESSAGE Could not publish server configuration for Tomcat v9.0 Server at localhost.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 18:19:41.072
+!MESSAGE Multiple Contexts have a path of "/chap10_servlet_web04".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 21:04:19.295
+!MESSAGE Could not publish server configuration for Tomcat v9.0 Server at localhost.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 21:04:19.295
+!MESSAGE Multiple Contexts have a path of "/chap10_servlet_web04".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 21:05:03.076
+!MESSAGE Could not publish server configuration for Tomcat v9.0 Server at localhost.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 21:05:03.076
+!MESSAGE Multiple Contexts have a path of "/chap10_servlet_web04".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 21:07:39.445
+!MESSAGE Could not publish server configuration for Tomcat v9.0 Server at localhost.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 21:07:39.445
+!MESSAGE Multiple Contexts have a path of "/chap10_servlet_web04".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 22:15:50.083
+!MESSAGE Port 9000 required by Tomcat v9.0 Server at localhost is already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+!SESSION 2022-07-26 22:31:39.917 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=1.8.0_291
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/tuan/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/tuan/.eclipse_keyring
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-07-26 22:31:42.517
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2022-07-26 22:31:44.119
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.egit.core 1 0 2022-07-26 22:31:44.153
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.jst.jsp.core 4 4 2022-07-26 22:31:53.856
+!MESSAGE A workspace crash was detected. The previous session did not exit normally. Not using saved taglib indexes.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 22:32:18.186
+!MESSAGE Port 9000 required by Tomcat v9.0 Server at localhost is already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2022-07-26 22:32:29.775
+!MESSAGE Port 9000 required by Tomcat v9.0 Server at localhost is already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
