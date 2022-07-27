@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="jxl.write.biff.RowsExceededException"/>
-<fullyQualifiedTypeName name="jxl.write.WriteException"/>
-<fullyQualifiedTypeName name="excelEx01.ExcelReaderClass"/>
-<fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.classfile.Field"/>
 <fullyQualifiedTypeName name="com.sun.javafx.jmx.MXNodeAlgorithmContext"/>
 <fullyQualifiedTypeName name="excel.PrintClass"/>
 <fullyQualifiedTypeName name="excel.vo.Customer"/>
@@ -23,7 +19,6 @@
 <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
-<fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.xml.internal.serialize.Method"/>
 <fullyQualifiedTypeName name="jdbc.db.MethodClass"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
@@ -55,9 +50,14 @@
 <fullyQualifiedTypeName name="database.vo.EmpClass"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="database.db.PrintClass"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="database.vo.TempClass"/>
 <fullyQualifiedTypeName name="interface01.vo.LGTV"/>
 <fullyQualifiedTypeName name="interface01.vo.SamsungTV"/>
 <fullyQualifiedTypeName name="interface01.vo.TV"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="servlet02.MemberDAO"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="servlet02.MemberVO"/>
 </qualifiedTypeNameHistroy>
