@@ -114,7 +114,6 @@ public class MemberDAO {
 			
 			System.out.println("데이터 삭제!");
 			
-			
 			rs.close();
 			stmt.close();
 			con.close();
