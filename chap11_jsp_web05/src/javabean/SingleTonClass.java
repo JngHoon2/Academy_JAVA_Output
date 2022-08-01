@@ -14,4 +14,5 @@ public class SingleTonClass {
 			single_instance = new SingleTonClass();
 		return single_instance;
 	}
+	
 }
