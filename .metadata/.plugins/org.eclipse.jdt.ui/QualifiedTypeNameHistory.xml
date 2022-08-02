@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.sun.javafx.jmx.MXNodeAlgorithmContext"/>
-<fullyQualifiedTypeName name="excel.PrintClass"/>
-<fullyQualifiedTypeName name="excel.vo.Customer"/>
-<fullyQualifiedTypeName name="excel.MethodClass"/>
 <fullyQualifiedTypeName name="classTest.CustomerMain.Customer"/>
 <fullyQualifiedTypeName name="classTest.MethodClass"/>
 <fullyQualifiedTypeName name="classTest.Customer"/>
@@ -27,7 +23,6 @@
 <fullyQualifiedTypeName name="abstract02.vo.SmartPhone"/>
 <fullyQualifiedTypeName name="jxl.Cell"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
-<fullyQualifiedTypeName name="java.sql.Statement"/>
 <fullyQualifiedTypeName name="database.DatabaseClass"/>
 <fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
 <fullyQualifiedTypeName name="database.PrintClass"/>
@@ -45,7 +40,6 @@
 <fullyQualifiedTypeName name="java.io.FileWriter"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="database.db.DatabaseClass"/>
-<fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="database.vo.EmpClass"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="database.db.PrintClass"/>
@@ -56,8 +50,14 @@
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 <fullyQualifiedTypeName name="servlet02.MemberDAO"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="servlet02.MemberVO"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="javabean.Dept"/>
+<fullyQualifiedTypeName name="javabean.EmpClass"/>
+<fullyQualifiedTypeName name="javabean.MemberBean"/>
+<fullyQualifiedTypeName name="javabean.SingleTonClass"/>
 </qualifiedTypeNameHistroy>
