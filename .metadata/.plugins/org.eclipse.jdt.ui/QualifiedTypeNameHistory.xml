@@ -12,7 +12,6 @@
 <fullyQualifiedTypeName name="java.lang.Class"/>
 <fullyQualifiedTypeName name="sun.print.PSPrinterJob.PluginPrinter"/>
 <fullyQualifiedTypeName name="java.sql.DriverManager"/>
-<fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.xml.internal.serialize.Method"/>
@@ -22,7 +21,6 @@
 <fullyQualifiedTypeName name="abstract02.vo.TwoGPhone"/>
 <fullyQualifiedTypeName name="abstract02.vo.SmartPhone"/>
 <fullyQualifiedTypeName name="jxl.Cell"/>
-<fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="database.DatabaseClass"/>
 <fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
 <fullyQualifiedTypeName name="database.PrintClass"/>
@@ -41,7 +39,6 @@
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="database.db.DatabaseClass"/>
 <fullyQualifiedTypeName name="database.vo.EmpClass"/>
-<fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="database.db.PrintClass"/>
 <fullyQualifiedTypeName name="database.vo.TempClass"/>
 <fullyQualifiedTypeName name="interface01.vo.LGTV"/>
@@ -60,4 +57,7 @@
 <fullyQualifiedTypeName name="javabean.EmpClass"/>
 <fullyQualifiedTypeName name="javabean.MemberBean"/>
 <fullyQualifiedTypeName name="javabean.SingleTonClass"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
 </qualifiedTypeNameHistroy>

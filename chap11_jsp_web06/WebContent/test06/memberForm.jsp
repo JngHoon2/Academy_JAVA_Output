@@ -10,7 +10,7 @@
 <title>회원가입 창</title>
 </head>
 <body>
-	<form method="post" action="${contextPath}/test03/member9.jsp">
+	<form method="post" action="${contextPath}/test06/member_insert.jsp">
 		<h1 style="text-align: center">회원 가입창</h1>
 		<table align="center">
 			<tr>
@@ -31,7 +31,8 @@
 			</tr>
 			<tr>
 				<td width="200"><p>&nbsp;<p></td>
-				<td width="400"><input type="submit" value="가입하기"><input type="reset" value="다시입력"></td>
+				<td width="400"><input type="submit" value="가입하기">
+				<input type="reset" value="다시입력"></td>
 			</tr>
 		</table>
 	</form>

@@ -11,7 +11,7 @@
 <title>로그인 창</title>
 </head>
 <body>
-	<form action="result.jsp">
+	<form action="${contextPath}/test04/result.jsp">
 		아이디 : <input type="text" name="id" size=20/><br>
 		비밀번호: <input type="password" name="pwd" size=20/><br>
 		<input type="submit" value="로그인"/>
