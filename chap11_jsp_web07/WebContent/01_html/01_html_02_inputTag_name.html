@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Form input Tag name 속성</title>
+</head>
+<body>
+  <h2>input 태그의 name 속성 - 서버로 값전달 통로 역할</h2>
+   <form action="값을받아서처리할.jsp">
+        <label>value 속성</label> <input type="text" name="nickname" value="이름"><br />
+        <label>placeholder</label> <input type="text" name="username" placeholder="이름을 입력하세요"><br />
+        <label>maxlength 속성</label> <input type="text" name="address" maxlength="6"><br />
+        <label>readonly 속성</label> <input type="text" name="phone" value="010-1111-1111" readonly="readonly"><br />
+        <label>disabled 속성</label> <input type="text" name="school" value="서울대학교" disabled="disabled"><br />
+        <label>name 속성</label> <input type="text" name="userid" placeholder="아이디를 입력하세요"><br />
+        <label>name 속성</label> <input type="date" name="birth" placeholder="생일을 입력하세요"><br />
+        
+        <label>radio name 속성</label> <input type="radio" name="gender" value="male" checked="checked"> 남
+                                <input type="radio" name="gender" value="female"> 여 <br />
+        <label>radio name 속성</label> <input type="radio" name="career" value="0" checked="checked"> 신입
+                                <input type="radio" name="career" value="3"> 3년차 이상
+                                <input type="radio" name="career" value="5"> 5년차 이상
+                                <input type="radio" name="career" value="7"> 7년차 이상 <br />
+                                
+        <label>checkbox name 속성</label> <input type="checkbox" name="tech" value="java" checked="checked">java
+                                 <input type="checkbox" name="tech" value="script" checked="checked">script
+                                 <input type="checkbox" name="tech" value="python">python
+                                 <input type="checkbox" name="tech" value="c">c
+                                 <input type="checkbox" name="tech" value="sql">SQL
+                                 <input type="checkbox" name="tech" value="design">design<br />
+        <input type="submit">
+    </form>
+    <br>
+    <p>
+    <h2>input 태그 속성</h2>
+
+		- type 속성	: 입력 컨트롤의 형식을 지정한다.<br>
+			- name 속성	: 입력된 값을 서버로 전송할 때 사용된다.<br>
+					  서버와 교류를 할 때 필수적으로 id역할로 사용된다.<br>
+			- id 속성		: 입력 컨트롤을 식별하기 위해서 사용된다.<br>
+			- readonly 속성	: 읽기 전용 입력 컨트롤로 만든다.<br>
+					  		   값을 변경할 수 없지만 서버로 전송된다.<br>
+			- disabled 속성	: 입력 컨트롤을 비활성화 시킨다.<br>
+					  값을 변경할 수 없고, 해당 입력 컨트롤의 값은 서버로 전송되지 않는다.<br>
+			- placeholder 속성	: 입력값 힌트를 제공한다.<br>
+			- maxlength 속성	: 최대 입력 문자 갯수를 지정한다.<br>
+			- value 속성	: 입력값을 지정한다.<br>
+			- chekced 속성	: 라디오버튼, 체크박스를 미리 선택되게 한다.<br>
+    </p>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	div.red_box span {
+		background-color : red;
+	}
+	
+	div#c_box span {
+		text-align : center;
+		padding : 10px;
+		color : green;
+	}
+	
+	div span.blue_span {
+		background-color : #09c;
+	}
+	
+	div span#c_span {
+		text-align : center;
+		padding : 10px;
+		color: orange;
+	}
+</style>
+</head>
+<body>
+	<h3>부모 자식 선택<br>
+		태그 이름 사이에 공백을 넣은 선택자는 부모 태그 하위에 있는 태그에 스타이를 적용시킵니다.</h3>
+		
+	<div class="red_box">
+		<span>
+			red_box div 클래스 내의 span입니다.
+		</span>
+		<p>
+			red_box p태그입니다.
+		</p>
+	</div>
+	
+	<div id="c_box">
+		<span>
+			c_box div 아이디 내의 span입니다.
+		</span>
+	</div>
+	
+	<div>
+		<span class="blue_span">
+			div 내의 blue_span입니다.
+		</span>
+	</div>
+	
+	<div>
+		<span id="c_span">
+			div 내의 c_span입니다.
+		</span>
+	</div>
+	
+</body>
+</html>
