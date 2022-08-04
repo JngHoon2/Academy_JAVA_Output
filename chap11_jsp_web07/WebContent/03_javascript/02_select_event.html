@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Form3</title>
+<script>
+	function schoolSelect(){
+		var schoolSelect = document.getElementById("school");
+		
+		var selectValue = schoolSelect.options[schoolSelect.selectedIndex].value;
+		alert("selectValue : " + selectValue);
+		
+		var selectText = schoolSelect.options[schoolSelect.selectedIndex].text;
+		alert("selectText : " + selectText);
+	}
+	
+	function majorSelect(){
+		var majorSelect = document.getElementById("major");
+		
+		var selectValue = majorSelect.options[majorSelect.selectedIndex].value;
+		alert("selectValue : " + selectValue);
+		
+		var selectText = majorSelect.options[majorSelect.selectedIndex].text;
+		alert("selectText : " + selectText);
+	}
+	
+	function emailSelect(){
+		var emailSelect = document.getElementById("email");
+		
+		var selectValue = emailSelect.options[emailSelect.selectedIndex].value;
+		alert("selectValue : " + selectValue);
+		
+		var selectText = emailSelect.options[emailSelect.selectedIndex].text;
+		alert("selectText : " + selectText);
+	}
+
+function chageLangSelect(){
+    var langSelect = document.getElementById("school");
+    
+    // select element에서 선택된 option의 value가 저장된다.
+    var selectValue = langSelect.options[langSelect.selectedIndex].value;
+ 
+    // select element에서 선택된 option의 text가 저장된다.
+    var selectText = langSelect.options[langSelect.selectedIndex].text;
+    alert(selectText);
+}
+</script>
+    
+    
+</head>
+<body>
+    <h1>select 태그 연습하기</h1>
+    
+   <form action="register.jsp">
+        <label>학력</label>
+        <select name="school" id="school" onchange="schoolSelect()">
+            <option value="E"> 초등학교 졸업</option>
+            <option value="M"> 중학교 졸업</option>
+            <option value="H"> 고등학교 졸업</option>
+            <option value="U" selected="selected"> 대학교 졸업</option>
+            <option value="G"> 대학원 졸업</option>
+        </select><br />
+        
+        <label>전공</label>
+        <select name="major" id="major" onchange="majorSelect()">
+           <optgroup label="인문대학">
+                <option value="KD"> 국어국문학과</option>
+                <option value="ED"> 영어영문학과</option>
+                <option value="BD"> 신문방송학과</option>
+            </optgroup>
+        </select><br />
+        
+        <label>이메일</label>
+       <input type="text" name="email1">@
+       <select name="email2" id="email" onchange="emailSelect()">
+           <option value="" disabled selected="selected">선택하세요</option>
+           <option value="daum.net">daum.net</option>
+           <option value="naver.com">naver.com</option>
+           <option value="google.com">google.com</option>
+           <option value="D">직접 입력</option>
+       </select>
+        
+        <input type="submit">
+    </form>
+    <br>
+    <p>
+    <h2>select option</h2>
+
+		- 콤보박스 생성<br>
+		- 사용자가 값을 입력하는 대신 나열된 값 중에 하나를 선택하도록 하는 드롭다운 목록을 생성한다.<br>
+		  <select name="서버에 전달할 이름"><br>
+		  	<option value="값1">내용1</option><br>
+		  	<option value="값2">내용2</option><br>
+		  	<option value="값3">내용3</option><br>
+		  	<option value="값4">내용4</option><br>
+		  </select><br>
+
+		  * 서버에는 선택된 옵션의 value에 설정된 값이 전달된다. 내용은 전달되지 않는다.<br>
+		- option 태그의 주요 속성<br>
+			- value		: 서버로 전달될 값을 설정한다.<br>
+			- disabled		: 해당 항목을 선택하지 못하게 한다.<br>
+			- selected		: 해당 항목이 미리 선택되어 있게 한다.<br>
+    </p>
+    
+</body>
+</html>

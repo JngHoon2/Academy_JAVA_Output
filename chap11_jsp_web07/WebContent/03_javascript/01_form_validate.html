@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function fnValidate(){
+			var frmLogin = document.frmLogin;
+			var id = frmLogin.id.value;
+			var pwd = frmLogin.pwd.value;
+			
+			if(id.length == 0 || id == ""){
+				alert("아이디를 입력해주세요.")
+				frmLogin.id.focus();
+				return false;
+			} else if(pwd.length == 0 || pwd == ""){
+				alert("비밀번호를 입력해주세요.")
+				frmLogin.pwd.focus();
+				return false;
+			}
+			alert("정상입력 id : " + id + ", pwd : " + pwd);
+		}
+	</script>
+</head>
+<body>
+	<form name="frmLogin">
+		<label for="name">아이디</label><br/>
+		<input type="text" name = "id"/><br/>
+		<label for="pass">비밀번호</label><br/>
+		<input type="password" name = "pwd"><br/>
+		<input type="button" onclick="fnValidate();" value = "제출" />	
+	</form>
+</body>
+</html>

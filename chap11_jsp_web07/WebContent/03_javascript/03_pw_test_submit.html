@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+    
+    	//alert(document.getElementById('pass').value);	// 오류발생(화면의 모든 요소들이 만들어지기 전임)
+    
+    	// 화면이 모두 열리고 난 후에 실행
+    	// 본 자바스크립트가 화면 맨 위에 있기 때문에 아직 모든 엘리먼트들이 열리기 전임
+    	// 그래서 모든 요소들이 열린 후에 본 이벤트를 타도록함.
+    	// 화면이 열리면서 특정 작업을 해야 할 경우에 사용됨.
+        window.onload = function () {
+    		alert("화면의 모든 엘리먼트들이 랜더링 완료됨!!!");
+    		
+    		alert(document.getElementById('pass').value);
+    		
+            // my-form Form 엘리먼트에 onsubmit 이벤트 바인딩
+            document.getElementById('my-form').onsubmit = function () {
+            	alert('onsubmit event 발생');
+                // 변수를 선언합니다.
+                var pass = document.getElementById('pass').value;
+                var passCheck = document.getElementById('pass-check').value;
+
+                if (pass.length == 0 || pass == ""){
+                	alert('비밀번호를 입력하세요.');
+                	document.getElementById('pass').focus();
+                	return false;
+                }
+
+                if (passCheck.length == 0 || passCheck == ""){
+                	alert('비밀번호를 입력하세요.');
+                	document.getElementById('pass-check').focus();
+                	return false;
+                }
+                
+                // 비밀번호가 같은지 확인합니다.
+                if (pass == passCheck) {
+                    alert('비밀번호와 비밀번호 확인의 내용이 같습니다.');
+                } else {
+                    alert('비밀번호와 비밀번호 확인의 내용이 다릅니다.');
+                    return false;
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <form id="my-form">
+        <label for="name">이름</label><br/>
+        <input type="text" name="name" id="name" /><br/>
+        <label for="pass">비밀번호</label><br/>
+        <input type="password" name="pass" id="pass" /><br/>
+        <label for="pass-check">비밀번호 확인</label><br/>
+        <input type="password" id="pass-check" /><br/>
+        <input type="submit" value="제출" />
+    </form>
+</body>
+</html>
