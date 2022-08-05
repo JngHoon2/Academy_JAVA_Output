@@ -5,8 +5,8 @@
 		<item key="DIALOG_Y_ORIGIN" value="43"/>
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item key="dialogHeight" value="810"/>
-		<item key="dialogWidth" value="864"/>
+		<item key="dialogHeight" value="-1"/>
+		<item key="dialogWidth" value="-1"/>
 		<list key="orderedElements">
 		</list>
 		<list key="orderedProviders">
@@ -42,6 +42,8 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="/Users/tuan/Desktop/chap11_jsp_web08.zip"/>
+			<item value="/Users/tuan/Desktop/chap11_jsp_web09.zip"/>
 			<item value="/Users/tuan/Desktop/assignment3.zip"/>
 			<item value="/Users/tuan/Desktop/chap08_databaseEx.zip"/>
 			<item value="/Users/tuan/Desktop/assginment.zip"/>
