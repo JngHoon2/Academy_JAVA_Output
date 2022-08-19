@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+	<title>Selector : 선택자/선택기/실렉터/셀렉터</title>
+	<script src="jquery-1.6.2.js" type="text/javascript"></script>
+	<style type="text/css">
+		.bg{
+			background-color:Yellow;
+		}
+		
+		.horizontal {
+			float:left;
+			list-style:none;
+			margin:10px;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			
+			$('li > u').addClass('bg');
+			
+			$("#myFavorites > li").addClass("horizontal");
+			
+			jQuery('#jQuery').click(function() {
+				alert('jQuery');
+			});
+			
+			$('.sil').click(function() {
+				alert('실버 라이트');
+			});
+		});
+	</script>
+</head>
+<body>
+	<h3>관심사항</h3>
+	<ul id="myFavorites">
+		<li><u>C#</u></li>
+		<li>ASP.NET</li>
+		<li></li>
+		<li class="sil">silverlight</li>
+		<li id="jQuery">j<u>Q</u>uery</li>
+	</ul>
+</body>
+</html>

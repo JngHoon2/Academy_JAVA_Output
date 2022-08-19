@@ -5,4 +5,33 @@
 	</list>
 	<section name="NewWizardAction">
 	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="q"/>
+			<item value="/Users/tuan/Documents/works/chap011_jsp_web11"/>
+			<item value="/Users/tuan/Documents/works/chap11_jsp_web08"/>
+			<item value="/Users/tuan/Downloads/chap011_jsp_web11"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="425"/>
+		<item key="DIALOG_Y_ORIGIN" value="279"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+	<section name="CleanDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="478"/>
+		<item key="DIALOG_Y_ORIGIN" value="196"/>
+		<item key="DIALOG_WIDTH" value="484"/>
+		<item key="DIALOG_HEIGHT" value="381"/>
+		<item key="TOGGLE_SELECTED" value="false"/>
+	</section>
 </section>
