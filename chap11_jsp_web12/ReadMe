@@ -1,0 +1,13 @@
+[특이사항]
+
+※ context.xml에서 데이터소스 관련 데이터베이스명 변경 잊지말것.
+※ Dao 메소드마다 close() 넣어서 명시적으로 커넥션 반환해줄것.
+
+product_management_system 프로젝트
+
+1. 데이터베이스 생성 : product
+ 1) 테이블은 일부 필요한 부분만 생성할것.
+  - product, worker
+
+2. vo, dto 도 필요한 것만 Product, Worker만 생성
+  

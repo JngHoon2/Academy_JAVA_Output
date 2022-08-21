@@ -1,0 +1,229 @@
+-- 1. 데이터베이스(계정) 생성
+show user;
+-- 12c 버전 부터는 아래 문장 실행후 계정 생성 
+ ALTER SESSION SET "_ORACLE_SCRIPT"=true; 
+ 
+ -- 계정(데이터베이스) 생성
+create user product identified by 1234;  
+
+-- 새로 만든 계정(데이터베이스)에 권한 부역
+-- grant connect to product;  -- DB 연결권한(권한취소 : revoke connect  from company)
+-- grant create table to product;  -- 테이블 생성권한
+-- grant create view to product; -- view  생성권한
+grant all privileges to product;
+
+-- 사용자 테이블 스페이스 사용 권한 부여
+alter user product default tablespace users quota unlimited on users;
+
+-- product 계정으로 접속 가능해짐. product 계정 접속 경로 설정후 접속
+
+--// 테이블 생성 작업//-------------------------------------------------------------
+--// 테이블 생성 작업//-------------------------------------------------------------
+
+--// product 테이블 생성 작업//-------------------------------------------------------------
+-- drop table product;
+Create table product(
+    code number(5),
+    name varchar2(100),
+    kind char(1),
+    cost_price number(8) default 0,
+    list_price number(8) default 0,
+    sales_margin number(8) default 0,
+    content varchar2(1000),
+    image varchar2(50) default 'noImage.jpg',
+    useyn char(1)  default 'y',
+    bestyn char(1)  default 'n',
+    regdate date default sysdate,
+   primary key(code)
+);
+
+-- 시퀀스 생성
+Create sequence product_code_seq increment by 1 start with 1;
+-- 샘플 데이터 삽입
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '킨록 by 킨록앤더슨','1',23000,25000,2000,'CK진 남여 간절기 데일리룩','1.jpg','1','1',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '타미진 모던시크 블랙 룩','1',23000,25000,2000,'CK진 남여 간절기 데일리룩','2.jpg','1','1',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '디젤 프리뷰 신상 코디룩','1',23000,25000,2000,'CK진 남여 간절기 데일리룩','3.jpg','1','1',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '타미진 데님 스타일링 코디 상품','2',20000,17000,3000,'CK진 남여 간절기 데일리룩','4.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '컨셉원 감성코디 포인트룩','2',20000,17000,3000,'CK진 남여 간절기 데일리룩','5.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '리버클래시 데일리룩','2',20000,17000,3000,'CK진 남여 간절기 데일리룩','noImage.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '간절기 데일리 커플룩 제안','2',20000,17000,3000,'CK진 남여 간절기 데일리룩','noImage.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '세련되고 멋스러운 데일리룩','2',20000,17000,3000,'CK진 남여 간절기 데일리룩','noImage.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '리바이스 가을 신상 코디','2',20000,17000,3000,'CK진 남여 간절기 데일리룩','noImage.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '미리 만나는 NBA 가을룩','3',13200,10000,3200,'CK진 남여 간절기 데일리룩','noImage.jpg','0','1',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '팀버랜드 데일리룩','3',13200,10000,3200,'CK진 남여 간절기 데일리룩','noImage.jpg','0','1',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '간절기 플리스 커플룩 제안','3',13200,10000,3200,'CK진 남여 간절기 데일리룩','noImage.jpg','0','1',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, 'NBA 가을 신상 커플코디룩','4',56000,50000,6000,'CK진 남여 간절기 데일리룩','noImage.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '미리 준비하는 가을 아이템!','4',56000,50000,6000,'CK진 남여 간절기 데일리룩','noImage.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '눈에 밟히는 그녀의 신상룩','4',56000,50000,6000,'CK진 남여 간절기 데일리룩','noImage.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '컨셉원 데님과 셔켓 코디제안','4',56000,50000,6000,'CK진 남여 간절기 데일리룩','noImage.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '예작 아트셔츠','4',56000,50000,6000,'CK진 남여 간절기 데일리룩','noImage.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '지오다노 캐주얼 코디 룩','5',79000,70000,9000,'CK진 남여 간절기 데일리룩','noImage.jpg','1','1',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '여름 커플 아이템','5',79000,70000,9000,'CK진 남여 간절기 데일리룩','noImage.jpg','1','1',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '클라이드앤 커플 스트릿룩','5',79000,70000,9000,'CK진 남여 간절기 데일리룩','noImage.jpg','1','1',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '엄브로 8월의 데일리룩','5',79000,70000,9000,'CK진 남여 간절기 데일리룩','noImage.jpg','1','1',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '타미진 그레이 코디룩','5',79000,70000,9000,'CK진 남여 간절기 데일리룩','noImage.jpg','1','1',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '리바이스 클래식 청남방 코디','5',79000,70000,9000,'CK진 남여 간절기 데일리룩','noImage.jpg','1','1',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '리바이스 데님 데일리룩','5',79000,70000,9000,'CK진 남여 간절기 데일리룩','noImage.jpg','1','1',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '매일 신기 편한 스트랩 샌들','6',120000,80000,32000,'CK진 남여 간절기 데일리룩','noImage.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '베이지 커플시밀러룩','6',120000,80000,32000,'CK진 남여 간절기 데일리룩','noImage.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '시원한느낌의 바캉스 룩','6',120000,80000,32000,'CK진 남여 간절기 데일리룩','noImage.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, 'CK진의 장마철 필수템!','6',120000,80000,32000,'CK진 남여 간절기 데일리룩','noImage.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '리바이스의 여름휴가룩','6',120000,80000,32000,'CK진 남여 간절기 데일리룩','noImage.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, 'NBA 스타일리쉬한 커플룩','7',70000,50000,20000,'CK진 남여 간절기 데일리룩','noImage.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '가을 스타일리쉬 코디룩','7',70000,50000,-20000,'CK진 남여 간절기 데일리룩','315.jpg',null,null,to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '시원한 로고티셔츠 코디 제안','7',70000,50000,20000,'CK진 남여 간절기 데일리룩','32.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, 'CK진 여름 데일리룩','7',70000,50000,20000,'CK진 남여 간절기 데일리룩','33.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '타미진 데일리 코디룩~','7',70000,50000,20000,'CK진 남여 간절기 데일리룩','34.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '스누피와 루즈핏으로 편한 룩','7',70000,50000,20000,'CK진 남여 간절기 데일리룩','35.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '누구나 편안하게 고민 없이 백팩 PICK','7',70000,50000,20000,'CK진 남여 간절기 데일리룩','36.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '뉴에라 스포티 커플 코디룩','7',70000,50000,20000,'CK진 남여 간절기 데일리룩','37.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '여름 일상룩 코디 제안 !!','7',70000,50000,20000,'CK진 남여 간절기 데일리룩','38.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '장마철 편안한 캐주얼룩','7',70000,50000,20000,'CK진 남여 간절기 데일리룩','39.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '타미진 스트라이프 커플룩','7',70000,50000,20000,'CK진 남여 간절기 데일리룩','40.jpg','1','0',to_date('22/08/07','RR/MM/DD'));
+Insert into PRODUCT.PRODUCT (CODE,NAME,KIND,COST_PRICE,LIST_PRICE,SALES_MARGIN,CONTENT,IMAGE,USEYN,BESTYN,REGDATE) values (product_code_seq.nextval, '캘빈클라인 데일리 스포티룩','7',70000,50000,-20000,'CK진 남여 간절기 데일리룩','316.jpg',null,null,to_date('22/08/07','RR/MM/DD'));
+
+
+
+
+-- old version
+Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, 'CK진 남여 간절기 데일리룩', '1', 23000, 25000, 2000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '1', sysdate)
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '완벽한 니트 베스트 상품 ', '1', 23000, 25000, 2000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '1', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '킨록 by 킨록앤더슨', '1', 23000, 25000, 2000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '1', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '타미진 모던시크 블랙 룩', '1', 23000, 25000, 2000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '1', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '디젤 프리뷰 신상 코디룩', '1', 23000, 25000, 2000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '1', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '타미진 데님 스타일링 코디 상품', '2', 20000, 17000, 3000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '컨셉원 감성코디 포인트룩', '2', 20000, 17000, 3000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '리버클래시 데일리룩', '2', 20000, 17000, 3000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '간절기 데일리 커플룩 제안', '2', 20000, 17000, 3000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '세련되고 멋스러운 데일리룩', '2', 20000, 17000, 3000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '리바이스 가을 신상 코디', '2', 20000, 17000, 3000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '미리 만나는 NBA 가을룩', '3', 13200, 10000, 3200, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '0', '1', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '팀버랜드 데일리룩', '3', 13200, 10000, 3200, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '0', '1', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '간절기 플리스 커플룩 제안', '3', 13200, 10000, 3200, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '0', '1', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, 'NBA 가을 신상 커플코디룩', '4', 56000, 50000, 6000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '미리 준비하는 가을 아이템!', '4', 56000, 50000, 6000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '눈에 밟히는 그녀의 신상룩', '4', 56000, 50000, 6000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '컨셉원 데님과 셔켓 코디제안', '4', 56000, 50000, 6000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '예작 아트셔츠', '4', 56000, 50000, 6000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '지오다노 캐주얼 코디 룩', '5', 79000, 70000, 9000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '1', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '여름 커플 아이템', '5', 79000, 70000, 9000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '1', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '클라이드앤 커플 스트릿룩', '5', 79000, 70000, 9000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '1', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '엄브로 8월의 데일리룩', '5', 79000, 70000, 9000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '1', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '타미진 그레이&네이비 코디룩', '5', 79000, 70000, 9000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '1', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '리바이스 클래식 청남방 코디', '5', 79000, 70000, 9000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '1', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '리바이스 데님 데일리룩', '5', 79000, 70000, 9000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '1', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '매일 신기 편한 스트랩 샌들', '6', 120000, 80000, 32000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '베이지 커플시밀러룩', '6', 120000, 80000, 32000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '시원한느낌의 바캉스 룩', '6', 120000, 80000, 32000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, 'CK진의 장마철 필수템!', '6', 120000, 80000, 32000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '리바이스의 여름휴가룩', '6', 120000, 80000, 32000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, 'NBA 스타일리쉬한 커플룩', '7', 70000, 50000, 20000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '가을 스타일리쉬 코디룩', '7', 70000, 50000, 20000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '시원한 로고티셔츠 코디 제안', '7', 70000, 50000, 20000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, 'CK진 여름 데일리룩', '7', 70000, 50000, 20000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '타미진 데일리 코디룩~', '7', 70000, 50000, 20000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '스누피와 루즈핏으로 편한 룩', '7', 70000, 50000, 20000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '누구나 편안하게 고민 없이 백팩 PICK', '7', 70000, 50000, 20000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '뉴에라 스포티 커플 코디룩', '7', 70000, 50000, 20000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '여름 일상룩 코디 제안 !!', '7', 70000, 50000, 20000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '장마철 편안한 캐주얼룩', '7', 70000, 50000, 20000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '타미진 스트라이프 커플룩', '7', 70000, 50000, 20000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--Insert Into product(code, name, kind, cost_price, list_price, sales_margin,content, image, useyn, bestyn, regdate) Values(product_code_seq.nextval, '캘빈클라인 데일리 스포티룩', '7', 70000, 50000, 20000, 'CK진 남여 간절기 데일리룩', 'noImage.jpg', '1', '0', sysdate) ;
+--commit;
+
+
+select * from product;
+
+--// member 테이블 생성 작업//-------------------------------------------------------------
+--Drop Table member;
+Create table member(
+    id varchar2(20),
+    pwd varchar2(20) not null,
+    name varchar2(40) not null,
+    email varchar2(40),
+    zip_num varchar2(7),
+    address varchar2(100),
+    phone varchar2(20),
+    useyn char(1) default 'y',
+    regdate date default sysdate,
+    primary key(id)
+    );
+    
+--// worker 테이블 생성 작업//-------------------------------------------------------------
+ Create Table worker(
+    id varchar2(20),
+    pwd varchar2(20) not null,
+    name varchar2(40) not null,
+    primary key(id)
+    );
+
+--// address 테이블 생성 작업//-------------------------------------------------------------
+Create Table address(
+    zip_num varchar2(7),
+    sido varchar2(30),
+    gugun varchar2(30),
+    dong varchar2(100),
+    zip_code varchar2(30),
+    bunji varchar2(30)
+);
+
+--// cart 테이블 생성 작업//-------------------------------------------------------------
+-- Drop Table cart
+Create Table cart(
+    cart_no number(10),
+    member_id varchar2(20) not null,
+    product_code  number(5) not null,
+    quantity number(5) default 1,
+    result char(1) default '1',
+    regdate date default sysdate,
+    primary key(cart_no)
+);
+
+Create sequence cart_no_seq increment by 1 start with 1;
+
+--// orders 테이블 생성 작업//-------------------------------------------------------------
+-- Drop Table orders
+Create table orders(
+    order_no number(10),
+    member_id varchar2(20) not null,
+    order_date date default sysdate,
+    primary key(order_no)
+);
+Create sequence order_no_seq increment by 1 start with 1;
+
+--// order_item 테이블 생성 작업//-------------------------------------------------------------
+--drop table order_item
+Create Table order_item(
+    item_no number(10),
+    order_no number(10),
+    product_code number(5) not null,
+    quantity number(5),
+    result char(1) default '1',
+    primary key(item_no)
+) ;
+Create Sequence order_item_seq increment by 1 start with 1;
+
+--// qna 테이블 생성 작업//-------------------------------------------------------------
+Create Table qna(
+    no number(5),
+    subject varchar2(100) not null,
+    content varchar2(1000),
+    reply varchar2(1000),
+    member_id varchar2(20),
+    replyn char(1) default '1',
+    regdate date default sysdate,
+    primary key(no)
+);
+
+-- 현재 데이터베이스에 생성된 모든 테이블 조회
+select * from tab;
+
+desc worker
+select * from worker;
+--// worker 데이터 삽입 작업//-------------------------------------------------------------
+insert into worker(id, pwd, name) values('java', '1234', '관리자');
+commit;
+
+
+
+

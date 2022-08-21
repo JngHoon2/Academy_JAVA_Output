@@ -1,0 +1,172 @@
+-- systemp account 
+Create user product identified by 1234 ;
+
+grant create session to product;
+
+grant create table, resource to product ;
+
+-- product account
+
+Create table product(
+    code number(5),
+    name varchar2(100),
+    kind char(1),
+    cost_price number(8) default 0,
+    list_price number(8) default 0,
+    sales_margin number(8) default 0,
+    content varchar2(1000),
+    image varchar2(50) default 'default.jpg',
+    useyn char(1)  default 'y',
+    bestyn char(1)  default 'n',
+    regdate date default sysdate,
+   primary key(code)
+)   
+
+create sequence product_code_seq increment by 1 start with 1;
+
+Insert into product Values(product_code_seq.nextval, '개념을 콕콕 잡아주는 데이터베이스', 21000, 'db.jpg', '데이터베이스에 관한 모든덧...');
+Insert into product Values(product_code_seq.nextval, '개념을 콕콕 잡아주는 데이터베이스2', 21000, 'db.jpg', '2데이터베이스에 관한 모든덧...');
+Insert into product Values(product_code_seq.nextval, '개념을 콕콕 잡아주는 데이터베이스3', 22000, 'db.jpg', '3데이터베이스에 관한 모든덧...');
+Insert into product Values(product_code_seq.nextval, '개념을 콕콕 잡아주는 데이터베이스4', 24000, 'db.jpg', '4데이터베이스에 관한 모든덧...');
+Insert into product Values(product_code_seq.nextval, '개념을 콕콕 잡아주는 데이터베이스5', 25000, 'db.jpg', '5데이터베이스에 관한 모든덧...');
+
+commit;
+
+
+
+Select c.seq, c.code, c.name, c.price, c.picture, c.description
+From(
+    Select rownum as seq, b.code, b.name, b.price, b.picture, b.description
+    From (
+        Select rownum, a.code, a.name, a.price, a.picture, description
+        From product a
+        Order By a.code Desc
+    ) b
+)C
+ Where c.name like '%개념%'
+And c.seq Between 1 And 3
+
+Select Count(code) as total 
+From product
+Where name like '%개념%'
+
+Select count(code) as totalCount From product
+
+Select code, name, price, picture, description
+From product 
+Where code = 1 
+
+show user
+
+Select c.seq, c.code, c.name, c.price, c.picture, c.description 
+From( 	Select rownum as seq, b.code, b.name, b.price, b.picture, b.description    
+    From ( 		
+        Select rownum, a.code, a.name, a.price, a.picture, description    	
+        From product a 	
+       --  Where a.name like '%4%'
+        Order By a.code Desc     
+    ) B
+) C 
+Where  c.seq Between 1 And 10
+
+
+delete from product where code = 12
+
+commit
+
+Create table member(
+    id varchar2(20),
+    pwd varchar2(20) not null,
+    name varchar2(40) not null,
+    email varchar2(40),
+    zip_num varchar2(7),
+    address varchar2(100),
+    phone varchar2(20),
+    useyn char(1) default 'y',
+    regdate date default sysdate,
+    primary key(id)
+)
+   
+   Create Table worker(
+    id varchar2(20),
+    pwd varchar2(20) not null,
+    name varchar2(40) not null,
+    primary key(id)
+    );
+     
+Create Table address(
+    zip_num varchar2(7),
+    sido varchar2(30),
+    gugun varchar2(30),
+    dong varchar2(100),
+    zip_code varchar2(30),
+    bunji varchar2(30)
+)
+    
+Create Table cart(
+    cart_no number(10),
+    member_id varchar2(20) not null,
+    product_code  number(5) not null,
+    quantity number(5) default 1,
+    result char(1) default '1',
+    regdate date default sysdate,
+    primary key(cart_no)
+) 
+   
+   Create sequence cart_no_seq increment by 1 start with 1
+   
+Create table orders(
+    order_no number(10),
+    member_id varchar2(20) not null,
+    order_date date default sysdate,
+    primary key(order_no)
+)
+    Create sequence order_no_seq increment by 1 start with 1
+    
+--drop table order_item
+Create Table order_item(
+    item_no number(10),
+    order_no number(10),
+    product_code number(5) not null,
+    quantity number(5),
+    result char(1) default '1',
+    primary key(item_no)
+)  
+Create Sequence order_item_seq increment by 1 start with 1
+    
+Create Table qna(
+    no number(5),
+    subject varchar2(100) not null,
+    content varchar2(1000),
+    reply varchar2(1000),
+    member_id varchar2(20),
+    replyn char(1) default '1',
+    regdate date default sysdate,
+    primary key(no)
+)    
+
+   
+   Create Sequence qna_no_seq increment by 1 start with 1
+   
+Insert into worker(id, pwd, name) values('abc1', '124', 'abc_name1');
+Insert into worker(id, pwd, name) values('abc2', '124', 'abc_name2');
+Insert into worker(id, pwd, name) values('abc3', '124', 'abc_name3');
+Insert into worker(id, pwd, name) values('abc4', '124', 'abc_name4');
+Insert into worker(id, pwd, name) values('abc5', '124', 'abc_name5');
+Insert into worker(id, pwd, name) values('abc6', '124', 'abc_name6');
+Insert into worker(id, pwd, name) values('abc7', '124', 'abc_name7');
+Insert into worker(id, pwd, name) values('abc8', '124', 'abc_name8');
+Insert into worker(id, pwd, name) values('abc9', '124', 'abc_name9');
+Insert into worker(id, pwd, name) values('abc10', '124', 'abc_name10');
+Insert into worker(id, pwd, name) values('abc11', '124', 'abc_name11');
+Insert into worker(id, pwd, name) values('abc12', '124', 'abc_name12');
+Insert into worker(id, pwd, name) values('abc13', '124', 'abc_name13');
+Insert into worker(id, pwd, name) values('abc14', '124', 'abc_name14');
+Insert into worker(id, pwd, name) values('abc15', '124', 'abc_name15');
+
+select id from worker
+
+show user;
+
+
+   
