@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function formSubmit() {
+    var params = jQuery("#formname1").serialize(); // serialize() : 입력된 모든Element(을)를 문자열의 데이터에 serialize 한다.
+    jQuery.ajax({
+        url: '샘플ajax.php',
+        type: 'POST',
+        data:params,
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8', 
+        dataType: 'html',
+        success: function (result) {
+            if (result){
+                // 데이타 성공일때 이벤트 작성
+            }
+        }
+    });
+}
+</script>
+</head>
+<body>
+	<form name="formname1" id="formname1" style="margin: 0px;">
+		<div>
+			<label for="fname">이름</label> : <input type="text" name="fname"
+				id="fname" value="C.m.A" />
+		</div>
+		<div>
+			<label for="femail">이메일</label> : <input type="text" name="femail"
+				id="femail" value="" />
+		</div>
+		<div>
+			<label for="sex">성별</label> : <input type="radio" name="sex"
+				value="0" />여자 <input type="radio" name="sex" value="1"
+				checked="checked" />남자
+		</div>
+		<div>
+			<label for="job">직업</label> : <select name="job" id="job">
+				<option value="직업1">직업1</option>
+				<option value="직업2">직업2</option>
+				<option value="직업3">직업3</option>
+			</select>
+		</div>
+		<div>
+			<input type="button" value="Ajax 폼 전송" onclick="formSubmit()" />
+		</div>
+	</form>
+</body>
+</html>

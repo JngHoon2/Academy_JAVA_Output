@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>콤보박스 값 변경시 이벤트를 통한 작업</title>
+	<style type="text/css">
+		.backColor{
+			background-color: lightBlue;
+		}
+	</style>
+	
+  	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  	
+	<script type="text/javascript">
+	
+		$(document).ready(function(){
+			//body에 배경색 바꾸는 방법 
+			$('body').addClass('backColor');
+			
+			$('#lstFavorites').on('change', function() {
+				
+				// #select option 체크값 알아내는 방법
+				var _selectedValue = $("#lstFavorites option:selected").val();
+				
+				//alert($("#lstFavorites option:selected").val());
+				
+				$('#selectedValue').text($("#lstFavorites option:selected").val());
+				$('#selectedText').text($("option:selected").text());
+
+				
+				var request = $.ajax({		//ajax() 함수 호출
+					url : "ajax04_02.jsp",	//Url
+					method : "POST",		//보내는 방식
+					data : {selectedValue : _selectedValue},	//전송할 파라미터(없으면 생략가능)
+					dataType : "json"		//응답 Type => application/json : json || text/plain:text || text/html : html || text/xml : xml(응답데이터 없으면 생략가능)
+				});
+
+				request.done(function(data){
+					console.log(data)
+					var result = data.selectedValue;
+					
+					// 서버에서 전송된 value 값으로 콤보박스 값 선택
+					$("#selectedBox").val(result);
+					
+					$('#result').empty();
+					$('#result').html(result);
+				});
+				
+				request.fail(function(qjFp, textStatus){
+					alert('선택된 값을 확인하세요.' + textStatus);
+				});
+			})
+		});	
+		
+	</script>
+</head>
+<body>
+
+    <select id="lstFavorites">
+        <option selected value="1">JAVA</option>
+        <option value="2">JSP - View</option>
+        <option value="3">Servlet - Controller</option>
+        <option value="4">Dao - Data Access Object</option>
+        <option value="5">Vo or Dto - Data Transfer Object</option>
+    </select>
+    <br>
+    <br>
+ 	선택된 text : <span id="selectedText"></span><br>
+ 	선택된 value : <span id="selectedValue"></span>
+	<br> <br><br>
+	서버를 거쳐온 값으로 콤보박스(Select option) 세팅<br>
+    <select id="selectedBox">
+        <option selected value="1">JAVA</option>
+        <option value="2">JSP - View</option>
+        <option value="3">Servlet - Controller</option>
+        <option value="4">Dao - Data Access Object</option>
+        <option value="5">Vo or Dto - Data Transfer Object</option>
+    </select>
+    <br>
+    <br>
+	
+	서버에서 전송된 값 : <span id="result"></span>
+</body>
+</html>

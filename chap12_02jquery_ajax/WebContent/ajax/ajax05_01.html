@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>다중 선택 콤보 박스</title>
+
+	<style type="text/css">
+		.backColor{
+			background-color: lightBlue;
+		}
+	</style>
+	
+  	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			//body에 배경색 바꾸는 방법 
+			$('body').addClass('backColor');
+			
+			$('#searchKeyWord').click(function(){
+				
+				//select box 다중 선택 or 단일선택
+				//[단일선택] 선택된 항목의 value를 갖고 오는 방법
+				//var type = $("#selectSportsType option:selected").val();
+				//[단일선택] 선택된 항목의 text 값을 갖고 오는 방법
+				//var type = $("#selectSportsType option:selected").text();	//예, 축구, 수영...
+				
+				//[다중 선택] 전체 선택된 value값 추출(배열형태로)
+				var arrType = [];	// var arrType = new Array();
+				arrType = $("#selectSportsType").val();	// 예) 1, 2, 3....value
+				
+				//배열값 확인
+				//$.each(arrType,function(index,item){
+				//	alert(arrType[index]);
+				//});
+
+				var request = $.ajax({				//ajax() 함수 호출
+					url : "ajax05_02.jsp",			//Url
+					method : "post",				//보내는 방식
+					data : {searchType : arrType},	//자바스크립트 배열 전송(없으면 생략가능)
+					dataType : "json"				//응답 Type => application/json : json
+				});
+
+				//var types = $("#selectSportsType").val();
+				//data:{'types[]', types}
+				
+				// 응답 성공 콜백
+				request.done(function(data){
+					console.log(data)
+					var result = data.list;			// 결과는 list 타입
+					$('#relatedKeyword').empty();	// 연관 검색어 Display
+					
+					//alert(result);	//<option>손흥민</option> 이런 형태
+					
+					$('#relatedKeyword').html(result);
+				});
+				// 응답 실패 콜백
+				request.fail(function(qjFp, textStatus){
+					alert('조회 결과가 없습니다.' + textStatus);
+				});
+			})
+		});	
+		
+	</script>
+</head>
+<body>
+	<h3> 다중선택 콤보 박스 </h3>
+	<div>
+		<select id = "selectSportsType" multiple="multiple" style="width:100px;height:250px;">
+			<option value="1">축구</option>
+			<option value="2">수영</option>
+			<option value="3">게임</option>
+		</select>
+		<button type="button" id="searchKeyWord">연관단어 검색</button>
+		<select id = "relatedKeyword" multiple="multiple" style="width:100px;height:250px;">
+			<option value="1"></option>
+			<option value="2"></option>
+			<option value="3"></option>
+			<option value="4"></option>
+			<option value="5"></option>
+		</select>
+	</div>
+	
+</body>
+</html>

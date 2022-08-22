@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ajax Test ajax.html</title>
+	<!-- jQuery를 사용하기 위한 자바스크립트 import(최신버전)  -->
+	<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+	
+	<script type="text/javascript">
+		// Ajax 이 기종 언어 간의 데이터 송수신 기법(Javascript <-> 서블릿/jsp)
+		// '#ajaxCall' 버튼을 클랙했을 때 ajax 함수를 통해서 ajaxResult.jsp 를 호출
+		$(document).ready(function(){
+
+			// 1. ajax 함수 호출 형태 #1
+			$('#ajaxCall').click(function(){
+				var request = $.ajax({		// ajax() 함수 호출
+					url : "ajax01_02.jsp",	// 요청을 처리할 Url
+					method : "post",		// 보내는 방식
+					data : {paramNum : 1},	// 전송할 파라미터(key:value, 없으면 생략가능)
+					// 서버로 부터 돌려받는 데이터의 유형
+					// 응답 Type => application/json : json || text/plain : text || 
+					// text/html : html || text/xml : xml(응답데이터 없으면 생략가능)
+					dataType : "json"	// json 타입으로 돌려받겠다
+				});
+				// 성공시 본 콜백함수가 자동호출됨(응답 json 데이터-객체가 파라미터로 주어짐)
+				request.done(function(data){	// json 데이터가 파라미터(data)로 들어감
+					console.log(data);			// 웹브라우저 개발자도구 콘솔창에 객체 형태로 표시됨
+					// data는 객체이므로 화면에 바로 출력 불가함(객체 안의 값을 출력해야).
+					console.log(data.param1);
+					$('#message').append(data.param1);
+				});
+				// 실패시 본 콜백함수 자동호출됨
+				// 파라미터 두 개는 자유명칭(실패한 메시지는 두 번째 파라미터를 통해 전달됨.)
+				request.fail(function(jqXHR, textStatus) {	
+					alert( "Request failed : " + textStatus );
+				});
+			});	// end ajax()
+			
+			// 2. ajax 함수 호출 형태 #2
+			$('#ajaxCall2').click(function(){
+				$.ajax({		//ajax() 함수 호출
+					url : "ajax01_02.jsp",	//Url
+					method : "POST",		//보내는 방식
+					data : {paramNum : 2},	//전송할 파라미터(없으면 생략가능)
+					dataType : "json",
+					// 성공시 콜백함수 자동호출(응답 json 데이터가 파라미터로 주어짐)
+					success: function(data, textStatus) {
+						// 웹브라우저의 콘솔 창에 출력됨
+						// data는 object 형태
+						console.log(data);	
+
+						if(data != null){
+							console.log(data.param2)
+							var name = data.param2.name;
+							var age = data.param2.age;
+							var address = data.param2.address;
+							$('#message').append(name + " " + age + " " + address);
+						}
+						
+					},// 실패시 콜백함수 자동호출
+					 error:function(data,textStatus){
+						 alert( "Request failed : " + textStatus );
+				    },
+			         complete:function(data,textStatus){
+			            //alert("success 함수 실행후에 실행됨!");
+				    }
+				});
+			});	// end ajax()
+			
+			// 3. jQuery 이벤트 처리 함수 on()
+			// 아직 생성되지 않은 하위 요소에 대한 이벤트를 처리하는 기능
+			// 하나의 요소에 여러개의 이벤트를 한꺼번에 바인딩 가능
+			// 아래와 같은 형태도 가능
+			/*
+			$( "#dataTable tbody tr" ).on( "click", function() {
+			  console.log($(this).text());
+			});
+			*/
+			$('#ajaxCall3').on('click', function(){
+				$.ajax({		//ajax() 함수 호출
+					url : "ajax01_02.jsp",	//Url
+					method : "POST",		//보내는 방식
+					data : {paramNum : 3},	//전송할 파라미터(없으면 생략가능)
+					dataType : "json",		//서버로 부터 전송받을 데이터 타입
+					// 성공시 콜백함수 자동호출(응답 json 데이터가 파라미터로 주어짐)
+					success: function(data, textStatus) {
+						// 웹브라우저의 콘솔 창에 출력됨
+						// data는 object 형태
+						console.log(data);	
+
+						if(data != null){
+							var strTemp = "";
+							strTemp += "<table border='1'>";
+							strTemp += "<tr><td>순번</td><td>이름</td><td>나이</td><td>거주지</td></tr>";
+							data.param3.forEach(function (item, index, array) {    
+								strTemp += "<tr>";
+								strTemp += "<td>" + (index + 1) + "</td><td>" + item.name + "</td><td>" + item.age + "</td><td>" + item.address + "</td><br><br>";
+								strTemp += "<tr>";
+							});
+							strTemp += "</table>";
+							$('#message').append(strTemp);
+						}
+						
+					},// 실패시 콜백함수 자동호출
+					 error:function(data,textStatus){
+						 alert( "Request failed : " + textStatus );
+				    },
+			         complete:function(data,textStatus){
+			            //alert("success 함수 실행후에 실행됨!");
+				    }
+				});	// end ajax()
+				
+			});	// end call3 click			
+			
+		}); // end document ready end $('#ajaxCall').click
+	</script>
+</head>
+<body>
+	<button type="button" id="ajaxCall">호출</button><br><br>
+	<button type="button" id="ajaxCall2">호출2</button><br><br>
+	<button type="button" id="ajaxCall3">호출3</button>
+	<br><br>
+	<div id="message"></div>
+</body>
+</html>

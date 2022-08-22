@@ -1,0 +1,10 @@
+[chap12_02jquery_ajax 특이사항]
+
+ - 데이터베이스 접속 없이 클라이언트와 서블릿간의  Ajax 호출 코딩 훈련
+
+1. ajax01_01.html 복습
+ - javascript 라이브러리 import를 CDN(최신 jquery로 변경) 기존 jquery-1.6.2.js는 예전 버전
+   <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+2.  ajax02_01.html - ajax02_02.jsp
+	ajax03_01.html - ajax03_02.jsp

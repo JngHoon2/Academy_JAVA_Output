@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>아이디 중복 체크()</title>
+
+  	<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	<script type="text/javascript">
+	
+		$(document).ready(function(){		
+			// 1. Click 이벤트 정의
+			$('#idCheckBtn').on('click', function(){
+				
+				var _id = $("#memberId").val();
+				
+				var request = $.ajax({		// ajax() 함수 호출
+					url : "ajax02_02.jsp",	// 요청을 처리할 Url
+					method : "post",		// 보내는 방식
+					data : {id : _id},	// 전송할 파라미터(key:value, 없으면 생략가능)
+					// 서버로 부터 돌려받는 데이터의 유형
+					// 응답 Type => application/json : json || text/plain : text || 
+					// text/html : html || text/xml : xml(응답데이터 없으면 생략가능)
+					dataType : "json"	// json 타입으로 돌려받겠다
+				}); // end ajax()
+				// 성공시 본 콜백함수가 자동호출됨(응답 json 데이터-객체가 파라미터로 주어짐)
+				request.done(function(data){	// json 데이터가 파라미터(data)로 들어감
+					console.log(data.isDuplicate);
+					var result = data.isDuplicate;
+					if(result){
+						$('#resultMsg').html("이미 아이디가 존재합니다.");						
+					}else{
+						$('#resultMsg').html("사용 가능한 아이디입니다.");
+					}
+				});
+				// 실패시 본 콜백함수 자동호출됨
+				// 파라미터 두 개는 자유명칭(실패한 메시지는 두 번째 파라미터를 통해 전달됨.)
+				request.fail(function(jqXHR, textStatus) {	
+					alert( "Request failed : " + textStatus );
+				});
+			
+			});	// end click event
+			
+		});	// end $(document).ready(
+	
+	</script>
+
+</head>
+<body>
+	아이디 : <input type="text" id="memberId" name="id">
+	<input type="button" id="idCheckBtn" value="중복체크" />
+	<div id="resultMsg"></div>
+</body>
+</html>

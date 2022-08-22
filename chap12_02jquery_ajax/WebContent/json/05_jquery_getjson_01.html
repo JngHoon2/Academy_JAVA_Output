@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+    <title>$.getJSON을 통해서 비동기적으로 외부에서 받아서 하드디스크에 저장한 JSON 파일 읽어들이기</title>
+
+    <script src="jquery-1.6.2.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+			
+        	//아이디가 btn이고 그 자식들 중에서 btnLoad 클래스를 찾아서 click이벤트 부여
+        	$('#btn .btnLoad').click(function(){
+
+        		//jquery 내장 함수인 getJSON() 이용해서 "JQuery.getJSON.js" 객체를 읽어들여라($ : jQuery 객체)
+        		//그리고 읽은 값을 function(data) data에 넣어줘라.
+        		$.getJSON("05_jquery_getjson_data.js", function(data){
+        			//panelView 요소의 >< 사이 값을 지워라.
+        			$('#panelView').empty();
+        			
+        			//table 변수에 제목 부분 만들어서 보관
+        			var table = "<table border='1'><tr><td>인덱스</td><td>번호</td><td>이름</td></tr>";
+        			
+        			//data 가 갖고 있는 값을 each 문으로 반복(inde:순번, entry:값)
+        			//entry["Num"] entry 내부의 키명이 Num인 것의 값을 꺼내라.
+        			$.each(data, function(index, entry){
+        				table += '<tr>';
+        				table += '<td>' + index + '</td>';			//첫번째 <td>
+        				table += '<td>' + entry["Num"] + '</td>';	//두번째 <td>
+        			
+        				//키명이 Name이라고 명시, 왜냐하면 Num 키와 값은 있고 Name 키와 값은 없을 수도 있기 때문
+        				//그런데 Num은 있고 Name이 없는 Json Data는 아예 읽어오질 못했음.
+        				if(entry["Name"]){
+        					table += '<td>' + entry["Name"] + '</td>';//세번째 <td>
+        				}
+        				
+        				table += "</tr>";
+        			});
+        			
+        			table += "</table>";
+       				$('#panelView').append(table);
+       				
+        		}); // end $.getJSON    		
+        	});
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="btn">
+    	<div class="btnLoad">HTML읽어오기</div>
+    </div>
+
+    <div id="panelView">
+		<!-- 이 위치에 Json 객체의 값을 Table형태로 출력 -->
+    </div>
+
+</body>
+
+</html>
+

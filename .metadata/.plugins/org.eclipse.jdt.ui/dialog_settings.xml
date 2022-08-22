@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item key="org.eclipse.jdt.ui.last.selected.jre.kind2" value="1"/>
-	<item key="org.eclipse.jdt.ui.lastextjar" value="D:\works\chap11_jsp_web12\WebContent\WEB-INF\lib"/>
+	<item key="org.eclipse.jdt.ui.lastextjar" value="/Users/tuan/Documents/works/chap11_jsp_web12/WebContent/WEB-INF/lib"/>
 	<item key="TypeHierarchyViewPart.hierarchyview" value="2"/>
 	<item key="TypeHierarchyViewPart.qualifiednames" value="false"/>
 	<item key="TypeHierarchyViewPart.linkeditors" value="false"/>
@@ -154,8 +154,8 @@
 	<section name="org.eclipse.jdt.internal.ui.wizards.buildpaths.NewVariableEntryDialog">
 		<item key="DIALOG_X_ORIGIN" value="210"/>
 		<item key="DIALOG_Y_ORIGIN" value="-56"/>
-		<item key="DIALOG_WIDTH" value="770"/>
-		<item key="DIALOG_HEIGHT" value="625"/>
-		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+		<item key="DIALOG_WIDTH" value="557"/>
+		<item key="DIALOG_HEIGHT" value="351"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
 	</section>
 </section>

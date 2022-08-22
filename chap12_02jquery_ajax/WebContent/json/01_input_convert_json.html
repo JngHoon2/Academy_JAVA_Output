@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- jQuery CDN 포털사이트에서 제공하는 jquery 함수 사용 -->
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+</head>
+<body>
+	     
+	<br>
+	<br>     아이디 : <input type="text" id="id1"> , 
+			비밀번호 : <input type="text" id="pw1">
+	<br>
+	<br>    아이디 : <input type="text" id="id2"> , 
+			비밀번호 : <input type="text" id="pw2">
+	<br>
+	<br>     
+	<button id="changeBtn">JSON 문자열로 변환</button>
+	<br>
+	<br>     
+	<strong> :: JSON 문자열로 변환된 형태 :: </strong>
+	<br>
+	<br>    
+	<div id="result"></div>
+	     
+	<script>         
+		$("#changeBtn").click(function(){     
+			
+			// 1. 자바스크립트 객체를 담을 배열을 선언            
+			var scriptArray = new Array();                         
+			
+			for(var i=1; i<=2; i++){     
+				/*
+				  2. 자바스크립트 객체 생성
+					- 자바 처럼 객체를 미리 만들어 놓고 사용하지 않고 즉석에서 멤버 변수 선언
+					- id, pw가 멤버 변수로 바로 선언하면서 값을 저장하고 있음.
+				*/
+				var scriptObject = new Object();                                
+				
+				// 3. 객체의 멤버 변수에 html input 값 저장                
+				scriptObject.id = $("#id" + i).val();                
+				scriptObject.pw = $("#pw" + i).val();    
+				                                
+				// 4. 객체 배열에 생성된 객체 저장
+				scriptArray.push(scriptObject) ;            
+			}
+			
+			// 5. 자바스크립트 객체 보기
+			console.log(scriptArray);
+			
+			// 6. stringify() 함수를 통해서 json 형태의 문자열로 변환.            
+			var jsonData = JSON.stringify(scriptArray);     
+			console.log(jsonData);        
+			$("#result").html(jsonData);            
+				
+		});    
+	</script>	 
+</body>
+</html>

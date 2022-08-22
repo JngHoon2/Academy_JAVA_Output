@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+  	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#btnSubmit').on('click', function(){
+				var params = $('#formm').serialize();
+				
+				$.ajax({
+					url : 'ajax06_form_serialize3.jsp',
+					type : 'POST',
+					data : params,
+					dataType : 'json',
+					success : function(data, status, successObj){
+						if(data != null){
+							console.log(data.member);
+							console.log("status : " + status);
+							console.log(successObj);
+							console.log(data.member.name);
+							
+							var name = data.member.name;
+							var age = data.member.age;
+							var address = data.member.address;
+							
+							var member =  "이름 : " + name + " " 
+							+ "나이 : " + age + " " 
+							+ "주소 : " + address;
+							
+							$('#message').append(member);
+							$('#message').append("<br>");
+						}
+					}, 
+					error : function(failObj, status){
+						console.log(failObj);
+						console.log(status);
+					}
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<form name = "formm" id = "formm" style = "margin:0px;">
+		<div>
+			<label for=name>이름</label> : <input type = "text" name = "name" id = "name" value = "홍길동"/>
+		</div>
+		<div>
+			<label for=age>나이</label> : <input type = "text" name = age id = age value = "18"/>
+		</div>
+		<div>
+			<label for=address>주소</label> : <input type = "text" name = "address" id = "address" value = "주소"/>
+		</div>
+		<div>
+			<input type="button" id = "btnSubmit" name = "btnSubmit" value="Ajax폼 전송">
+		</div>
+	</form>
+	<br><br>
+	<div id="message"></div>
+</body>
+</html>

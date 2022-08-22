@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Input type text 값을 보내서 연산 결과 받기[ready()의 순서에 대한 설명]</title>
+	<style type="text/css">
+		.backColor{
+			background-color: lightBlue;
+		}
+	</style>
+	
+  	<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	<script type="text/javascript">
+		//$(document).ready(function(){
+			//.....................
+		//});
+	</script>
+</head>
+<body>
+	<input type="text" id="num1"><br />
+	<input type="text" id="num2"><br />
+	<br>
+	<button type="button" id="call">계산</button><br />
+	<br>
+	<input type="text" id="numResult" value="결과값" readonly><br />
+	<br>
+	<div id="resultValue"></div>
+	
+	<script type="text/javascript">
+		//$(document).ready(function(){
+			
+			//body 에 배경색 바꾸는 방법 
+			$('body').addClass('backColor');
+			
+			$('#call').on('click', function(){
+				
+				var num1 = $('#num1').val();
+				var num2 = $('#num2').val();
+				
+					var request = $.ajax({			//ajax() 함수 호출
+						url : "ajax03_02.jsp",	//Url
+						method : "POST",			//보내는 방식
+						data : {					
+							paramNum1 : num1,		//보낼 파라미터
+							paramNum2 : num2
+							},	
+						dataType : "json"			//응답 받을 Type => 
+					});						
+					request.done(function(data){
+						console.log(data)
+						var result = data.result;
+						$('#numResult').val(result);
+						$('#resultValue').text(result);
+					});
+					
+					request.fail(function(qjFp, textStatus){
+						alert('실패 메시지 :' + textStatus);
+					});
+				});				
+		//});	
+		
+	</script>	
+	
+</body>
+</html>
