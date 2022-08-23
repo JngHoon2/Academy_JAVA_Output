@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			$('#btn .btnLoadjson').on('click', function(){
+				$.getJSON("02_jquery_getjson_data.js", function(data){
+					$('#panelView').empty();
+					
+					var table = "<table border='1'><tr><td>인덱스</td><td>번호(num)</td><td>이름(name)</td></tr>";
+					
+					$.each(data, function(index, entry){
+						table += '<tr>';
+						if(entry["Num"] != "" && entry["Name"] != ""){
+							table += '<td>' + index + '</td>';
+							table += '<td>' + entry["Num"] + '</td>';
+							table += '<td>' + entry["Name"] + '</td>';
+						}
+						table += "</tr>";
+					});
+					table += "</table>";
+					$('#panelView').append(table);
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="btn">
+		<div>
+			<input type="button" class="btnLoadjson" value="json으로 된 회원 데이터 읽기">
+		</div>
+	</div>
+	<div id="panelView">
+	
+	</div>
+</body>
+</html>

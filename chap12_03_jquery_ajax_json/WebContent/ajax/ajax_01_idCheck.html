@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>아이디 중복 체크</title>
+	
+  	<style type="text/css">
+		.backColor{
+			background-color: lightBlue;
+		}
+	</style>	
+	
+	<!-- jQuery CDN 포털사이트에서 제공하는 jquery 함수 사용 -->
+	<script  src="http://code.jquery.com/jquery-latest.min.js"></script> 
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			//body 에 배경색 바꾸는 방법 
+			$('body').addClass('backColor');
+			
+		  	/*
+		  	 [ajax 호출]
+		  	 - type : 서버로 요청할 method type
+		  	 - dataType : 처리 결과를 서버로 부터 전송 받을 type
+		  	 - url : 요청을 받을 서버의 서블릿 또는 jsp의 경로
+		  	 - data : 서버로 전송할 데이터(키 : 값 쌍으로)
+		  	 - success, error, complete : 콜백함수 
+		  		 
+		  	 [콜백함수]
+		  	 - ajax 호출후에 전송 받을 결과를 처리하는 함수로 자동으로 불려짐
+		  	*/
+		  	$('#id').on('change', function(){
+		  		var inputId = $('#id').val();	// id 입력값
+		  		
+		  		if(inputId == null || inputId.length == 0){
+		  			alert('ID를 입력하세요.');
+		  		}
+	    var url = "http://localhost:9000/chap12_03_jquery_ajax_json/idCheck";
+		  		
+				$.ajax({
+					type:"post",
+					dataType:"text",
+					async:true,  
+					url: url,
+					data: {id : inputId},
+					success:function (data, textStatus){
+						console.log(data);
+						if(data == 'usable') {
+		                    $('#result').css('color', 'black');
+		                    $('#result').text('사용할 수 있는 ID입니다.');
+		                } else {
+		                    $('#result').css('color', 'red'); 
+		                    $('#result').text('이미 사용 중인 아이디입니다.');
+		                    $('#id').focus();
+		                }
+					},
+					error:function(data,textStatus){
+						alert("id중복 체크중 오류 발생!!");
+					},
+					complete:function(data,textStatus){
+						//alert("작업 성공 - 2");
+					}
+				});	// end ajax call
+		  	});	// end on change event
+  		});	// end document ready
+	</script>
+</head>
+<body>
+	<h3>ID 중복 체크(Servlet DB)</h3>
+   <table style="border: 1px solid skyblue;">
+        <tr>
+            <td>아이디 : </td>
+            <td><input type="text" name="id" id="id" size="10"></td>
+        </tr>
+        <tr>
+            <td>비밀번호 :</td>
+            <td><input type="text" name="pwd" id="pwd" size="10"></td>
+        </tr>
+    </table>
+	<!-- <input type="button" id="btnIdCheck" value="id중복체크" /><br><br> -->
+	<div id="result"></div>
+	 
+</body>
+</html>

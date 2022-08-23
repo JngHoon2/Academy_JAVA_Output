@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			$("#changeBtn").on('click', function(){
+				var scriptArray = new Array();
+				
+				for(var i = 1 ; i <= 3; i++){
+					var scriptObject = new Object();
+					
+					scriptObject.name = $("#name"  + i).val();
+					scriptObject.age = $("#age"  + i).val();
+					scriptObject.address = $("#address"  + i).val();
+			
+					scriptArray.push(scriptObject);
+				}
+				console.log(scriptArray);
+				
+				var jsonData = JSON.stringify(scriptArray);
+				console.log(jsonData);
+				$("#result").html(jsonData);
+			});
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<table>
+			<thead>
+				<tr>
+					<th>순서</th>
+					<th>이름</th>
+					<th>나이</th>
+					<th>주소</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>1</th>
+					<th><input type="text" id = "name1" value="홍길동"></th>
+					<th><input type="text" id = "age1" value="18"></th>
+					<th><input type="text" id = "address1" value="평안남도"></th>
+				</tr>
+				<tr>
+					<th>2</th>
+					<th><input type="text" id = "name2" value="이정민"></th>
+					<th><input type="text" id = "age2" value="25"></th>
+					<th><input type="text" id = "address2" value="울산광역시"></th>
+				</tr>
+				<tr>
+					<th>3</th>
+					<th><input type="text" id = "name3" value="김기중"></th>
+					<th><input type="text" id = "age3" value="30"></th>
+					<th><input type="text" id = "address3" value="전북"></th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div>
+		<button id="changeBtn">JSON 문자열로 변환</button>
+	</div>
+	<div>
+		<div id="result"></div>
+	</div>
+</body>
+</html>

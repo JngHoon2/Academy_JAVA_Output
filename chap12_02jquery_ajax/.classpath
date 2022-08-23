@@ -9,5 +9,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/tuan/Documents/works/chap11_jsp_web12/WebContent/WEB-INF/lib/jstl.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
