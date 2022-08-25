@@ -38,4 +38,8 @@ id="WebApp_ID" version="4.0">
 		<url-pattern>/board/*</url-pattern>
 	</filter-mapping>
  
+ 	<listener>
+ 		<listener-class>listener.ContextLoaderListener</listener-class>
+ 	</listener>
+ 
 </web-app>

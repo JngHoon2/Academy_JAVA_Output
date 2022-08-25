@@ -19,25 +19,30 @@ public class BoardDao {
 	private ResultSet rs;
 
 	private static DataSource dataSource;
-	private static BoardDao instance;
+	//private static BoardDao instance;
 
-	private BoardDao() {
+	public BoardDao() {
 		System.out.println("여기는 BoardDao 생성자");
-		try {
-			Context ctx = new InitialContext();
-			Context envContext = (Context) ctx.lookup("java:/comp/env");
-			dataSource = (DataSource) envContext.lookup("jdbc/oracle");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+//		try {
+//			Context ctx = new InitialContext();
+//			Context envContext = (Context) ctx.lookup("java:/comp/env");
+//			dataSource = (DataSource) envContext.lookup("jdbc/oracle");
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
 	}
 
-	// 싱글톤 팬턴으로 생성
-	public static BoardDao getInstance() {
-		if (instance == null)
-			instance = new BoardDao();
-		return instance;
+
+	public void setDataSource(DataSource dataSource) {
+		this.dataSource = dataSource;
 	}
+	
+	// 싱글톤 팬턴으로 생성
+//	public static BoardDao getInstance() {
+//		if (instance == null)
+//			instance = new BoardDao();
+//		return instance;
+//	}
 
 	// 게시물 목록 조회 메소드
 	public ArrayList<BoardVo> selectBoardList() {

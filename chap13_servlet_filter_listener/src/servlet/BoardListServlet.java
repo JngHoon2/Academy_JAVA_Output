@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,7 +24,8 @@ public class BoardListServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 
-	private BoardDao boardDao = BoardDao.getInstance();
+	//private BoardDao boardDao = BoardDao.getInstance();
+	
     
     public BoardListServlet() {
         super();
@@ -42,19 +44,29 @@ public class BoardListServlet extends HttpServlet {
 		
 		String url = "/boardList.jsp";
 		
-		// 게시물 목록을 조회
-		ArrayList<BoardVo> boardList = boardDao.selectBoardList();
-		
-		// 디버깅 코드
-		//System.out.println("게시물 건수 : " + boardList.size());
-		
-		// request에 목록 객체 저장
-		request.setAttribute("boardList", boardList);
-		
-		// Jsp화면으로 보내기
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher(url);
-		requestDispatcher.forward(request, response);
-		
+		try {
+			ServletContext sc = this.getServletContext();
+			BoardDao boardDao = (BoardDao)sc.getAttribute("boardDao");
+			
+			// 게시물 목록을 조회
+			ArrayList<BoardVo> boardList = boardDao.selectBoardList();
+			
+			// 디버깅 코드
+			//System.out.println("게시물 건수 : " + boardList.size());
+			
+			// request에 목록 객체 저장
+			request.setAttribute("boardList", boardList);
+			
+			// Jsp화면으로 보내기
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher(url);
+			requestDispatcher.forward(request, response);
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+			request.setAttribute("error", e);
+			RequestDispatcher rd = request.getRequestDispatcher("/error.jsp");
+			rd.forward(request, response);
+		}
 	}
 
 }
