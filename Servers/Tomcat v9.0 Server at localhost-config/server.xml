@@ -152,7 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="chap11_jsp_web12" path="/chap11_jsp_web12" reloadable="true" source="org.eclipse.jst.jee.server:chap11_jsp_web12"/><Context docBase="chap12_02jquery_ajax" path="/jquery_ajax" reloadable="true" source="org.eclipse.jst.jee.server:chap12_02jquery_ajax"/><Context docBase="chap12_03_jquery_ajax_json" path="/chap12_03_jquery_ajax_json" reloadable="true" source="org.eclipse.jst.jee.server:chap12_03_jquery_ajax_json"/></Host>
+      <Context docBase="chap11_jsp_web12" path="/chap11_jsp_web12" reloadable="true" source="org.eclipse.jst.jee.server:chap11_jsp_web12"/><Context docBase="chap12_02jquery_ajax" path="/jquery_ajax" reloadable="true" source="org.eclipse.jst.jee.server:chap12_02jquery_ajax"/><Context docBase="chap12_03_jquery_ajax_json" path="/chap12_03_jquery_ajax_json" reloadable="true" source="org.eclipse.jst.jee.server:chap12_03_jquery_ajax_json"/><Context docBase="chap13_servlet_filter" path="/chap13_servlet_filter" reloadable="true" source="org.eclipse.jst.jee.server:chap13_servlet_filter"/></Host>
     </Engine>
   </Service>
 </Server>

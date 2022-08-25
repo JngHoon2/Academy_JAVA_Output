@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="database.DatabaseClass"/>
-<fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
-<fullyQualifiedTypeName name="database.PrintClass"/>
-<fullyQualifiedTypeName name="java.sql.Connection"/>
-<fullyQualifiedTypeName name="jxl.Workbook"/>
-<fullyQualifiedTypeName name="jxl.Sheet"/>
-<fullyQualifiedTypeName name="java.lang.Double"/>
-<fullyQualifiedTypeName name="java.sql.JDBCType"/>
 <fullyQualifiedTypeName name="database.db.Jdbc"/>
 <fullyQualifiedTypeName name="database.db.LocalFileReaderClass"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
@@ -25,7 +17,6 @@
 <fullyQualifiedTypeName name="servlet02.MemberDAO"/>
 <fullyQualifiedTypeName name="servlet02.MemberVO"/>
 <fullyQualifiedTypeName name="java.sql.Statement"/>
-<fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="javabean.Dept"/>
 <fullyQualifiedTypeName name="javabean.EmpClass"/>
 <fullyQualifiedTypeName name="javabean.SingleTonClass"/>
@@ -47,7 +38,6 @@
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="board.vo.BoardVO"/>
 <fullyQualifiedTypeName name="com.sun.java.util.jar.pack.Package.Class.Member"/>
-<fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="board.dao.BoardDAO"/>
 <fullyQualifiedTypeName name="board.vo.Board"/>
 <fullyQualifiedTypeName name="sun.rmi.server.Dispatcher"/>
@@ -60,4 +50,14 @@
 <fullyQualifiedTypeName name="dao.BoardDAO"/>
 <fullyQualifiedTypeName name="dto.BoardModel"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="javax.naming.InitialContext"/>
+<fullyQualifiedTypeName name="com.sun.xml.internal.bind.CycleRecoverable.Context"/>
+<fullyQualifiedTypeName name="javax.naming.Context"/>
+<fullyQualifiedTypeName name="javax.activation.DataSource"/>
+<fullyQualifiedTypeName name="javax.sql.DataSource"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="dao.MemberDAO"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
 </qualifiedTypeNameHistroy>
