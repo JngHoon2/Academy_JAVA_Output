@@ -1,0 +1,143 @@
+/* 오라클 18c에서 데이터 베이스 생성 */
+-- 데이터 베이스 생성은 sys 계정에서 해야 함 
+ALTER SESSION SET "_ORACLE_SCRIPT"=true;
+Create user shoppingcart identified by 1234;
+Grant create session to shoppingcart;
+Grant Create table, resource to shoppingcart;
+Grant Create view to shoppingcart;
+Alter user shoppingcart default tablespace users quota unlimited on users;
+
+-- 테이블 생성은 해당  데이터 베이스에 접속한 후에 진행해야 함
+create table users(
+user_id VARCHAR2(50) primary key,
+user_pwd varchar2(50) not null,
+user_name varchar2(100) not null,
+user_email varchar2(50)
+)
+
+create table cart(
+user_id varchar2(50),
+product_id varchar2(50),
+quantity number(11,2) default 0,
+unit_price number default 0,
+create_date date default sysdate,
+constraint pk_cart primary key(user_id, product_id)
+)
+
+create table category(
+category_id varchar2(50) primary key,
+category_name varchar2(100) not null,
+category_desc varchar2(200),
+create_date date default sysdate
+)
+
+create table product(
+product_id varchar2(50) primary key,
+product_name varchar2(100) not null,
+category_id varchar2(50) not null,
+unit_price number(11,2) default 0,
+image varchar2(100),
+create_date date default sysdate,
+constraint fk_product foreign key (category_id) references category(category_id)
+)
+
+drop table order_header;
+
+create table order_header(
+order_id number primary key,
+user_id varchar2(50),
+email varchar2(50),
+phone_no varchar2(13),
+address varchar2(100), 
+total_amt number(11,2) default 0,
+status char(3) default '0',
+payment_method char(3),
+create_date date default sysdate,
+constraint fk_orders_user_id foreign key(user_id) references users(user_id)
+);
+create sequence seq_order_header increment by 1 start with 1 ;
+ 
+ drop table order_item;
+ 
+create table order_item(
+     order_item_id number,
+     order_id number ,
+     product_id varchar2(50),     
+     quantity number default 0,
+     unit_price number(11,2) default 0,
+     amt number(11,2) default 0,
+     create_date date default sysdate,
+     constraint pk_order_item_id primary key(order_item_id),
+     constraint fk_order_item_order_id foreign key(order_id) references order_header(order_id),
+     constraint fk_orders_product_id foreign key(product_id) references product(product_id)
+);
+ create sequence seq_order_item increment by 1 start with 1 ;
+
+commit;
+
+
+INSERT INTO users VALUES ('java','1234','홍길동','hong@kildong.com');
+INSERT INTO users VALUES('john','1234','존오','johnoh@google.com');
+INSERT INTO users VALUES('steve','1234','스티브','steve@amazon.com');
+
+INSERT INTO category VALUES ('11','여성하이힐','여성하이힐',sysdate);
+INSERT INTO category VALUES ('12','여성시계','여성시계',sysdate);
+INSERT INTO category VALUES ('13','남성벨트','남성벨트',sysdate);
+INSERT INTO category VALUES ('14','남성구두','남성구두',sysdate);
+INSERT INTO category VALUES ('15','남성시계','남성시계',sysdate);
+INSERT INTO category VALUES ('16','여성핸드백','여성핸드백',sysdate);
+INSERT INTO category VALUES ('17','남성수트','남성수트',sysdate);
+INSERT INTO category VALUES ('18','여성의류','여성의류',sysdate);
+
+INSERT INTO product VALUES ('1','LA MEDUSA PATENT LEATHER PUMPS','11',53000,'female-shoes.jpg',sysdate);
+INSERT INTO product VALUES ('2','OLEVS Womens Dress Watches Rose Gold ','12',150000,'female-watch.jpg',sysdate);
+INSERT INTO product VALUES ('3','Salvatore Ferragamo Belt for men','13',380000,'man-belt.jpg',sysdate);
+INSERT INTO product VALUES ('4','Italian handmade shoes by Enzo Bonafe','14',2500000,'man-shoes.jpg',sysdate);
+INSERT INTO product VALUES ('5','ROLEX DATEJUST 41MM FULL-SET REF. 126331','15',13000000,'men-watch.jpg',sysdate);
+INSERT INTO product VALUES ('6','GG Marmont matelass? shoulder bag','16',800000,'ladies-bag.jpg',sysdate);
+INSERT INTO product VALUES ('7','Business Suits For Wedding','17',680000,'man-suits.jpg',sysdate);
+INSERT INTO product VALUES ('8','Chanel 21 Season cotton ecru','18',95000,'woman-cloths.jpg',sysdate);
+
+
+INSERT INTO orders VALUES (1, 'java', '2', 2, 106000, sysdate);
+INSERT INTO orders VALUES ('2','john','1', 15, 2250000,sysdate);
+INSERT INTO orders VALUES ('3','steve','3',20,7600000,sysdate);
+INSERT INTO orders VALUES ('4','java','4',100,25000000,sysdate);
+INSERT INTO orders VALUES (5, 'java','6',150,22500000,sysdate);
+INSERT INTO orders VALUES (6, 'steve','7',25,3750000,sysdate);
+INSERT INTO orders VALUES (7, 'john','5',30,1590000,sysdate);
+INSERT INTO orders VALUES (8, 'java','3',7,91000000,sysdate);
+INSERT INTO orders VALUES (9, 'john','4',13,10400000,sysdate);
+INSERT INTO orders VALUES (10, 'steve','8',8,5440000,sysdate);
+commit;
+
+---====================================================
+
+Select m.product_id, m.product_name, m.category_id, m.category_name, m.unit_price, m.image
+from (
+     Select p.product_id, p.product_name, p.category_id, c.category_name, p.unit_price, p.image 
+     From product p Left outer join category c ON p.category_id = c.category_id
+     order by p.create_date desc
+)m
+where rownum <= 4
+
+
+Select m.product_id, m.product_name, m.category_id, m.category_name, m.unit_price, m.image
+from (
+     Select o.product_id , p.product_name , p.category_id , c.category_name , p.unit_price , p.image , sum(amt) as amt
+     from orders o left outer join product p on o.product_id = p.product_id
+     inner join category c on p.category_id = c.category_id
+     group by o.product_id, p.product_name , p.category_id , c.category_name , p.unit_price , p.image
+     order by amt desc
+)m
+where rownum <= 4
+
+
+SELECT p.product_id, p.product_name, p.image, c.quantity, c.unit_price , p.image , c.user_id, c.create_date 
+From cart c inner join product p on c.product_id = p.product_id inner join user u on c.user_id = u.user_id where c.user_id = :1  
+Order BY p.create_date DESC, 
+
+OriginalSql = SELECT p.product_id, p.product_name, p.image, c.quantity, c.unit_price , p.image , 
+c.user_id, c.create_date From cart c inner join product p on c.product_id = p.product_id inner join user u on c.user_id = u.user_id where c.user_id = ? 
+Order BY p.create_date DESC
+

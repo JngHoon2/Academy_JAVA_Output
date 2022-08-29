@@ -1,18 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="database.db.Jdbc"/>
-<fullyQualifiedTypeName name="database.db.LocalFileReaderClass"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="database.vo.CafeClass"/>
-<fullyQualifiedTypeName name="database.vo.DataClass"/>
-<fullyQualifiedTypeName name="java.io.FileWriter"/>
-<fullyQualifiedTypeName name="java.io.IOException"/>
-<fullyQualifiedTypeName name="database.db.DatabaseClass"/>
-<fullyQualifiedTypeName name="database.vo.EmpClass"/>
-<fullyQualifiedTypeName name="database.db.PrintClass"/>
-<fullyQualifiedTypeName name="database.vo.TempClass"/>
-<fullyQualifiedTypeName name="interface01.vo.LGTV"/>
-<fullyQualifiedTypeName name="interface01.vo.SamsungTV"/>
 <fullyQualifiedTypeName name="interface01.vo.TV"/>
 <fullyQualifiedTypeName name="servlet02.MemberDAO"/>
 <fullyQualifiedTypeName name="servlet02.MemberVO"/>
@@ -21,10 +8,8 @@
 <fullyQualifiedTypeName name="javabean.EmpClass"/>
 <fullyQualifiedTypeName name="javabean.SingleTonClass"/>
 <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
-<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 <fullyQualifiedTypeName name="javax.servlet.http.Cookie"/>
 <fullyQualifiedTypeName name="javabean.MemberDAO"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="javafx.scene.control.Alert"/>
 <fullyQualifiedTypeName name="java.lang.OutOfMemoryError"/>
 <fullyQualifiedTypeName name="javabean.MemberBean"/>
@@ -49,15 +34,30 @@
 <fullyQualifiedTypeName name="util.PageNavigator"/>
 <fullyQualifiedTypeName name="dao.BoardDAO"/>
 <fullyQualifiedTypeName name="dto.BoardModel"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
-<fullyQualifiedTypeName name="javax.naming.InitialContext"/>
 <fullyQualifiedTypeName name="com.sun.xml.internal.bind.CycleRecoverable.Context"/>
-<fullyQualifiedTypeName name="javax.naming.Context"/>
-<fullyQualifiedTypeName name="javax.activation.DataSource"/>
-<fullyQualifiedTypeName name="javax.sql.DataSource"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="dao.MemberDAO"/>
+<fullyQualifiedTypeName name="oracle.net.aso.l"/>
+<fullyQualifiedTypeName name="com.google.gson.JsonParser"/>
+<fullyQualifiedTypeName name="com.google.gson.JsonObject"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="dto.SportsStar"/>
+<fullyQualifiedTypeName name="com.google.gson.Gson"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletContextListener"/>
+<fullyQualifiedTypeName name="javax.naming.InitialContext"/>
+<fullyQualifiedTypeName name="javax.naming.Context"/>
+<fullyQualifiedTypeName name="javax.activation.DataSource"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="javax.sql.DataSource"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
+<fullyQualifiedTypeName name="dao.BoardDao"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="javax.servlet.annotation.WebListener"/>
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="chap14_servlet_polymorphism.TV"/>
+<fullyQualifiedTypeName name="chap14_servlet_polymorphism.SamsungTV"/>
+<fullyQualifiedTypeName name="chap14_servlet_polymorphism.LGTV"/>
+<fullyQualifiedTypeName name="container.BeanFactory"/>
 </qualifiedTypeNameHistroy>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/Users/tuan/Documents/works/chap13_servlet_shopping"/>
 		<item value="/Users/tuan/Documents/works/chap11_jsp_web12"/>
 		<item value="/Users/tuan/Documents/works/chap06/src/board"/>
 	</list>
@@ -11,6 +12,7 @@
 		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/Users/tuan/Documents/works/chap13_servlet_shopping"/>
 			<item value="/Users/tuan/Documents/works/chap12_02jquery_ajax"/>
 			<item value="q"/>
 			<item value="/Users/tuan/Documents/works/chap011_jsp_web11"/>
