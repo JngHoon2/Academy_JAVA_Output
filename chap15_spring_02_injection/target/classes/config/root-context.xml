@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- [root-context.xml]은 개발자가 이름 붙이기 나름
+		1. 스프링 컨테이너가 구동될 때 이 파일을 읽어서 여러가지 일을 처리한다. 그래서 환경설정 파일이라고 함.
+		2. 빈으로 생성되어 스프링 컨테이너 안에서 관리될 클래스들을 기록 해놓음.
+		3. 거기에 등록된 빈들은 다른 모든 웹 관련 컴포넌트들이 사용(참고)한다.
+		4. <bean> 태그를 이용해서 클래스를 스프링 컨테이너의 Bean으로 등록.
+		5. 빈으로 생성할 클래스의 전체 경로를 적을 때는 자동완성 기능을 이용해야 오타를 줄일 수 있다.
+	 -->
+	 
+	<!-- <bean> 루트 엘리먼트:
+		루트엘리먼트에 오는 xmlns, xsi:schemaLocation 등은 빈 설정파일에서 사용할 태그들을 사용하는데 있어서 참고가 될 정보들이 있는 사이트와 스키마 파일이다.
+		이 사이트들에 들어가면 "스키와 xsd에 대한 버전별 파일들이 존재한다.
+		
+		처음에 Spring Bean Configuration 파일을 만들 때 xmlns 정보와 버전 별 스키마 파일을 선택할 수 도 있고 나중에 필요에 따라 추가할 수도 있다.
+	 -->
+	 
+	 <!-- SamsungTV를 빈으로 등록하라는 선언 -->
+	 <!-- lazy-init="true" : 컨테이너 구동시가 아닌 사용자의 요청이 있을 때 빈으로 등록 -->
+	 <!-- scope="singleton" : 싱글톤으로 하나의 객체만 생성(기본이 싱글톤) -->
+	 <!-- <bean id="tv" class="com.javalab.spring.vo.SamsungTV" lazy-init="true" scope="singleton"></bean> -->
+	 
+	 <bean id="tv" class="com.javalab.spring.vo.SamsungTV3rd" lazy-init="true" scope="singleton">
+	 	<property name = "speaker" ref="applespeaker" />
+	 </bean>
+	 
+	 <bean id="applespeaker" class="com.javalab.spring.vo.AppleSpeaker" />
+		
+</beans>
