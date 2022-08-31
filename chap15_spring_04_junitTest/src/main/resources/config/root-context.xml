@@ -2,7 +2,10 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						https://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context 
+						http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	
 	<!-- [root-context.xml]은 개발자가 이름 붙이기 나름
 		1. 스프링 컨테이너가 구동될 때 이 파일을 읽어서 여러가지 일을 처리한다. 그래서 환경설정 파일이라고 함.
@@ -25,7 +28,7 @@
 	 <!-- <bean id="tv" class="com.javalab.spring.vo.SamsungTV" lazy-init="true" scope="singleton"></bean> -->
 	 <context:property-placeholder location="classpath:config/value.properties" />
 	 
-	 <bean id="tv" class="com.javalab.spring.vo.SamsungTV" lazy-init="true" scope="singleton">
+	 <bean id="samsungTV" class="com.javalab.spring.vo.SamsungTV" lazy-init="true" scope="singleton">
 	 	<constructor-arg ref="appleSpeaker"/>
 	 	<constructor-arg value="2700000"/>
 	 	<property name="color" value="${color}" />
