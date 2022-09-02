@@ -1,26 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="interface01.vo.TV"/>
-<fullyQualifiedTypeName name="servlet02.MemberDAO"/>
-<fullyQualifiedTypeName name="servlet02.MemberVO"/>
-<fullyQualifiedTypeName name="java.sql.Statement"/>
-<fullyQualifiedTypeName name="javabean.Dept"/>
-<fullyQualifiedTypeName name="javabean.EmpClass"/>
-<fullyQualifiedTypeName name="javabean.SingleTonClass"/>
-<fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
-<fullyQualifiedTypeName name="javax.servlet.http.Cookie"/>
-<fullyQualifiedTypeName name="javabean.MemberDAO"/>
-<fullyQualifiedTypeName name="javafx.scene.control.Alert"/>
-<fullyQualifiedTypeName name="java.lang.OutOfMemoryError"/>
-<fullyQualifiedTypeName name="javabean.MemberBean"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
-<fullyQualifiedTypeName name="org.apache.commons.fileupload.disk.DiskFileItemFactory"/>
-<fullyQualifiedTypeName name="org.apache.commons.fileupload.servlet.ServletFileUpload"/>
 <fullyQualifiedTypeName name="org.apache.commons.fileupload.FileItem"/>
 <fullyQualifiedTypeName name="java.io.OutputStream"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
-<fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="board.vo.BoardVO"/>
 <fullyQualifiedTypeName name="com.sun.java.util.jar.pack.Package.Class.Member"/>
 <fullyQualifiedTypeName name="board.dao.BoardDAO"/>
@@ -30,7 +13,6 @@
 <fullyQualifiedTypeName name="dao.DBConnection"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="util.PageNavigator"/>
 <fullyQualifiedTypeName name="dao.BoardDAO"/>
 <fullyQualifiedTypeName name="dto.BoardModel"/>
@@ -42,7 +24,6 @@
 <fullyQualifiedTypeName name="oracle.net.aso.l"/>
 <fullyQualifiedTypeName name="com.google.gson.JsonParser"/>
 <fullyQualifiedTypeName name="com.google.gson.JsonObject"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="dto.SportsStar"/>
 <fullyQualifiedTypeName name="com.google.gson.Gson"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletContextListener"/>
@@ -53,11 +34,30 @@
 <fullyQualifiedTypeName name="javax.sql.DataSource"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
 <fullyQualifiedTypeName name="dao.BoardDao"/>
-<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 <fullyQualifiedTypeName name="javax.servlet.annotation.WebListener"/>
-<fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="chap14_servlet_polymorphism.TV"/>
 <fullyQualifiedTypeName name="chap14_servlet_polymorphism.SamsungTV"/>
 <fullyQualifiedTypeName name="chap14_servlet_polymorphism.LGTV"/>
 <fullyQualifiedTypeName name="container.BeanFactory"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+<fullyQualifiedTypeName name="com.javalab.spring.vo.SamsungTV"/>
+<fullyQualifiedTypeName name="com.javalab.spring.vo.SonySpeaker"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+<fullyQualifiedTypeName name="com.javalab.spring.vo.Speaker"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="org.springframework.test.context.ContextConfiguration"/>
+<fullyQualifiedTypeName name="org.springframework.test.context.junit4.SpringJUnit4ClassRunner"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.AbstractApplicationContext"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="com.javalab.spring.vo.TV"/>
+<fullyQualifiedTypeName name="org.junit.Ignore"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="com.javalab.spring.vo.BoardVo"/>
+<fullyQualifiedTypeName name="com.javalab.spring.dao.BoardDao"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>
