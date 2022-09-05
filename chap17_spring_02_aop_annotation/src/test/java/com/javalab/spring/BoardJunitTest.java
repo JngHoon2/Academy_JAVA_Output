@@ -5,6 +5,8 @@ import static org.junit.Assert.assertNotNull;
 
 import java.util.List;
 
+import javax.sql.DataSource;
+
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -41,14 +43,24 @@ public class BoardJunitTest {
 	@Autowired
 	private BoardDao dao;
 	
+	@Autowired
+	private DataSource dataSource;
+	
 	@Test
+	@Ignore
+	public void testDao() {
+		assertNotNull(dataSource);
+	}
+	
+	@Test
+	@Ignore
 	public void testGetBoard() {
 		BoardVo vo = new BoardVo();
 		vo.setNo(1);
 		
 		BoardVo board = service.getBoard(vo);
-		assertEquals(1, board.getNo());
 		System.out.println(board.toString());
+		assertEquals(1, board.getNo());
 	}
 	
 	@Test

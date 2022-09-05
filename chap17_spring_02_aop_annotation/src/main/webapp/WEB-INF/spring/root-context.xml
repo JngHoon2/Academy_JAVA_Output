@@ -27,10 +27,12 @@
 		<property name="username" value="${jdbc.username}"></property>
 		<property name="password" value="${jdbc.password}"></property>
 	</bean>
-	
-	<!-- AOP를 어노테이션 방식으로 사용하겠다고 선언 -->
-	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 	<!-- <bean id="before" class="com.javalab.spring.common.BeforeAdvice"></bean>
 	<aop:config>
 		<aop:pointcut
