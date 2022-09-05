@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.javalab.spring.common.AfterThorwingAdvice;
 import com.javalab.spring.common.Log4JAdvice;
 import com.javalab.spring.common.LogAdvice;
 import com.javalab.spring.dao.BoardDao;
@@ -20,6 +21,7 @@ public class BoardServiceImpl implements BoardService {
 	private BoardDao boardDao;
 
 	private LogAdvice logAdvice;
+	
 
 	public BoardServiceImpl() {
 		logAdvice = new LogAdvice();
@@ -28,9 +30,9 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public void insertBoard(BoardVo vo) {
 
-//		if(vo.getSeq() == 0){
-//			throw new IllegalArgumentException("0번 글은 등록할 수 없습니다.");
-//		}
+		if(vo.getNo() == 0){
+			throw new IllegalArgumentException("0번 글은 등록할 수 없습니다.");
+		}
 		this.boardDao.insertBoard(vo);
 	}
 
