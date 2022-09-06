@@ -8,7 +8,7 @@ public interface BoardService {
 
 	/** CRUD 기능 메서드 구현 
 	 * @return **/
-	void insertBoard(BoardVo vo); 
+	int insertBoard(BoardVo vo); 
 
 	// 글 수정
 	void modifyBoard(BoardVo vo); 

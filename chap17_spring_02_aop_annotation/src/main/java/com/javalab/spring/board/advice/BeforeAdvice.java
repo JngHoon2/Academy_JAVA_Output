@@ -5,8 +5,8 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Service;
 
-@Service
-@Aspect
+//@Service
+//@Aspect
 public class BeforeAdvice {
 	public BeforeAdvice() {}
 	

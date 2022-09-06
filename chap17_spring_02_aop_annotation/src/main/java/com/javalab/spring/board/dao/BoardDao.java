@@ -40,11 +40,12 @@ public class BoardDao {
 
 	/** CRUD 기능 메서드 구현 **/
 	// 글 등록
-	public void insertBoard(BoardVo vo) {
-		System.out.println("====>> Spring JDBC로 insertBoard() 기능 처리");
+	public int insertBoard(BoardVo vo) {
+		System.out.println("====>> Spring JDBC로 insertBoard() 기능 처리 : " + vo.toString());
 		int result;
 		result = jdbcTemplate.update(BOARD_INSERT_TRANSACTION, vo.getNo(), vo.getTitle(), 
 										vo.getWriter(), vo.getContent());
+		return result;
 	} 
 	
 	// 글 수정

@@ -26,12 +26,17 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public void insertBoard(BoardVo vo) {
-
+	public int insertBoard(BoardVo vo) {
+		
+		int result = 0;
+		
 		if(vo.getNo() == 0){
 			throw new IllegalArgumentException("0번 글은 등록할 수 없습니다.");
 		}
-		this.boardDao.insertBoard(vo);
+		
+		result = this.boardDao.insertBoard(vo);
+		
+		return result;
 	}
 
 	@Override

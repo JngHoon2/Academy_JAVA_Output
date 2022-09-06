@@ -7,8 +7,8 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Service;
 
 
-@Service
-@Aspect
+//@Service
+//@Aspect
 public class AroundAdvice {
 	public AroundAdvice() {}
 	

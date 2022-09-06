@@ -5,12 +5,12 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Service;
 
-@Service
-@Aspect
+//@Service
+//@Aspect
 public class AfterAdvice {
 	public AfterAdvice() {}
 	
-	@Pointcut("execution(*, com.javalab.spring..*Impl.*(..))")
+	@Pointcut("execution(* com.javalab.spring..*Impl.*(..))")
 	public void allPointCut() {}
 	
 	@After("allPointCut()")

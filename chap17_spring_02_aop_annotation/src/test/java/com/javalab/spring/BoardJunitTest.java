@@ -50,17 +50,16 @@ public class BoardJunitTest {
 	@Ignore
 	public void testDao() {
 		assertNotNull(dataSource);
+		System.out.println(dao);
 	}
 	
 	@Test
-	@Ignore
 	public void testGetBoard() {
 		BoardVo vo = new BoardVo();
-		vo.setNo(1);
+		vo.setNo(66);
 		
 		BoardVo board = service.getBoard(vo);
-		System.out.println(board.toString());
-		assertEquals(1, board.getNo());
+		assertEquals(66, board.getNo());
 	}
 	
 	@Test
