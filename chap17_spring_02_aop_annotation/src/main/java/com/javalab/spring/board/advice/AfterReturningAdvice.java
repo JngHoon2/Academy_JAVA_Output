@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 
 import com.javalab.spring.board.vo.BoardVo;
 
-@Service
-@Aspect
+//@Service
+//@Aspect
 public class AfterReturningAdvice {
 	
 	public AfterReturningAdvice() {}

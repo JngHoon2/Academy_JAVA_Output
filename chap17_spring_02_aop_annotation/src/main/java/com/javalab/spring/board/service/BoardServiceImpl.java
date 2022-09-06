@@ -35,6 +35,7 @@ public class BoardServiceImpl implements BoardService {
 		}
 		
 		result = this.boardDao.insertBoard(vo);
+		result = this.boardDao.insertBoard(vo);
 		
 		return result;
 	}

@@ -42,6 +42,7 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="/Users/tuan/Desktop/chap17_spring_02_aop_annotation.zip"/>
 			<item value="/Users/tuan/Desktop/chap11_jsp_web08.zip"/>
 			<item value="/Users/tuan/Desktop/chap11_jsp_web09.zip"/>
 			<item value="/Users/tuan/Desktop/assignment3.zip"/>

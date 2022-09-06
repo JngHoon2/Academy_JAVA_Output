@@ -54,6 +54,7 @@ public class BoardJunitTest {
 	}
 	
 	@Test
+	@Ignore
 	public void testGetBoard() {
 		BoardVo vo = new BoardVo();
 		vo.setNo(66);
@@ -75,13 +76,12 @@ public class BoardJunitTest {
 	}
 	
 	@Test
-	@Ignore
 	public void testInsertBoard() {
 		BoardVo vo = new BoardVo();
-		vo.setNo(66);
-		vo.setTitle("66번 게시물");
-		vo.setWriter("66번 작성자");
-		vo.setContent("66번 내용");
+		vo.setNo(2);
+		vo.setTitle("2번 게시물");
+		vo.setWriter("2번 작성자");
+		vo.setContent("2번 내용");
 		
 		int result = 0;
 		

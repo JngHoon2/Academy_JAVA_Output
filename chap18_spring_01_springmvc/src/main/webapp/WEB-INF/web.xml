@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+	<!-- 
+	 [2] contextConfigLocation
+	 - ContextLoaderListener가 루트 스프링 컨테이너를 만들때 읽어들이는 빈등록 설정 파일을 지정하는 역할 
+	 - root-context.xml에는 모든 서블릿과 필터가 공유하는 루트 스프링 컨테이너에 등록될 빈들이 명시되어 있음.
+	-->
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/spring/root-context.xml</param-value>
+	</context-param>
+	
+	<!-- 
+	 [1] ContextLoaderListener
+	  - 모든 서블릿과 필터가 공유하는 루트 스프링 컨테이너를 생성하는 클래스 역할 
+	-->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<!--
+	 [3] DispatcherServlet
+	  - 클라이언트의 최초 요청이 있을때 DispatcherServlet이 객체로 생성.
+	  - 디스패처 서블릿은 사용자의 요청을 처리하는 컨트롤러 관련 빈들을 생성하여
+	        관리하는 스프링 컨테이너를 생성하는 역할을 한다.
+	 [4] 디스패처 서블릿이 생성될 때 contextConfigLocation에 인자로 설정된
+		파일을 읽어서 스프링 컨테이너를 생성한다.(servlet-context.xml)	
+	 [5] 생성된 디스패처 서블릿이 사용자의 모든 요청을 받고 스프링 컨테이너가 생성한
+		컨트롤러에게 요청을 전달한다. 컨트롤러는 사용자에게서 전달받은 매개변수를
+		"서비스 레이어(비즈니스로직)"에 보낸다. 서비스 레이어는 Dao에게 전달하고
+		Dao는 데이터베이스에 직접 쿼리해서 결과를 받는다. 받은 결과는 역순으로 다시
+		디스패처 서블릿에 전달되어 최종적으로 사용자에게 전송된다.
+	 -->
+	<servlet>
+		<servlet-name>appServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>		
+	<servlet-mapping>
+		<servlet-name>appServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- 한글 UTF-8 Encoding Filter -->
+	<filter>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+</web-app>
