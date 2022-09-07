@@ -7,7 +7,7 @@
 <title>게시물 작성</title>
 
 	<!-- ckeditor용 자바 스크립트 import -->
-	<script type="text/javascript" src='<c:url value="/ckeditor/ckeditor.js" />'></script>
+	<script type="text/javascript" src='<c:url value="resources//ckeditor/ckeditor.js" />'></script>
 	
 	<style type="text/css">
 		* {
@@ -70,7 +70,7 @@
 		</c:if>
 	</div>
 	<div>
-		<form name="boardForm" action="<c:url value="/boardWrite" />" 
+		<form name="boardForm" action="<c:url value="/boardWrite.do" />" 
 				method="post" onsubmit="return boardWriteCheck();">
 			<table>
 				<colgroup>
@@ -84,7 +84,7 @@
 					</tr>
 					<tr>
 						<th align="center">작성자</th>
-						<td><input type="text" name="id" maxlength="20" value="${member.id }" readonly /></td>
+						<td><input type="text" name="writer" maxlength="20"/></td>
 					</tr>
 					<tr>
 						<th align="center">내용</th>
@@ -98,7 +98,7 @@
 			</table>
 			<p class="btn_align">
 				<input type="submit" value="저장" />
-				<input type="button" value="목록" onclick="goUrl('<c:url value="/boardList" />');" />
+				<input type="button" value="목록" onclick="goUrl('<c:url value="/boardList.do" />');" />
 			</p>
 		</form>
 	</div>	

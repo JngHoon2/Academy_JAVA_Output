@@ -33,7 +33,7 @@ public class BoardDAOImpl {
 	private final String BOARD_GET = "select * from simple_board where no=?";
 	private final String BOARD_LIST = "select * from simple_board order by no desc";
 
-	private final String BOARD_INSERT_TRANSACTION = "insert into simple_board (no, title, writer, content) values (?, ?, ?, ?)";
+	private final String BOARD_INSERT_TRANSACTION = "insert into simple_board (no, title, writer, content) values (seq_simple_board.nextval, ?, ?, ?)";
 	
 	public BoardDAOImpl() {
 	}
@@ -43,7 +43,7 @@ public class BoardDAOImpl {
 	public int insertBoard(BoardVO vo) {
 		System.out.println("====>> Spring JDBC로 insertBoard() 기능 처리 : " + vo.toString());
 		int result;
-		result = jdbcTemplate.update(BOARD_INSERT_TRANSACTION, vo.getNo(), vo.getTitle(), 
+		result = jdbcTemplate.update(BOARD_INSERT_TRANSACTION, vo.getTitle(), 
 										vo.getWriter(), vo.getContent());
 		return result;
 	} 
@@ -51,7 +51,7 @@ public class BoardDAOImpl {
 	// 글 수정
 	public void updateBoard(BoardVO vo) {
 		System.out.println("===> Spring JDBC로 updateBoard() 기능 처리");
-		jdbcTemplate.update(BOARD_UPDATE, vo.getTitle(), vo.getWriter(), vo.getContent());
+		jdbcTemplate.update(BOARD_UPDATE, vo.getTitle(), vo.getContent(), vo.getNo());
 	}
 	
 	// 글 삭제

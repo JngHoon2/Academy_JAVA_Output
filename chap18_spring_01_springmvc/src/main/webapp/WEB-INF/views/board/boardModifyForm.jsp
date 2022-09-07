@@ -10,7 +10,7 @@
 <title>글수정</title>
 
 	<script type="text/javascript"
-		src="<c:url value="/ckeditor/ckeditor.js" />">
+		src="<c:url value="resources/ckeditor/ckeditor.js" />">
 	</script>
 	
 	<style type="text/css">
@@ -75,7 +75,7 @@
 	</div>
 	<div>
 		<form name="modifyForm"
-			action="<c:url value="/boardModify" />" method="post"
+			action="<c:url value="/boardModify.do" />" method="post"
 			onsubmit="return boardModifyCheck();">
 			
 			<input type="hidden" name="no" value="<c:out value="${board.no}" />" />
@@ -112,7 +112,7 @@
 				</tbody>
 			</table>
 			<p class="btn_align">
-				<input type="button" value="목록" onclick="goUrl('<c:url value="/boardList" />');" />
+				<input type="button" value="목록" onclick="goUrl('<c:url value="/boardList.do" />');" />
 				<input type="submit" value="저장" />
 			</p>
 		</form>

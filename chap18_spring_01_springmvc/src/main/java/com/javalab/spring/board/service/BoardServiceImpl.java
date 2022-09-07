@@ -13,7 +13,7 @@ import com.javalab.spring.board.vo.BoardVO;
  [비즈니스 로직 - 서비스 Layer] 
  */
 @Service("boardService")
-public class BoardServiceImpl implements BoardService {
+public class BoardServiceImpl implements BoardService { 
 
 	@Autowired
 	private BoardDAOImpl boardDao;
@@ -30,11 +30,11 @@ public class BoardServiceImpl implements BoardService {
 		
 		int result = 0;
 		
-		if(vo.getNo() == 0){
-			throw new IllegalArgumentException("0번 글은 등록할 수 없습니다.");
-		}
+//		if(vo.getNo() == 0){
+//			System.out.println(vo.toString());
+//			throw new IllegalArgumentException("0번 글은 등록할 수 없습니다.");
+//		}
 		
-		result = this.boardDao.insertBoard(vo);
 		result = this.boardDao.insertBoard(vo);
 		
 		return result;

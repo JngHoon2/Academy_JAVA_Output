@@ -70,7 +70,7 @@ public class BoardController {
 	// 게시물 작성 폼을 띄워주는 메소드(핸들러)
 	@RequestMapping(value="/boardWrite.do", method = RequestMethod.GET)
 	public String boardWriteForm(Model model){
-		return "/board/boardWriteForm";	// boardWrite.jsp
+		return "board/boardWriteForm";	// boardWrite.jsp
 	}
 
 	// 작성된 게시물을 데이터베이스에 저장하는 메소드(핸들러)
@@ -88,13 +88,13 @@ public class BoardController {
 		//vo.setNo(no);
 		BoardVO boardVo = boardService.getBoard(vo);
 		model.addAttribute("board", boardVo);
-		return "/board/boardModifyForm";	// boardModify.jsp
+		return "/board/boardModifyForm.do";	// boardModify.jsp
 	}
 	
 	// 수정한 내용을 데이터베이스에 반영하는 메소드(핸들러)
 	@RequestMapping(value="/boardModify.do", method = RequestMethod.POST)
 	public String boardModify(BoardVO vo, Model model){
-		boardService.updateBoard(vo);
+		boardService.modifyBoard(vo);
 		return "redirect:boardList.do"; 
 	}
 

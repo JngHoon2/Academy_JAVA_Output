@@ -112,7 +112,7 @@
 									<c:out value="${board.writer}" />
 								</td>
 								<td align="center">
-									<c:out value="${board.regDate}" />
+									<c:out value="${board.regdate}" />
 								</td>
 								<td align="center">
 									<c:out value="${board.hit}" />

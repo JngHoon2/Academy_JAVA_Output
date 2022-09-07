@@ -131,7 +131,7 @@
 			</div>
 			<p class="btn_align">
 				<input type="submit" value="저장" />
-				<input type="button" value="목록" onclick="goUrl('<c:url value="/boardList" />');" />
+				<input type="button" value="목록" onclick="goUrl('<c:url value="/boardList.do" />');" />
 			</p>
 		</form>
 	</div>	

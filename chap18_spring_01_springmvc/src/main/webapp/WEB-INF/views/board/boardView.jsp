@@ -72,7 +72,7 @@
 				</tr>
 				<tr>
 					<th align="center">작성자</th>
-					<td><c:out value="${board.id}" /></td>
+					<td><c:out value="${board.no}" /></td>
 				</tr>
 				<tr>
 					<th align="center">조회수</th>
