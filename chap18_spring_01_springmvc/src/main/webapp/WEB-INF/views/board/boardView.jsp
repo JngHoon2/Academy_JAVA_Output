@@ -72,7 +72,7 @@
 				</tr>
 				<tr>
 					<th align="center">작성자</th>
-					<td><c:out value="${board.no}" /></td>
+					<td><c:out value="${board.writer}" /></td>
 				</tr>
 				<tr>
 					<th align="center">조회수</th>
@@ -81,7 +81,7 @@
 	
 				<tr>
 					<th align="center">등록 일시</th>
-					<td><c:out value="${board.regdate}" /></td>
+					<td><c:out value="${board.regDate}" /></td>
 				</tr>
 				<tr>
 					<th align="center">내용</th>

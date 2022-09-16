@@ -1,0 +1,117 @@
+[chap18_spring_01_springmvc 특이사항]
+
+ - service, dao 단이 Interface 와 Impl로 만들어지는 원리(그림으로 설명)	
+ - Spring MVC에 대한 전체적인 윤곽을 그려줘야 한다.
+ - ModelAndView를 통해서 화면과 디비 조회 결과를 반환
+ 
+1. 목적 
+ - root-context.xml 에서 Service, Dao 단에서 사용될 빈 설정(등록)
+ - servlet-context.xml 에서 Controll 단에서 사용될 빈 설정(등록)
+ 
+2. 핵심 
+  1) 컨트롤러에서 Dao 단을 바로 접근하는 방법은 대형 프로젝트에 적합하지 않다.
+  2) 앞으로 배우게 될 여러가지 스프링 프레임워크를 적용하기 위해서 컨트롤러와
+     Dao 단을 분리해야 한다.
+  3) 컨트롤러와 Dao단의 중간에 Service layer 즉, 비즈니스 로직 layer가 필요하다.
+  4) 전자정부 프레임워크도 view - presentation layer(컨트롤러) - 
+     service layer(비즈니스 컴포넌트 로직) - data access layer(dao) - 
+          영속계층(데이터베이스) 형태로 설계되어 있다.
+
+ 
+[진행단계]
+
+1. 새로운 Spring Legacy Project 생성
+ - chap18_spring_01_springmvc
+
+2. pom.xml에 디펜던시 추가
+ 1) spring-test, juint 4.13
+ 2) ojdbc8.jar, orai18n
+ 3) spring-jdbc, commons-dbcp
+ 4) AOP 관련 3개 aspectjrt  aspectjweaver aspectjtools
+  
+3. web.xml에   다음 설정
+ - ContextLoaderListener : root 스프링 컨테이너 설정
+ - DispatcherServlet : 자식 스프링 컨테이너 설정
+ - 인코딩 설정
+ 
+4. root-context.xml 설정
+ 1) 위치 : WEB-INF/spring/ 폴더에 위치
+ 2) component-scan
+ 3) aspectj-autoproxy
+ 4) property-placeholder
+ 5) dataSource 관련 설정
+ 6) jdbcTemplate 설정
+
+5. VO 개발
+
+6. DAO 개발
+
+7. Dao Layer 단위테스트
+ - com.javalab.spring.board.dao
+ 1) 단위테스트는 서블릿 컨테이너, 스프링 컨테이너 구동 없이 테스트
+ 2) 먼저 Dao Layer Test
+
+8. Service Layer 개발
+ - com.javalab.spring.board.service 패키지 생성
+ 1) DaoImple에서 Service 인터페이스 자동 생성하기
+  - [Alt + Shift + T] > Extract Interface
+ 2) ServiceImple 클래스 생성
+ 
+9. 컨트롤러 개발
+ - com.javalab.spring.board.controller 패키지 생성
+ 1) chap16_spring_01_bizcomponent 프로젝트의 컨트롤러에서
+  - BoardController.java 클래스 복사해서 붙여넣기
+  - 수정 작업
+  
+ 2) HomeController home 메소드 수정
+  -  return "boardList.do"; // 프로그램 실행시 최초로 나오는 화면
+  
+10. 컨트롤러를 빈으로 생성하는 servlet-context.xml 설정
+ 1) annotation-driven
+ 2) component-scan
+ 3) 컨트롤러가 빈으로 등록되도록 설정작업 완료
+ 
+11. jsp 작업  
+ - chap11_jsp_web11 프로젝트에서 *.jsp 파일 복사해서
+ -  src/main/webapp/WEB-INF/views/board 폴더에 복사
+
+12. chap17_spring_02_aop_annotation 프로젝트의
+ - src/main/resources/config 폴더 복사해서
+ - 새프로젝트의 webapp/WEB-INF/ 폴더에 붙여넣기
+ - cofig/database.properties 붙여넣기
+ - WEB-INF/spring/root-context.xml 붙여넣기
+ 
+13. HomeController.java 수정
+ 
+14. boardWriteForm.jsp에서 작성자를 하드코딩 "java"
+ 1) 현재는 로그인 기능이 없으므로 작성자 아이디 자동으로 못갖고옴.
+  
+15. 프로그램 정상 실행후 다음 단계로 이동
+
+16. Dao Layer를 인터페이스와 Impl로 분리
+ 1) BoardDAOImpl 에서 [Alt + Shift + T]해서 [Extract interface] BoardDao 인터페이스 생성
+ - [주의] 추상메소드를 제외한 모든 체크 옵션 해제!!!!!!!!!!
+
+[정리] ---------- 컨트롤러를 제외한 Service Dao Layer 모두 인터페이스 + Impl 행태로 구현 -------
+
+15. 로깅
+ 1) log4j.xml 수정
+ 2) 모든 System.out.println() -> 수정
+  - 화면에 org.slf4j.Logger 추가
+  - System.out.println() 걷어냄.
+  
+16. 예외
+ 1) web.xml 수정
+  - 404
+  - throwExceptionIfNoHandlerFound
+  - error/404.jsp 추가
+  -      custom404.jsp
+  
+ 1) 실행후 로그 다시 설명
+ 2) 스프링 MVC 각 Layer별로 매커니즘 설명
+ 3) jdbcTemplate 설명
+
+[추가 기능] 
+1. ModelAndView : selectBoardList()
+
+ 

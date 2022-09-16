@@ -3,6 +3,10 @@
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
 
 	<!-- Appenders -->
+	<!-- 로그를 어떤 매체(콘솔, 파일 등)에 출력할지를 지정하는 역할 -->
+	<!-- Target : 어느 쪽에 출력할 지 결정 -->
+	<!-- layout : 로그를 어떤 형태로 출력할지 결정 -->
+	
 	<appender name="console" class="org.apache.log4j.ConsoleAppender">
 		<param name="Target" value="System.out" />
 		<layout class="org.apache.log4j.PatternLayout">
@@ -11,11 +15,16 @@
 	</appender>
 	
 	<!-- Application Loggers -->
+	<!-- 어플리케이션에서 발생하는 로그에 대한 출력 레별 결정 -->
+	<!-- "com.javalab.spring" : 이 패키지에서 발생하는 로그를 출력하겠다는 선언 -->
+	<!-- debug : 메소드에서 선언된 로그 출력문에 logger.debug 이상으로 설정된 로그를 출력하겠다는 선언-->
+	<!--         만약에 여기를 "error"로 해놓으면 메소드에서 logger.debug해놓은 로그는 안찍힘-->
 	<logger name="com.javalab.spring">
-		<level value="error" />
+		<level value="debug" />
 	</logger>
 	
 	<!-- 3rdparty Loggers -->
+	<!-- 3rdparty Loggers는 삭제해도 무방 -->
 	<logger name="org.springframework.core">
 		<level value="info" />
 	</logger>
@@ -32,7 +41,7 @@
 		<level value="info" />
 	</logger>
 
-	<!-- Root Logger -->
+	<!-- Root Logger(루트 로그 설정) -->
 	<root>
 		<priority value="warn" />
 		<appender-ref ref="console" />

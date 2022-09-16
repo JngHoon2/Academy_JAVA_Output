@@ -2,37 +2,35 @@ package com.javalab.spring.board.vo;
 
 import java.sql.Date;
 
-/**
- * 게시판 vo 클래스
- * 
- * @since 2020.02.05
- * @author javalab
- */
+
+/** VO : Value Object **/
+
 public class BoardVO {
 
-	/** 번호 */
 	private int no;
-	/** 제목 */
 	private String title;
-	/** 내용 */
-	private String content;
-	/** 작성자 */
 	private String writer;
-	/** 조회수 */
+	private String content;
+	private Date regDate;
 	private int hit;
-	/** 등록 일시 */
-	private Date regdate;
 
 	public BoardVO() {
-		super();
 	}
 
-	public BoardVO(String title, String content, String writer) {
-		this.title = title;
-		this.content = content;
-		this.writer = writer;
+	@Override
+	public String toString() {
+		String values = "";
+		values += "BoardVO [no=" + this.no; 
+		values +=  ", title=" + this.title;
+		values +=  ", writer=" + this.writer;
+		values +=  ", content=" + this.content;
+		values +=  ", regDate=" + this.regDate;
+		values +=  ", hit=" + this.hit;
+		values += ']';
+		return values;
 	}
 
+	/** getter/setter **/
 	public int getNo() {
 		return no;
 	}
@@ -49,6 +47,14 @@ public class BoardVO {
 		this.title = title;
 	}
 
+	public String getWriter() {
+		return writer;
+	}
+
+	public void setWriter(String writer) {
+		this.writer = writer;
+	}
+
 	public String getContent() {
 		return content;
 	}
@@ -57,12 +63,12 @@ public class BoardVO {
 		this.content = content;
 	}
 
-	public String getWriter() {
-		return writer;
+	public Date getRegDate() {
+		return regDate;
 	}
 
-	public void setWriter(String writer) {
-		this.writer = writer;
+	public void setRegDate(Date regDate) {
+		this.regDate = regDate;
 	}
 
 	public int getHit() {
@@ -73,18 +79,6 @@ public class BoardVO {
 		this.hit = hit;
 	}
 
-	public Date getRegdate() {
-		return regdate;
-	}
 
-	public void setRegDate(Date regdate) {
-		this.regdate = regdate;
-	}
-
-	@Override
-	public String toString() {
-		return "BoardVo [no=" + no + ", title=" + title + ", content=" + content + ", writer=" + writer + ", hit=" + hit
-				+ ", regdate=" + regdate + "]";
-	}
-
+	
 }

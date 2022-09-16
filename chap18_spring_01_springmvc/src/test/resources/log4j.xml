@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.javalab.spring">
+	<logger name="com.freeflux.biz">
 		<level value="info" />
 	</logger>
 	

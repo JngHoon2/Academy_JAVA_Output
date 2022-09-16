@@ -6,12 +6,12 @@ import com.javalab.spring.board.vo.BoardVO;
 
 public interface BoardService {
 
-	/** CRUD 기능 메서드 구현 
-	 * @return **/
+	/** CRUD 기능 메서드 구현 **/
+	// 글 등록
 	int insertBoard(BoardVO vo); 
 
 	// 글 수정
-	void modifyBoard(BoardVO vo); 
+	void updateBoard(BoardVO vo); 
 
 	// 글 삭제
 	void deleteBoard(BoardVO vo); 
@@ -23,3 +23,4 @@ public interface BoardService {
 	List<BoardVO> getBoardList(BoardVO vo); 
 
 }
+

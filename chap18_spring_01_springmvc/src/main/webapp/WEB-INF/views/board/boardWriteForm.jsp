@@ -7,7 +7,7 @@
 <title>게시물 작성</title>
 
 	<!-- ckeditor용 자바 스크립트 import -->
-	<script type="text/javascript" src='<c:url value="resources//ckeditor/ckeditor.js" />'></script>
+	<script type="text/javascript" src='<c:url value="/resources/ckeditor/ckeditor.js" />'></script>
 	
 	<style type="text/css">
 		* {
@@ -84,7 +84,10 @@
 					</tr>
 					<tr>
 						<th align="center">작성자</th>
-						<td><input type="text" name="writer" maxlength="20"/></td>
+						<td>
+							<%-- <input type="text" name="id" maxlength="20" value="${member.id }" readonly /> --%>
+							<input type="text" name="writer" maxlength="20" value="java"  />
+						</td>
 					</tr>
 					<tr>
 						<th align="center">내용</th>

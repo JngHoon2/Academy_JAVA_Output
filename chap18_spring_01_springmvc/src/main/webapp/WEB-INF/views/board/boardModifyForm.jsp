@@ -9,9 +9,9 @@
 <meta content="text/html; charset=UTF-8"></meta>
 <title>글수정</title>
 
-	<script type="text/javascript"
-		src="<c:url value="resources/ckeditor/ckeditor.js" />">
-	</script>
+	<!-- ckeditor용 자바 스크립트 import -->
+	<script type="text/javascript" src='<c:url value="/resources/ckeditor/ckeditor.js" />'></script>
+
 	
 	<style type="text/css">
 		* {
@@ -105,7 +105,7 @@
 						<td colspan="2">
 							<textarea name="content" cols="80" rows="10">
 								<c:out	value="${board.content}" escapeXml="false" />
-							</textarea> 
+							</textarea>
 							<script>CKEDITOR.replace('content');</script>
 						</td>
 					</tr>

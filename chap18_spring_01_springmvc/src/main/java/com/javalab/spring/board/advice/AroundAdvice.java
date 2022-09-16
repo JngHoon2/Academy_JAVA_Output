@@ -5,23 +5,35 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StopWatch;
 
-
-@Service
-@Aspect
+//@Service
+//@Aspect
 public class AroundAdvice {
-	public AroundAdvice() {}
+
+	public AroundAdvice() {
+	}
 	
 	@Pointcut("execution(* com.javalab.spring..*Impl.*(..))")
-	public void allPointCut() {}
+	public void allPointCut(){}
 	
 	@Around("allPointCut()")
 	public Object aroundLog(ProceedingJoinPoint pjp) throws Throwable{
-		System.out.println("[AroundAdvdvice - BEFORE] : 비즈니스 로직 수행전 동작...");
 		
-		Object returnObj = pjp.proceed();
+		String method=pjp.getSignature().getName();
 		
-		System.out.println("[AroundAdvdvice - AFTER] : 비즈니스 로직 수행후 동작...");
-		return returnObj;
+		StopWatch stopWatch = new StopWatch();
+		stopWatch.start();
+		
+		System.out.println("[AroundAdvice - BEFORE] : 비지니스 메서드 수행 전에 처리할 내용...");
+		
+		Object obj = pjp.proceed();
+		
+		System.out.println("[AroundAdvice - AFTER] : 비지니스 메서드 수행 후에 처리할 내용...");
+
+		stopWatch.stop();
+		
+		System.out.println("[AroundAdvice " + method + "()  메서드 수행에 걸린 시간] : "+ stopWatch.getTotalTimeMillis()+"(ms)초");
+		return obj;
 	}
 }
