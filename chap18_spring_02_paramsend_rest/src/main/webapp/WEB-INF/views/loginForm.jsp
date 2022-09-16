@@ -65,8 +65,9 @@
 <body>
    <!-- 주석을 해제해가면서 테스트하세요. -->
    <%-- <form name="frmLogin" method="post" action="${contextPath}/login.do"> --%>
-   <form name="frmLogin" method="post" action="${contextPath}/action2.do">
+  <%--  <form name="frmLogin" method="post" action="${contextPath}/action2.do"> --%>
    <%-- <form name="frmLogin" method="post" action="${contextPath}/action3.do"> --%>
+    <form name="frmLogin" method="post" action="${contextPath}/action2.do">
    
       <h1 style="text-align: center">로그인</h1>
       <table align="center" border="0">

@@ -45,7 +45,7 @@ public class HomeController {
 		return "home";
 	}
 	
-	@RequestMapping(value = "/fomRest", method = RequestMethod.POST)
+	@RequestMapping(value = "/formRest", method = RequestMethod.POST)
 	public String formRest(@ModelAttribute("name") String name) {
 		log.info("formRest name : " + name);
 		return "formRest";

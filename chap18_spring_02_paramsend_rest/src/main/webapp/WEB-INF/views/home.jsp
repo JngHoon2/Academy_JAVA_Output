@@ -1,15 +1,19 @@
-<%@ page contentType="text/html; charset=UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
-<c;set var="contextPath" value="${pageContext.request.contextPath }"/>
-
-<html>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<!DOCTYPE html>
+<html lang="ko-kr">
 <head>
 <meta charset="UTF-8">
-	<title>Home(화면에서 파타미터 전송)</title>
+<title>form param transfer</title>
 </head>
 <body>
-	1. <a href="${contextPath}/login.do">로그인폼으로 가기</a>
-	
+   
+   <!-- 이 부분에서 action 경로를 formRest, formRest2로 변경하면서 각 경로별로 테스트합니다. -->
+   <form name="frm" 
+        method="post" 
+        action="${pageContext.request.contextPath}/formRest">
+      <input type="text" id="name" name="name">
+      <input type="submit" value="전송">
+   </form>
+   
 </body>
 </html>
