@@ -47,6 +47,47 @@
 				}
 			});
 		});
+		
+		$("#btn2").on('click', function(e){
+			var name = $('#name').val();
+			var grade = $('#grade').val();
+			
+			var scriptObj = new Object;
+			scriptObj.name = name;
+			scriptObj.grade = grade;
+			
+			// 자바 스트립트 객체를 json 형태의 문자열로 변환
+			var jsonMember = JSON.stringify(scriptObj);
+			
+			$.ajax({
+				url : '${pageContext.request.contextPath}/action5.do/',
+				type : 'post',
+				dataType: 'text',
+				contentType: "application/json",
+				data : jsonMember,
+				success : function(data){
+					alert("성공!");
+					
+					var jsonInfo = JSON.parse(data);
+					console.log(jsonInfo);
+					
+					//html 생성
+               		var table = "<table border='1'><tr><td>이름</td><td>학년</td></tr>";
+                 		table += '<tr>';
+                 		table += '<td>' + jsonInfo.name + '</td>';   
+                 		table += '<td>' + jsonInfo.grade + '</td>';   
+                 		table += "</tr>";
+                 		table += "</table>";
+                    
+                    	$('#resultDiv').html(table);
+					
+				},
+				error : function(xhr, status){
+					alert("실패!");
+					console.log(xhr + " : " + status);
+				}
+			});
+		});
 	});
 </script>
 </head>

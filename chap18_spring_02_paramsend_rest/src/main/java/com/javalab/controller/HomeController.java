@@ -89,4 +89,18 @@ public class HomeController {
 		
 		return member;
 	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/action5.do", method = {RequestMethod.GET, RequestMethod.POST} )
+	public MemberVo action5(@RequestBody MemberVo memberVo, Model model){
+		log.info("action5.do @RequestBody action");
+		log.info("name : " + memberVo.getName());
+		log.info("grade : " + memberVo.getGrade());
+		
+		MemberVo member = new MemberVo();
+		member.setName(memberVo.getName());
+		member.setGrade(memberVo.getGrade());
+		
+		return member;
+	}
 }

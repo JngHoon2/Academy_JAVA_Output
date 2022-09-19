@@ -1,0 +1,94 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<c:set var="contextPath" value="${pageContext.request.contextPath}" />
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>formRest2</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#btn1").on('click', function(e){
+			var name = $('#name').val();
+			var grade = $('#grade').val();
+			
+			$.ajax({
+				url : '${contextPath}/restAction1.do/name/' + name + "/grade/" + grade,
+				type : 'get',
+				dataType: 'text',
+				success : function(data){
+					console.log("data : " + data);
+					$('#resultDiv').html(data);
+					
+				},
+				error : function(xhr, status){
+					console.log(xhr + " : " + status);
+				}
+			});
+		});
+		
+		$("#btn2").on('click', function(e){
+			var name = $('#name').val();
+			var grade = $('#grade').val();
+			
+			var scriptObj = new Object;
+			scriptObj.name = name;
+			scriptObj.grade = grade;
+			
+			// 자바 스트립트 객체를 json 형태의 문자열로 변환
+			var jsonMember = JSON.stringify(scriptObj);
+			
+			$.ajax({
+				url : '${pageContext.request.contextPath}/restAction2.do/',
+				type : 'post',
+				dataType: 'text',
+				contentType: "application/json",
+				data : jsonMember,
+				success : function(data){
+					alert("성공!");
+					
+					var jsonInfo = JSON.parse(data);
+					console.log(jsonInfo);
+					
+					//html 생성
+               		var table = "<table border='1'><tr><td>이름</td><td>학년</td></tr>";
+                 		table += '<tr>';
+                 		table += '<td>' + jsonInfo.name + '</td>';   
+                 		table += '<td>' + jsonInfo.grade + '</td>';   
+                 		table += "</tr>";
+                 		table += "</table>";
+                    
+                    	$('#resultDiv').html(table);
+					
+				},
+				error : function(xhr, status){
+					alert("실패!");
+					console.log(xhr + " : " + status);
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	이름 :
+	<input type="text" id="name" value="${name}" />
+	<br> 학년 :
+	<input type="text" id="grade" />
+	<br>
+	<br>
+	<input type="button" id="btn1" value="전송1" />
+	<br>
+	<br>
+	<input type="button" id="btn2" value="전송2" />
+	<br>
+	<br>
+
+	<div id="resultDiv"></div>
+</body>
+</html>
