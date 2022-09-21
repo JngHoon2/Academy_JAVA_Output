@@ -10216,3 +10216,4 @@ org.eclipse.core.runtime.CoreException: Launch configuration chap18_spring_01_sp
 	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1374)
 	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:82)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2022-09-21 09:50:23,397 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
