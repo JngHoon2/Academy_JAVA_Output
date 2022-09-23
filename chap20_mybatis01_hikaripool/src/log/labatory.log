@@ -1,35 +1,1123 @@
-2022-09-21 17:14:31 [Catalina-utility-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
-2022-09-21 17:14:31 [Catalina-utility-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Wed Sep 21 17:14:31 KST 2022]; root of context hierarchy
-2022-09-21 17:14:31 [Catalina-utility-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
-2022-09-21 17:14:31 [Catalina-utility-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7358d27f: defining beans []; root of factory hierarchy
-2022-09-21 17:14:31 [Catalina-utility-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 435 ms
-2022-09-21 17:14:31 [Catalina-utility-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
-2022-09-21 17:14:31 [Catalina-utility-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Wed Sep 21 17:14:31 KST 2022]; parent: Root WebApplicationContext
-2022-09-21 17:14:31 [Catalina-utility-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
-2022-09-21 17:14:32 [Catalina-utility-1] INFO  o.s.c.a.ClassPathBeanDefinitionScanner - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
-2022-09-21 17:14:32 [Catalina-utility-1] INFO  o.s.c.a.ClassPathBeanDefinitionScanner - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
-2022-09-21 17:14:32 [Catalina-utility-1] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-2022-09-21 17:14:32 [Catalina-utility-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7c8d47d4: defining beans [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.view.InternalResourceViewResolver#0,homeController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@7358d27f
-2022-09-21 17:14:32 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.javalab.controller.HomeController.home(java.util.Locale,org.springframework.ui.Model)
-2022-09-21 17:14:32 [Catalina-utility-1] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
-2022-09-21 17:14:32 [Catalina-utility-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization completed in 840 ms
-2022-09-21 17:14:36 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Wed Sep 21 17:14:31 KST 2022]; parent: Root WebApplicationContext
-2022-09-21 17:14:36 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7c8d47d4: defining beans [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.view.InternalResourceViewResolver#0,homeController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@7358d27f
-2022-09-21 17:14:38 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
-2022-09-21 17:14:38 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Wed Sep 21 17:14:38 KST 2022]; root of context hierarchy
-2022-09-21 17:14:38 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
-2022-09-21 17:14:39 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@40fa8766: defining beans []; root of factory hierarchy
-2022-09-21 17:14:39 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 818 ms
-2022-09-21 17:14:39 [main] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
-2022-09-21 17:14:39 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Wed Sep 21 17:14:39 KST 2022]; parent: Root WebApplicationContext
-2022-09-21 17:14:39 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
-2022-09-21 17:14:39 [main] INFO  o.s.c.a.ClassPathBeanDefinitionScanner - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
-2022-09-21 17:14:39 [main] INFO  o.s.c.a.ClassPathBeanDefinitionScanner - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
-2022-09-21 17:14:39 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-2022-09-21 17:14:39 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7af52ec7: defining beans [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.view.InternalResourceViewResolver#0,homeController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@40fa8766
-2022-09-21 17:14:40 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.javalab.controller.HomeController.home(java.util.Locale,org.springframework.ui.Model)
-2022-09-21 17:14:40 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
-2022-09-21 17:14:40 [main] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization completed in 761 ms
-2022-09-21 17:14:40 [http-nio-8080-exec-2] INFO  c.javalab.controller.HomeController - Welcome home! The client locale is ko_KR.
-2022-09-21 17:14:45 [Thread-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Wed Sep 21 17:14:39 KST 2022]; parent: Root WebApplicationContext
-2022-09-21 17:14:45 [Thread-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7af52ec7: defining beans [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.view.InternalResourceViewResolver#0,homeController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@40fa8766
+2022-09-23 10:01:19 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2022-09-23 10:01:19 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Fri Sep 23 10:01:19 KST 2022]; root of context hierarchy
+2022-09-23 10:01:19 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+2022-09-23 10:01:19 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022-09-23 10:01:19 [main] WARN  o.s.w.c.s.XmlWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'boardService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.javalab.service.BoardServiceImpl] from ClassLoader [ParallelWebappClassLoader
+  context: ROOT
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@b1bc7ed
+]
+2022-09-23 10:01:19 [main] ERROR o.s.web.context.ContextLoader - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'boardService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.javalab.service.BoardServiceImpl] from ClassLoader [ParallelWebappClassLoader
+  context: ROOT
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@b1bc7ed
+]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:262)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1129)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:409)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:291)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4768)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5230)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:265)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.javalab.service.BoardServiceImpl] from ClassLoader [ParallelWebappClassLoader
+  context: ROOT
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@b1bc7ed
+]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:659)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:556)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:541)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:245)
+	... 44 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/javalab/vo/BoardVo
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:641)
+	... 47 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.javalab.vo.BoardVo
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1412)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1220)
+	... 51 common frames omitted
+2022-09-23 10:11:06 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2022-09-23 10:11:06 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Fri Sep 23 10:11:06 KST 2022]; root of context hierarchy
+2022-09-23 10:11:06 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+2022-09-23 10:11:06 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022-09-23 10:11:07 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-09-23 10:11:07 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-09-23 10:11:08 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1758 ms
+2022-09-23 10:11:08 [main] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+2022-09-23 10:11:08 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 10:11:08 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 10:11:08 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
+2022-09-23 10:11:08 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022-09-23 10:11:09 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardWrite.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.BoardController.insertBoard(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 10:11:09 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardview.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.getBoardById(int,org.springframework.ui.Model)
+2022-09-23 10:11:09 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardList.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.getBoardList(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 10:11:09 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardCount.do],methods=[GET]}" onto public int com.javalab.controller.BoardController.getTotalBoardCount(org.springframework.ui.Model)
+2022-09-23 10:11:09 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardWrite.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.boardWriteForm(org.springframework.ui.Model)
+2022-09-23 10:11:09 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardModify.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.updateBoardForm(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 10:11:09 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardModify.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.BoardController.boardModify(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 10:11:09 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardDelete.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.boardDelete(com.javalab.vo.BoardVo)
+2022-09-23 10:11:09 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.javalab.controller.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+2022-09-23 10:11:09 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/logout.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.LoginController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+2022-09-23 10:11:09 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/login.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.LoginController.login(com.javalab.vo.UserVo,javax.servlet.http.HttpSession,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+2022-09-23 10:11:09 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/login.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.LoginController.loginForm(org.springframework.ui.Model)
+2022-09-23 10:11:09 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 10:11:08 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 10:11:09 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 10:11:08 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 10:11:09 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2022-09-23 10:11:09 [main] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization completed in 1337 ms
+2022-09-23 10:11:09 [http-nio-9000-exec-1] INFO  c.javalab.controller.HomeController - Welcome home! The client locale is ko_KR.
+2022-09-23 10:11:09 [http-nio-9000-exec-2] INFO  c.javalab.controller.HomeController - Welcome home! The client locale is ko_KR.
+2022-09-23 10:11:09 [http-nio-9000-exec-3] INFO  c.javalab.controller.LoginController - getUser GET() 메소드 
+2022-09-23 10:11:16 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - login POST() 메소드
+2022-09-23 10:11:16 [http-nio-9000-exec-4] INFO  com.javalab.service.LoginServiceImpl - (Method) getUserById(from LoginServiceImpl) is execute!
+2022-09-23 10:11:17 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - 로그인 성공! userVo : UserVo(id=1, pwd=2, name=홍범도, email=a@a.com, role=admin, joinDate=2022-09-15)
+2022-09-23 10:11:17 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - 세션에 기록 성공
+2022-09-23 10:11:17 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - 사용자 웹브라우저에 쿠키 저장 성공 cookie값 : 1
+2022-09-23 10:11:17 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - 리턴 Url : redirect:/board/boardList.do
+2022-09-23 10:11:17 [http-nio-9000-exec-5] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:11:17 [http-nio-9000-exec-5] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:11:17 [http-nio-9000-exec-5] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 1
+2022-09-23 10:13:15 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 10:11:08 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 10:13:18 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2022-09-23 10:13:19 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Fri Sep 23 10:13:19 KST 2022]; root of context hierarchy
+2022-09-23 10:13:19 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+2022-09-23 10:13:19 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022-09-23 10:13:19 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-09-23 10:13:20 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-09-23 10:13:20 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1801 ms
+2022-09-23 10:13:20 [main] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+2022-09-23 10:13:20 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 10:13:20 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 10:13:20 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
+2022-09-23 10:13:21 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022-09-23 10:13:21 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardWrite.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.boardWriteForm(org.springframework.ui.Model)
+2022-09-23 10:13:21 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardModify.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.updateBoardForm(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 10:13:21 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardModify.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.BoardController.boardModify(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 10:13:21 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardDelete.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.boardDelete(com.javalab.vo.BoardVo)
+2022-09-23 10:13:21 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardWrite.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.BoardController.insertBoard(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 10:13:21 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardview.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.getBoardById(int,org.springframework.ui.Model)
+2022-09-23 10:13:21 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardList.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.getBoardList(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 10:13:21 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardCount.do],methods=[GET]}" onto public int com.javalab.controller.BoardController.getTotalBoardCount(org.springframework.ui.Model)
+2022-09-23 10:13:21 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.javalab.controller.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+2022-09-23 10:13:21 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/login.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.LoginController.login(com.javalab.vo.UserVo,javax.servlet.http.HttpSession,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+2022-09-23 10:13:21 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/logout.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.LoginController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+2022-09-23 10:13:21 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/login.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.LoginController.loginForm(org.springframework.ui.Model)
+2022-09-23 10:13:21 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 10:13:20 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 10:13:22 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 10:13:20 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 10:13:22 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2022-09-23 10:13:22 [main] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization completed in 1350 ms
+2022-09-23 10:13:22 [http-nio-9000-exec-1] INFO  c.javalab.controller.HomeController - Welcome home! The client locale is ko_KR.
+2022-09-23 10:13:22 [http-nio-9000-exec-2] INFO  c.javalab.controller.HomeController - Welcome home! The client locale is ko_KR.
+2022-09-23 10:13:22 [http-nio-9000-exec-3] INFO  c.javalab.controller.LoginController - getUser GET() 메소드 
+2022-09-23 10:13:25 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - login POST() 메소드
+2022-09-23 10:13:25 [http-nio-9000-exec-4] INFO  com.javalab.service.LoginServiceImpl - (Method) getUserById(from LoginServiceImpl) is execute!
+2022-09-23 10:13:25 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - 로그인 성공! userVo : UserVo(id=1, pwd=2, name=홍범도, email=a@a.com, role=admin, joinDate=2022-09-15)
+2022-09-23 10:13:25 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - 세션에 기록 성공
+2022-09-23 10:13:25 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - 사용자 웹브라우저에 쿠키 저장 성공 cookie값 : 1
+2022-09-23 10:13:25 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - 리턴 Url : redirect:/board/boardList.do
+2022-09-23 10:13:25 [http-nio-9000-exec-5] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:13:25 [http-nio-9000-exec-5] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:13:25 [http-nio-9000-exec-5] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 1
+2022-09-23 10:13:29 [http-nio-9000-exec-6] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/board/boardView.do] in DispatcherServlet with name 'appServlet'
+2022-09-23 10:15:10 [Catalina-utility-2] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 10:13:20 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 10:15:11 [Catalina-utility-2] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2022-09-23 10:15:12 [Catalina-utility-2] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Fri Sep 23 10:15:12 KST 2022]; root of context hierarchy
+2022-09-23 10:15:12 [Catalina-utility-2] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+2022-09-23 10:15:12 [Catalina-utility-2] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022-09-23 10:15:12 [Catalina-utility-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2022-09-23 10:15:13 [Catalina-utility-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2022-09-23 10:15:13 [Catalina-utility-2] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1265 ms
+2022-09-23 10:15:13 [Catalina-utility-2] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+2022-09-23 10:15:13 [Catalina-utility-2] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 10:15:13 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 10:15:13 [Catalina-utility-2] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
+2022-09-23 10:15:13 [Catalina-utility-2] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022-09-23 10:15:13 [Catalina-utility-2] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardWrite.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.boardWriteForm(org.springframework.ui.Model)
+2022-09-23 10:15:13 [Catalina-utility-2] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardModify.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.updateBoardForm(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 10:15:13 [Catalina-utility-2] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardModify.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.BoardController.boardModify(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 10:15:13 [Catalina-utility-2] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardDelete.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.boardDelete(com.javalab.vo.BoardVo)
+2022-09-23 10:15:13 [Catalina-utility-2] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardWrite.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.BoardController.insertBoard(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 10:15:13 [Catalina-utility-2] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardView.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.getBoardById(int,org.springframework.ui.Model)
+2022-09-23 10:15:13 [Catalina-utility-2] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardList.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.getBoardList(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 10:15:13 [Catalina-utility-2] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardCount.do],methods=[GET]}" onto public int com.javalab.controller.BoardController.getTotalBoardCount(org.springframework.ui.Model)
+2022-09-23 10:15:13 [Catalina-utility-2] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.javalab.controller.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+2022-09-23 10:15:13 [Catalina-utility-2] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/login.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.LoginController.login(com.javalab.vo.UserVo,javax.servlet.http.HttpSession,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+2022-09-23 10:15:13 [Catalina-utility-2] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/logout.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.LoginController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+2022-09-23 10:15:13 [Catalina-utility-2] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/login.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.LoginController.loginForm(org.springframework.ui.Model)
+2022-09-23 10:15:14 [Catalina-utility-2] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 10:15:13 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 10:15:14 [Catalina-utility-2] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 10:15:13 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 10:15:14 [Catalina-utility-2] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2022-09-23 10:15:14 [Catalina-utility-2] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization completed in 1023 ms
+2022-09-23 10:16:22 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 10:15:13 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 10:16:25 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2022-09-23 10:16:25 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Fri Sep 23 10:16:25 KST 2022]; root of context hierarchy
+2022-09-23 10:16:25 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+2022-09-23 10:16:26 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022-09-23 10:16:26 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-09-23 10:16:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-09-23 10:16:27 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1813 ms
+2022-09-23 10:16:27 [main] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+2022-09-23 10:16:27 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 10:16:27 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 10:16:27 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
+2022-09-23 10:16:28 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022-09-23 10:16:28 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardWrite.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.BoardController.insertBoard(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 10:16:28 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardView.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.getBoardById(int,org.springframework.ui.Model)
+2022-09-23 10:16:28 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardList.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.getBoardList(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 10:16:28 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardCount.do],methods=[GET]}" onto public int com.javalab.controller.BoardController.getTotalBoardCount(org.springframework.ui.Model)
+2022-09-23 10:16:28 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardWrite.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.boardWriteForm(org.springframework.ui.Model)
+2022-09-23 10:16:28 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardDelete.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.boardDelete(com.javalab.vo.BoardVo)
+2022-09-23 10:16:28 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardModify.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.BoardController.boardModify(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 10:16:28 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardModify.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.updateBoardForm(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 10:16:28 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.javalab.controller.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+2022-09-23 10:16:28 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/login.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.LoginController.loginForm(org.springframework.ui.Model)
+2022-09-23 10:16:28 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/login.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.LoginController.login(com.javalab.vo.UserVo,javax.servlet.http.HttpSession,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+2022-09-23 10:16:28 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/logout.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.LoginController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+2022-09-23 10:16:28 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 10:16:27 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 10:16:28 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 10:16:27 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 10:16:29 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2022-09-23 10:16:29 [main] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization completed in 1484 ms
+2022-09-23 10:16:29 [http-nio-9000-exec-1] INFO  c.javalab.controller.HomeController - Welcome home! The client locale is ko_KR.
+2022-09-23 10:16:29 [http-nio-9000-exec-2] INFO  c.javalab.controller.HomeController - Welcome home! The client locale is ko_KR.
+2022-09-23 10:16:29 [http-nio-9000-exec-3] INFO  c.javalab.controller.LoginController - getUser GET() 메소드 
+2022-09-23 10:16:33 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - login POST() 메소드
+2022-09-23 10:16:33 [http-nio-9000-exec-4] INFO  com.javalab.service.LoginServiceImpl - (Method) getUserById(from LoginServiceImpl) is execute!
+2022-09-23 10:16:33 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - 로그인 성공! userVo : UserVo(id=1, pwd=2, name=홍범도, email=a@a.com, role=admin, joinDate=2022-09-15)
+2022-09-23 10:16:33 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - 세션에 기록 성공
+2022-09-23 10:16:33 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - 사용자 웹브라우저에 쿠키 저장 성공 cookie값 : 1
+2022-09-23 10:16:33 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - 리턴 Url : redirect:/board/boardList.do
+2022-09-23 10:16:33 [http-nio-9000-exec-5] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:16:33 [http-nio-9000-exec-5] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:16:33 [http-nio-9000-exec-5] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 1
+2022-09-23 10:16:36 [http-nio-9000-exec-6] INFO  c.javalab.controller.BoardController - getBoardById 메소드 호출 
+2022-09-23 10:16:38 [http-nio-9000-exec-7] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:16:38 [http-nio-9000-exec-7] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:16:38 [http-nio-9000-exec-7] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 1
+2022-09-23 10:16:40 [http-nio-9000-exec-8] INFO  c.javalab.controller.BoardController - getBoardById 메소드 호출 
+2022-09-23 10:16:41 [http-nio-9000-exec-9] INFO  c.javalab.controller.BoardController - updateBoardForm 메소드 호출 
+2022-09-23 10:16:49 [http-nio-9000-exec-8] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/boardModify.do] in DispatcherServlet with name 'appServlet'
+2022-09-23 10:17:54 [http-nio-9000-exec-1] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:17:54 [http-nio-9000-exec-1] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:17:54 [http-nio-9000-exec-1] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 1
+2022-09-23 10:17:56 [http-nio-9000-exec-2] INFO  c.javalab.controller.BoardController - getBoardById 메소드 호출 
+2022-09-23 10:17:58 [http-nio-9000-exec-3] INFO  c.javalab.controller.BoardController - updateBoardForm 메소드 호출 
+2022-09-23 10:18:01 [http-nio-9000-exec-4] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:18:01 [http-nio-9000-exec-4] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:18:01 [http-nio-9000-exec-4] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 1
+2022-09-23 10:18:02 [http-nio-9000-exec-5] INFO  c.javalab.controller.BoardController - boardWriteForm 메소드 호출 
+2022-09-23 10:18:08 [http-nio-9000-exec-6] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/boardWrite.do] in DispatcherServlet with name 'appServlet'
+2022-09-23 10:20:14 [http-nio-9000-exec-1] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/boardWrite.do] in DispatcherServlet with name 'appServlet'
+2022-09-23 10:33:45 [http-nio-9000-exec-4] INFO  c.javalab.controller.BoardController - boardWriteForm 메소드 호출 
+2022-09-23 10:33:48 [http-nio-9000-exec-9] INFO  c.javalab.controller.BoardController - insertBoard 메소드 호출 
+2022-09-23 10:33:48 [http-nio-9000-exec-10] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:33:48 [http-nio-9000-exec-10] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:33:49 [http-nio-9000-exec-10] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 2
+2022-09-23 10:33:51 [http-nio-9000-exec-1] INFO  c.javalab.controller.BoardController - getBoardById 메소드 호출 
+2022-09-23 10:33:54 [http-nio-9000-exec-2] INFO  c.javalab.controller.BoardController - boardDelete 메소드 호출 
+2022-09-23 10:33:58 [http-nio-9000-exec-3] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:33:58 [http-nio-9000-exec-3] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:33:58 [http-nio-9000-exec-3] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 1
+2022-09-23 10:35:57 [Catalina-utility-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 10:16:27 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 10:35:59 [Catalina-utility-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2022-09-23 10:35:59 [Catalina-utility-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Fri Sep 23 10:35:59 KST 2022]; root of context hierarchy
+2022-09-23 10:35:59 [Catalina-utility-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+2022-09-23 10:35:59 [Catalina-utility-1] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022-09-23 10:36:00 [Catalina-utility-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2022-09-23 10:36:00 [Catalina-utility-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2022-09-23 10:36:00 [Catalina-utility-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1320 ms
+2022-09-23 10:36:00 [Catalina-utility-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+2022-09-23 10:36:00 [Catalina-utility-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 10:36:00 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 10:36:00 [Catalina-utility-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
+2022-09-23 10:36:01 [Catalina-utility-1] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022-09-23 10:36:01 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardWrite.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.BoardController.insertBoard(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 10:36:01 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardView.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.getBoardById(int,org.springframework.ui.Model)
+2022-09-23 10:36:01 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardList.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.getBoardList(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 10:36:01 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardCount.do],methods=[GET]}" onto public int com.javalab.controller.BoardController.getTotalBoardCount(org.springframework.ui.Model)
+2022-09-23 10:36:01 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardWrite.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.boardWriteForm(org.springframework.ui.Model)
+2022-09-23 10:36:01 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardDelete.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.boardDelete(com.javalab.vo.BoardVo)
+2022-09-23 10:36:01 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardModify.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.BoardController.boardModify(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 10:36:01 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardModify.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.updateBoardForm(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 10:36:01 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.javalab.controller.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+2022-09-23 10:36:01 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/login.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.LoginController.loginForm(org.springframework.ui.Model)
+2022-09-23 10:36:01 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/login.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.LoginController.login(com.javalab.vo.UserVo,javax.servlet.http.HttpSession,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+2022-09-23 10:36:01 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/logout.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.LoginController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+2022-09-23 10:36:01 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 10:36:00 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 10:36:01 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 10:36:00 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 10:36:01 [Catalina-utility-1] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2022-09-23 10:36:01 [Catalina-utility-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization completed in 930 ms
+2022-09-23 10:36:06 [http-nio-9000-exec-6] INFO  c.javalab.controller.BoardController - boardWriteForm 메소드 호출 
+2022-09-23 10:36:11 [http-nio-9000-exec-9] INFO  c.javalab.controller.LoginController - getUser GET() 메소드 
+2022-09-23 10:36:14 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - login POST() 메소드
+2022-09-23 10:36:14 [http-nio-9000-exec-4] INFO  com.javalab.service.LoginServiceImpl - (Method) getUserById(from LoginServiceImpl) is execute!
+2022-09-23 10:36:14 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - 로그인 성공! userVo : UserVo(id=1, pwd=2, name=홍범도, email=a@a.com, role=admin, joinDate=2022-09-15)
+2022-09-23 10:36:14 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - 세션에 기록 성공
+2022-09-23 10:36:14 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - 사용자 웹브라우저에 쿠키 저장 성공 cookie값 : 1
+2022-09-23 10:36:14 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - 리턴 Url : redirect:/board/boardList.do
+2022-09-23 10:36:14 [http-nio-9000-exec-2] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:36:14 [http-nio-9000-exec-2] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:36:14 [http-nio-9000-exec-2] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 1
+2022-09-23 10:36:15 [http-nio-9000-exec-7] INFO  c.javalab.controller.BoardController - boardWriteForm 메소드 호출 
+2022-09-23 10:36:19 [http-nio-9000-exec-10] INFO  c.javalab.controller.BoardController - insertBoard 메소드 호출 
+2022-09-23 10:36:19 [http-nio-9000-exec-1] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:36:19 [http-nio-9000-exec-1] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:36:19 [http-nio-9000-exec-1] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 2
+2022-09-23 10:36:20 [http-nio-9000-exec-3] INFO  c.javalab.controller.BoardController - getBoardById 메소드 호출 
+2022-09-23 10:36:21 [http-nio-9000-exec-5] INFO  c.javalab.controller.BoardController - updateBoardForm 메소드 호출 
+2022-09-23 10:36:26 [http-nio-9000-exec-8] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/boardModify.do] in DispatcherServlet with name 'appServlet'
+2022-09-23 10:37:04 [http-nio-9000-exec-12] INFO  c.javalab.controller.BoardController - updateBoardForm 메소드 호출 
+2022-09-23 10:37:10 [http-nio-9000-exec-14] INFO  c.javalab.controller.BoardController - boardModify 메소드 호출 
+2022-09-23 10:37:10 [http-nio-9000-exec-15] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:37:10 [http-nio-9000-exec-15] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:37:10 [http-nio-9000-exec-15] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 2
+2022-09-23 10:37:11 [http-nio-9000-exec-1] INFO  c.javalab.controller.BoardController - getBoardById 메소드 호출 
+2022-09-23 10:37:13 [http-nio-9000-exec-16] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:37:13 [http-nio-9000-exec-16] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:37:13 [http-nio-9000-exec-16] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 2
+2022-09-23 10:37:15 [http-nio-9000-exec-17] INFO  c.javalab.controller.BoardController - getBoardById 메소드 호출 
+2022-09-23 10:37:17 [http-nio-9000-exec-18] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:37:17 [http-nio-9000-exec-18] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:37:17 [http-nio-9000-exec-18] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 2
+2022-09-23 10:37:18 [http-nio-9000-exec-11] INFO  c.javalab.controller.BoardController - getBoardById 메소드 호출 
+2022-09-23 10:37:22 [http-nio-9000-exec-12] INFO  c.javalab.controller.BoardController - boardDelete 메소드 호출 
+2022-09-23 10:37:22 [http-nio-9000-exec-13] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:37:22 [http-nio-9000-exec-13] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:37:22 [http-nio-9000-exec-13] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 1
+2022-09-23 10:37:25 [http-nio-9000-exec-19] INFO  c.javalab.controller.LoginController - logout 메소드
+2022-09-23 10:37:28 [http-nio-9000-exec-14] INFO  c.javalab.controller.LoginController - login POST() 메소드
+2022-09-23 10:37:28 [http-nio-9000-exec-14] INFO  com.javalab.service.LoginServiceImpl - (Method) getUserById(from LoginServiceImpl) is execute!
+2022-09-23 10:37:28 [http-nio-9000-exec-14] INFO  c.javalab.controller.LoginController - 로그인 성공! userVo : UserVo(id=1, pwd=2, name=홍범도, email=a@a.com, role=admin, joinDate=2022-09-15)
+2022-09-23 10:37:28 [http-nio-9000-exec-14] INFO  c.javalab.controller.LoginController - 세션에 기록 성공
+2022-09-23 10:37:28 [http-nio-9000-exec-14] INFO  c.javalab.controller.LoginController - 사용자 웹브라우저에 쿠키 저장 성공 cookie값 : 1
+2022-09-23 10:37:28 [http-nio-9000-exec-14] INFO  c.javalab.controller.LoginController - 리턴 Url : redirect:/board/boardList.do
+2022-09-23 10:37:28 [http-nio-9000-exec-15] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:37:28 [http-nio-9000-exec-15] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:37:28 [http-nio-9000-exec-15] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 1
+2022-09-23 10:37:32 [http-nio-9000-exec-20] INFO  c.javalab.controller.BoardController - boardWriteForm 메소드 호출 
+2022-09-23 10:37:56 [http-nio-9000-exec-17] INFO  c.javalab.controller.BoardController - insertBoard 메소드 호출 
+2022-09-23 10:37:56 [http-nio-9000-exec-18] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:37:56 [http-nio-9000-exec-18] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:37:56 [http-nio-9000-exec-18] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 2
+2022-09-23 10:37:58 [http-nio-9000-exec-11] INFO  c.javalab.controller.BoardController - getBoardById 메소드 호출 
+2022-09-23 10:38:22 [http-nio-9000-exec-13] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:38:22 [http-nio-9000-exec-13] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:38:22 [http-nio-9000-exec-13] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 2
+2022-09-23 10:38:24 [http-nio-9000-exec-19] INFO  c.javalab.controller.BoardController - getBoardById 메소드 호출 
+2022-09-23 10:38:26 [http-nio-9000-exec-14] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:38:26 [http-nio-9000-exec-14] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:38:26 [http-nio-9000-exec-14] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 2
+2022-09-23 10:40:34 [http-nio-9000-exec-20] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:40:34 [http-nio-9000-exec-20] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:40:34 [http-nio-9000-exec-20] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 2
+2022-09-23 10:40:37 [http-nio-9000-exec-16] INFO  c.javalab.controller.BoardController - getBoardById 메소드 호출 
+2022-09-23 10:40:39 [http-nio-9000-exec-17] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:40:39 [http-nio-9000-exec-17] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:40:39 [http-nio-9000-exec-17] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 2
+2022-09-23 10:41:14 [http-nio-9000-exec-11] INFO  c.javalab.controller.BoardController - getBoardById 메소드 호출 
+2022-09-23 10:41:16 [http-nio-9000-exec-12] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:41:16 [http-nio-9000-exec-12] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:41:16 [http-nio-9000-exec-12] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 2
+2022-09-23 10:41:17 [http-nio-9000-exec-13] INFO  c.javalab.controller.BoardController - getBoardById 메소드 호출 
+2022-09-23 10:41:18 [http-nio-9000-exec-19] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:41:18 [http-nio-9000-exec-19] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:41:18 [http-nio-9000-exec-19] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 2
+2022-09-23 10:41:19 [http-nio-9000-exec-14] INFO  c.javalab.controller.BoardController - getBoardById 메소드 호출 
+2022-09-23 10:41:20 [http-nio-9000-exec-15] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:41:20 [http-nio-9000-exec-15] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:41:20 [http-nio-9000-exec-15] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 2
+2022-09-23 10:41:22 [http-nio-9000-exec-20] INFO  c.javalab.controller.BoardController - getBoardById 메소드 호출 
+2022-09-23 10:41:24 [http-nio-9000-exec-16] INFO  c.javalab.controller.BoardController - boardDelete 메소드 호출 
+2022-09-23 10:41:24 [http-nio-9000-exec-17] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 10:41:24 [http-nio-9000-exec-17] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 10:41:24 [http-nio-9000-exec-17] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 1
+2022-09-23 11:05:59 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Retrograde clock change detected (housekeeper delta=28s861ms), soft-evicting connections from pool.
+2022-09-23 11:42:19 [Catalina-utility-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 10:36:00 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 11:42:20 [Catalina-utility-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2022-09-23 11:42:20 [Catalina-utility-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Fri Sep 23 11:42:20 KST 2022]; root of context hierarchy
+2022-09-23 11:42:20 [Catalina-utility-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+2022-09-23 11:42:21 [Catalina-utility-1] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022-09-23 11:42:21 [Catalina-utility-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2022-09-23 11:42:21 [Catalina-utility-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2022-09-23 11:42:21 [Catalina-utility-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1023 ms
+2022-09-23 11:42:21 [Catalina-utility-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+2022-09-23 11:42:21 [Catalina-utility-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 11:42:21 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 11:42:21 [Catalina-utility-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
+2022-09-23 11:42:22 [Catalina-utility-1] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022-09-23 11:42:22 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardWrite.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.BoardController.insertBoard(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 11:42:22 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardView.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.getBoardById(int,org.springframework.ui.Model)
+2022-09-23 11:42:22 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardList.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.getBoardList(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 11:42:22 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardCount.do],methods=[GET]}" onto public int com.javalab.controller.BoardController.getTotalBoardCount(org.springframework.ui.Model)
+2022-09-23 11:42:22 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardWrite.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.boardWriteForm(org.springframework.ui.Model)
+2022-09-23 11:42:22 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardDelete.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.boardDelete(com.javalab.vo.BoardVo)
+2022-09-23 11:42:22 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardModify.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.BoardController.boardModify(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 11:42:22 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardModify.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.updateBoardForm(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 11:42:22 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.javalab.controller.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+2022-09-23 11:42:22 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/login.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.LoginController.loginForm(org.springframework.ui.Model)
+2022-09-23 11:42:22 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/login.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.LoginController.login(com.javalab.vo.UserVo,javax.servlet.http.HttpSession,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+2022-09-23 11:42:22 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/logout.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.LoginController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+2022-09-23 11:42:22 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 11:42:21 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 11:42:22 [Catalina-utility-1] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 11:42:21 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 11:42:22 [Catalina-utility-1] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2022-09-23 11:42:22 [Catalina-utility-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization completed in 956 ms
+2022-09-23 11:42:23 [Thread-4] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 11:42:21 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 12:02:33 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2022-09-23 12:02:33 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Fri Sep 23 12:02:33 KST 2022]; root of context hierarchy
+2022-09-23 12:02:33 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+2022-09-23 12:02:34 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022-09-23 12:02:34 [main] ERROR com.zaxxer.hikari.HikariConfig - Failed to load class of driverClassName net.sf.log4jdsc.sql.jdbcapi.DriverSpy in HikariConfig class classloader ParallelWebappClassLoader
+  context: ROOT
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@b1bc7ed
+
+2022-09-23 12:02:34 [main] WARN  o.s.w.c.s.XmlWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'boardService': Unsatisfied dependency expressed through field 'boardDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'boardDao' defined in file [/Users/tuan/Documents/works/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/chap20_mybatis01_hikaripool/WEB-INF/classes/com/javalab/dao/BoardDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Cannot resolve reference to bean 'dataSource' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Cannot resolve reference to bean 'hikariConfig' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hikariConfig' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'driverClassName' threw exception; nested exception is java.lang.RuntimeException: Failed to load class of driverClassName [net.sf.log4jdsc.sql.jdbcapi.DriverSpy] in either of HikariConfig class loader or Thread context classloader
+2022-09-23 12:02:34 [main] ERROR o.s.web.context.ContextLoader - Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'boardService': Unsatisfied dependency expressed through field 'boardDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'boardDao' defined in file [/Users/tuan/Documents/works/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/chap20_mybatis01_hikaripool/WEB-INF/classes/com/javalab/dao/BoardDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Cannot resolve reference to bean 'dataSource' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Cannot resolve reference to bean 'hikariConfig' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hikariConfig' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'driverClassName' threw exception; nested exception is java.lang.RuntimeException: Failed to load class of driverClassName [net.sf.log4jdsc.sql.jdbcapi.DriverSpy] in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:587)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:373)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1350)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:580)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:409)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:291)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4768)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5230)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:265)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'boardDao' defined in file [/Users/tuan/Documents/works/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/chap20_mybatis01_hikaripool/WEB-INF/classes/com/javalab/dao/BoardDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Cannot resolve reference to bean 'dataSource' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Cannot resolve reference to bean 'hikariConfig' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hikariConfig' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'driverClassName' threw exception; nested exception is java.lang.RuntimeException: Failed to load class of driverClassName [net.sf.log4jdsc.sql.jdbcapi.DriverSpy] in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1445)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:580)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:584)
+	... 45 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Cannot resolve reference to bean 'dataSource' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Cannot resolve reference to bean 'hikariConfig' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hikariConfig' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'driverClassName' threw exception; nested exception is java.lang.RuntimeException: Failed to load class of driverClassName [net.sf.log4jdsc.sql.jdbcapi.DriverSpy] in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:378)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:110)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1611)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1363)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:580)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1430)
+	... 56 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Cannot resolve reference to bean 'hikariConfig' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hikariConfig' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'driverClassName' threw exception; nested exception is java.lang.RuntimeException: Failed to load class of driverClassName [net.sf.log4jdsc.sql.jdbcapi.DriverSpy] in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:378)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:110)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:639)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:153)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1276)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1133)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:367)
+	... 69 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hikariConfig' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'driverClassName' threw exception; nested exception is java.lang.RuntimeException: Failed to load class of driverClassName [net.sf.log4jdsc.sql.jdbcapi.DriverSpy] in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1648)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1363)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:580)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:367)
+	... 81 common frames omitted
+Caused by: org.springframework.beans.PropertyBatchUpdateException: Failed properties: Property 'driverClassName' threw exception; nested exception is java.lang.RuntimeException: Failed to load class of driverClassName [net.sf.log4jdsc.sql.jdbcapi.DriverSpy] in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:122)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:77)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1644)
+	... 89 common frames omitted
+2022-09-23 12:04:55 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2022-09-23 12:04:55 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Fri Sep 23 12:04:55 KST 2022]; root of context hierarchy
+2022-09-23 12:04:56 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+2022-09-23 12:04:56 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022-09-23 12:04:56 [main] ERROR com.zaxxer.hikari.HikariConfig - Failed to load class of driverClassName net.sf.log4jdsc.sql.jdbcapi.DriverSpy in HikariConfig class classloader ParallelWebappClassLoader
+  context: ROOT
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@b1bc7ed
+
+2022-09-23 12:04:56 [main] WARN  o.s.w.c.s.XmlWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'boardService': Unsatisfied dependency expressed through field 'boardDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'boardDao' defined in file [/Users/tuan/Documents/works/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/chap20_mybatis01_hikaripool/WEB-INF/classes/com/javalab/dao/BoardDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Cannot resolve reference to bean 'dataSource' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Cannot resolve reference to bean 'hikariConfig' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hikariConfig' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'driverClassName' threw exception; nested exception is java.lang.RuntimeException: Failed to load class of driverClassName [net.sf.log4jdsc.sql.jdbcapi.DriverSpy] in either of HikariConfig class loader or Thread context classloader
+2022-09-23 12:04:56 [main] ERROR o.s.web.context.ContextLoader - Context initialization failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'boardService': Unsatisfied dependency expressed through field 'boardDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'boardDao' defined in file [/Users/tuan/Documents/works/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/chap20_mybatis01_hikaripool/WEB-INF/classes/com/javalab/dao/BoardDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Cannot resolve reference to bean 'dataSource' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Cannot resolve reference to bean 'hikariConfig' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hikariConfig' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'driverClassName' threw exception; nested exception is java.lang.RuntimeException: Failed to load class of driverClassName [net.sf.log4jdsc.sql.jdbcapi.DriverSpy] in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:587)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:373)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1350)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:580)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:409)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:291)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4768)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5230)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:265)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'boardDao' defined in file [/Users/tuan/Documents/works/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/chap20_mybatis01_hikaripool/WEB-INF/classes/com/javalab/dao/BoardDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Cannot resolve reference to bean 'dataSource' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Cannot resolve reference to bean 'hikariConfig' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hikariConfig' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'driverClassName' threw exception; nested exception is java.lang.RuntimeException: Failed to load class of driverClassName [net.sf.log4jdsc.sql.jdbcapi.DriverSpy] in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1445)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:580)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:584)
+	... 45 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Cannot resolve reference to bean 'dataSource' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Cannot resolve reference to bean 'hikariConfig' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hikariConfig' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'driverClassName' threw exception; nested exception is java.lang.RuntimeException: Failed to load class of driverClassName [net.sf.log4jdsc.sql.jdbcapi.DriverSpy] in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:378)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:110)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1611)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1363)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:580)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1430)
+	... 56 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Cannot resolve reference to bean 'hikariConfig' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hikariConfig' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'driverClassName' threw exception; nested exception is java.lang.RuntimeException: Failed to load class of driverClassName [net.sf.log4jdsc.sql.jdbcapi.DriverSpy] in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:378)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:110)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:639)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:153)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1276)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1133)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:367)
+	... 69 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hikariConfig' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'driverClassName' threw exception; nested exception is java.lang.RuntimeException: Failed to load class of driverClassName [net.sf.log4jdsc.sql.jdbcapi.DriverSpy] in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1648)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1363)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:580)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:367)
+	... 81 common frames omitted
+Caused by: org.springframework.beans.PropertyBatchUpdateException: Failed properties: Property 'driverClassName' threw exception; nested exception is java.lang.RuntimeException: Failed to load class of driverClassName [net.sf.log4jdsc.sql.jdbcapi.DriverSpy] in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:122)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:77)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1644)
+	... 89 common frames omitted
+2022-09-23 12:06:03 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2022-09-23 12:06:03 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Fri Sep 23 12:06:03 KST 2022]; root of context hierarchy
+2022-09-23 12:06:03 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+2022-09-23 12:06:04 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022-09-23 12:06:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-09-23 12:06:05 [main] INFO  jdbc.connection - 1. Connection opened
+2022-09-23 12:06:05 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-09-23 12:06:05 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1881 ms
+2022-09-23 12:06:05 [HikariPool-1 connection adder] INFO  jdbc.connection - 2. Connection opened
+2022-09-23 12:06:05 [main] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+2022-09-23 12:06:05 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 12:06:05 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 12:06:05 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
+2022-09-23 12:06:05 [HikariPool-1 connection adder] INFO  jdbc.connection - 3. Connection opened
+2022-09-23 12:06:05 [HikariPool-1 connection adder] INFO  jdbc.connection - 4. Connection opened
+2022-09-23 12:06:05 [HikariPool-1 connection adder] INFO  jdbc.connection - 5. Connection opened
+2022-09-23 12:06:06 [HikariPool-1 connection adder] INFO  jdbc.connection - 6. Connection opened
+2022-09-23 12:06:06 [HikariPool-1 connection adder] INFO  jdbc.connection - 7. Connection opened
+2022-09-23 12:06:06 [HikariPool-1 connection adder] INFO  jdbc.connection - 8. Connection opened
+2022-09-23 12:06:06 [HikariPool-1 connection adder] INFO  jdbc.connection - 9. Connection opened
+2022-09-23 12:06:06 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022-09-23 12:06:06 [HikariPool-1 connection adder] INFO  jdbc.connection - 10. Connection opened
+2022-09-23 12:06:06 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardWrite.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.boardWriteForm(org.springframework.ui.Model)
+2022-09-23 12:06:06 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardModify.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.updateBoardForm(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 12:06:06 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardModify.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.BoardController.boardModify(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 12:06:06 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardDelete.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.boardDelete(com.javalab.vo.BoardVo)
+2022-09-23 12:06:06 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardWrite.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.BoardController.insertBoard(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 12:06:06 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardView.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.getBoardById(int,org.springframework.ui.Model)
+2022-09-23 12:06:06 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardList.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.getBoardList(com.javalab.vo.BoardVo,org.springframework.ui.Model)
+2022-09-23 12:06:06 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardCount.do],methods=[GET]}" onto public int com.javalab.controller.BoardController.getTotalBoardCount(org.springframework.ui.Model)
+2022-09-23 12:06:06 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.javalab.controller.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+2022-09-23 12:06:06 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/login.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.LoginController.login(com.javalab.vo.UserVo,javax.servlet.http.HttpSession,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+2022-09-23 12:06:06 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/logout.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.LoginController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+2022-09-23 12:06:06 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/login.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.LoginController.loginForm(org.springframework.ui.Model)
+2022-09-23 12:06:06 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 12:06:05 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 12:06:06 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 12:06:05 KST 2022]; parent: Root WebApplicationContext
+2022-09-23 12:06:06 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2022-09-23 12:06:06 [main] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization completed in 1318 ms
+2022-09-23 12:06:07 [http-nio-9000-exec-1] INFO  c.javalab.controller.HomeController - Welcome home! The client locale is ko_KR.
+2022-09-23 12:06:07 [http-nio-9000-exec-2] INFO  c.javalab.controller.HomeController - Welcome home! The client locale is ko_KR.
+2022-09-23 12:06:07 [http-nio-9000-exec-3] INFO  c.javalab.controller.LoginController - getUser GET() 메소드 
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - login POST() 메소드
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  com.javalab.service.LoginServiceImpl - (Method) getUserById(from LoginServiceImpl) is execute!
+2022-09-23 12:06:11 [http-nio-9000-exec-4] DEBUG jdbc.sqlonly -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select * from user_tbl where id = '1' and pwd = '2' 
+
+2022-09-23 12:06:11 [http-nio-9000-exec-4] DEBUG jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select * from user_tbl where id = '1' and pwd = '2' 
+ {executed in 113 msec}
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.new ResultSet returned 
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@523ffa7a
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getType() returned 1003
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getString(ID) returned 1
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getString(PWD) returned 2
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getString(NAME) returned 홍범도
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getString(EMAIL) returned a@a.com
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getString(ROLE) returned admin
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getDate(JOINDATE) returned 2022-09-15
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultsettable - 
+|---|----|-----|--------|------|-----------|
+|id |pwd |name |email   |role  |joindate   |
+|---|----|-----|--------|------|-----------|
+|1  |2   |홍범도  |a@a.com |admin |2022-09-15 |
+|---|----|-----|--------|------|-----------|
+
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.next() returned false
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.close() returned void
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - 로그인 성공! userVo : UserVo(id=1, pwd=2, name=홍범도, email=a@a.com, role=admin, joinDate=2022-09-15)
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - 세션에 기록 성공
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - 사용자 웹브라우저에 쿠키 저장 성공 cookie값 : 1
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  c.javalab.controller.LoginController - 리턴 Url : redirect:/board/boardList.do
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 12:06:11 [http-nio-9000-exec-4] DEBUG jdbc.sqlonly -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select * from simple_board order by no desc 
+
+2022-09-23 12:06:11 [http-nio-9000-exec-4] DEBUG jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select * from simple_board order by no desc 
+ {executed in 19 msec}
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.new ResultSet returned 
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@13beb082
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getType() returned 1003
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getInt(NO) returned 22
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getString(TITLE) returned title1
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getString(CONTENT) returned content1
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getString(ID) returned 1
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getInt(HIT) returned 0
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getDate(REGDATE) returned 2022-09-22
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultsettable - 
+|---|-------|---------|---|----|-----------|
+|no |title  |content  |id |hit |regdate    |
+|---|-------|---------|---|----|-----------|
+|22 |title1 |content1 |1  |0   |2022-09-22 |
+|---|-------|---------|---|----|-----------|
+
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.next() returned false
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.close() returned void
+2022-09-23 12:06:11 [http-nio-9000-exec-4] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 1
+2022-09-23 12:06:20 [http-nio-9000-exec-5] INFO  c.javalab.controller.LoginController - logout 메소드
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  c.javalab.controller.LoginController - login POST() 메소드
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  com.javalab.service.LoginServiceImpl - (Method) getUserById(from LoginServiceImpl) is execute!
+2022-09-23 12:06:24 [http-nio-9000-exec-6] DEBUG jdbc.sqlonly -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select * from user_tbl where id = '1' and pwd = '2' 
+
+2022-09-23 12:06:24 [http-nio-9000-exec-6] DEBUG jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select * from user_tbl where id = '1' and pwd = '2' 
+ {executed in 9 msec}
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.new ResultSet returned 
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@4c8b9bf6
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.getType() returned 1003
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.getString(ID) returned 1
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.getString(PWD) returned 2
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.getString(NAME) returned 홍범도
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.getString(EMAIL) returned a@a.com
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.getString(ROLE) returned admin
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.getDate(JOINDATE) returned 2022-09-15
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  jdbc.resultsettable - 
+|---|----|-----|--------|------|-----------|
+|id |pwd |name |email   |role  |joindate   |
+|---|----|-----|--------|------|-----------|
+|1  |2   |홍범도  |a@a.com |admin |2022-09-15 |
+|---|----|-----|--------|------|-----------|
+
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.next() returned false
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.close() returned void
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  c.javalab.controller.LoginController - 로그인 성공! userVo : UserVo(id=1, pwd=2, name=홍범도, email=a@a.com, role=admin, joinDate=2022-09-15)
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  c.javalab.controller.LoginController - 세션에 기록 성공
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  c.javalab.controller.LoginController - 사용자 웹브라우저에 쿠키 저장 성공 cookie값 : 1
+2022-09-23 12:06:24 [http-nio-9000-exec-6] INFO  c.javalab.controller.LoginController - 리턴 Url : redirect:/board/boardList.do
+2022-09-23 12:06:24 [http-nio-9000-exec-7] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 12:06:24 [http-nio-9000-exec-7] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 12:06:24 [http-nio-9000-exec-7] DEBUG jdbc.sqlonly -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select * from simple_board order by no desc 
+
+2022-09-23 12:06:24 [http-nio-9000-exec-7] DEBUG jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select * from simple_board order by no desc 
+ {executed in 7 msec}
+2022-09-23 12:06:24 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.new ResultSet returned 
+2022-09-23 12:06:24 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@2d0598c4
+2022-09-23 12:06:24 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.getType() returned 1003
+2022-09-23 12:06:24 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-23 12:06:24 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.getInt(NO) returned 22
+2022-09-23 12:06:24 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:24 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.getString(TITLE) returned title1
+2022-09-23 12:06:24 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:24 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.getString(CONTENT) returned content1
+2022-09-23 12:06:24 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:24 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.getString(ID) returned 1
+2022-09-23 12:06:24 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:24 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.getInt(HIT) returned 0
+2022-09-23 12:06:24 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:24 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.getDate(REGDATE) returned 2022-09-22
+2022-09-23 12:06:24 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:24 [http-nio-9000-exec-7] INFO  jdbc.resultsettable - 
+|---|-------|---------|---|----|-----------|
+|no |title  |content  |id |hit |regdate    |
+|---|-------|---------|---|----|-----------|
+|22 |title1 |content1 |1  |0   |2022-09-22 |
+|---|-------|---------|---|----|-----------|
+
+2022-09-23 12:06:24 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.next() returned false
+2022-09-23 12:06:24 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.close() returned void
+2022-09-23 12:06:24 [http-nio-9000-exec-7] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 1
+2022-09-23 12:06:25 [http-nio-9000-exec-8] INFO  c.javalab.controller.BoardController - getBoardById 메소드 호출 
+2022-09-23 12:06:25 [http-nio-9000-exec-8] DEBUG jdbc.sqlonly -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select * from simple_board where no=22 
+
+2022-09-23 12:06:25 [http-nio-9000-exec-8] DEBUG jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select * from simple_board where no=22 
+ {executed in 23 msec}
+2022-09-23 12:06:25 [http-nio-9000-exec-8] INFO  jdbc.resultset - 1. ResultSet.new ResultSet returned 
+2022-09-23 12:06:25 [http-nio-9000-exec-8] INFO  jdbc.resultset - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@27d654f2
+2022-09-23 12:06:25 [http-nio-9000-exec-8] INFO  jdbc.resultset - 1. ResultSet.getType() returned 1003
+2022-09-23 12:06:25 [http-nio-9000-exec-8] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-23 12:06:25 [http-nio-9000-exec-8] INFO  jdbc.resultset - 1. ResultSet.getInt(NO) returned 22
+2022-09-23 12:06:25 [http-nio-9000-exec-8] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:25 [http-nio-9000-exec-8] INFO  jdbc.resultset - 1. ResultSet.getString(TITLE) returned title1
+2022-09-23 12:06:25 [http-nio-9000-exec-8] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:25 [http-nio-9000-exec-8] INFO  jdbc.resultset - 1. ResultSet.getString(CONTENT) returned content1
+2022-09-23 12:06:25 [http-nio-9000-exec-8] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:25 [http-nio-9000-exec-8] INFO  jdbc.resultset - 1. ResultSet.getString(ID) returned 1
+2022-09-23 12:06:25 [http-nio-9000-exec-8] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:25 [http-nio-9000-exec-8] INFO  jdbc.resultset - 1. ResultSet.getInt(HIT) returned 0
+2022-09-23 12:06:25 [http-nio-9000-exec-8] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:25 [http-nio-9000-exec-8] INFO  jdbc.resultset - 1. ResultSet.getDate(REGDATE) returned 2022-09-22
+2022-09-23 12:06:25 [http-nio-9000-exec-8] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:25 [http-nio-9000-exec-8] INFO  jdbc.resultsettable - 
+|---|-------|---------|---|----|-----------|
+|no |title  |content  |id |hit |regdate    |
+|---|-------|---------|---|----|-----------|
+|22 |title1 |content1 |1  |0   |2022-09-22 |
+|---|-------|---------|---|----|-----------|
+
+2022-09-23 12:06:25 [http-nio-9000-exec-8] INFO  jdbc.resultset - 1. ResultSet.next() returned false
+2022-09-23 12:06:25 [http-nio-9000-exec-8] INFO  jdbc.resultset - 1. ResultSet.close() returned void
+2022-09-23 12:06:34 [http-nio-9000-exec-10] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 12:06:34 [http-nio-9000-exec-10] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 12:06:34 [http-nio-9000-exec-10] DEBUG jdbc.sqlonly -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select * from simple_board order by no desc 
+
+2022-09-23 12:06:34 [http-nio-9000-exec-10] DEBUG jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select * from simple_board order by no desc 
+ {executed in 7 msec}
+2022-09-23 12:06:34 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.new ResultSet returned 
+2022-09-23 12:06:34 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@6a413b5
+2022-09-23 12:06:34 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.getType() returned 1003
+2022-09-23 12:06:34 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-23 12:06:34 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.getInt(NO) returned 22
+2022-09-23 12:06:34 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:34 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.getString(TITLE) returned title1
+2022-09-23 12:06:34 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:34 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.getString(CONTENT) returned content1
+2022-09-23 12:06:34 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:34 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.getString(ID) returned 1
+2022-09-23 12:06:34 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:34 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.getInt(HIT) returned 0
+2022-09-23 12:06:34 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:34 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.getDate(REGDATE) returned 2022-09-22
+2022-09-23 12:06:34 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:06:34 [http-nio-9000-exec-10] INFO  jdbc.resultsettable - 
+|---|-------|---------|---|----|-----------|
+|no |title  |content  |id |hit |regdate    |
+|---|-------|---------|---|----|-----------|
+|22 |title1 |content1 |1  |0   |2022-09-22 |
+|---|-------|---------|---|----|-----------|
+
+2022-09-23 12:06:34 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.next() returned false
+2022-09-23 12:06:34 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.close() returned void
+2022-09-23 12:06:34 [http-nio-9000-exec-10] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 1
+2022-09-23 12:07:21 [http-nio-9000-exec-2] INFO  c.javalab.controller.LoginController - logout 메소드
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  c.javalab.controller.LoginController - login POST() 메소드
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  com.javalab.service.LoginServiceImpl - (Method) getUserById(from LoginServiceImpl) is execute!
+2022-09-23 12:07:28 [http-nio-9000-exec-3] DEBUG jdbc.sqlonly -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select * from user_tbl where id = '1' and pwd = '2' 
+
+2022-09-23 12:07:28 [http-nio-9000-exec-3] DEBUG jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select * from user_tbl where id = '1' and pwd = '2' 
+ {executed in 8 msec}
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.new ResultSet returned 
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@17321a9a
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getType() returned 1003
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(ID) returned 1
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(PWD) returned 2
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(NAME) returned 홍범도
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(EMAIL) returned a@a.com
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(ROLE) returned admin
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getDate(JOINDATE) returned 2022-09-15
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  jdbc.resultsettable - 
+|---|----|-----|--------|------|-----------|
+|id |pwd |name |email   |role  |joindate   |
+|---|----|-----|--------|------|-----------|
+|1  |2   |홍범도  |a@a.com |admin |2022-09-15 |
+|---|----|-----|--------|------|-----------|
+
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.next() returned false
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.close() returned void
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  c.javalab.controller.LoginController - 로그인 성공! userVo : UserVo(id=1, pwd=2, name=홍범도, email=a@a.com, role=admin, joinDate=2022-09-15)
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  c.javalab.controller.LoginController - 세션에 기록 성공
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  c.javalab.controller.LoginController - 사용자 웹브라우저에 쿠키 저장 성공 cookie값 : 1
+2022-09-23 12:07:28 [http-nio-9000-exec-3] INFO  c.javalab.controller.LoginController - 리턴 Url : redirect:/board/boardList.do
+2022-09-23 12:07:28 [http-nio-9000-exec-4] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 12:07:28 [http-nio-9000-exec-4] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 12:07:28 [http-nio-9000-exec-4] DEBUG jdbc.sqlonly -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select * from simple_board order by no desc 
+
+2022-09-23 12:07:28 [http-nio-9000-exec-4] DEBUG jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select * from simple_board order by no desc 
+ {executed in 14 msec}
+2022-09-23 12:07:28 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.new ResultSet returned 
+2022-09-23 12:07:28 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@555a5560
+2022-09-23 12:07:28 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getType() returned 1003
+2022-09-23 12:07:28 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-23 12:07:28 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getInt(NO) returned 22
+2022-09-23 12:07:28 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:07:28 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getString(TITLE) returned title1
+2022-09-23 12:07:28 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:07:28 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getString(CONTENT) returned content1
+2022-09-23 12:07:28 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:07:28 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getString(ID) returned 1
+2022-09-23 12:07:28 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:07:28 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getInt(HIT) returned 0
+2022-09-23 12:07:28 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:07:28 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.getDate(REGDATE) returned 2022-09-22
+2022-09-23 12:07:28 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:07:28 [http-nio-9000-exec-4] INFO  jdbc.resultsettable - 
+|---|-------|---------|---|----|-----------|
+|no |title  |content  |id |hit |regdate    |
+|---|-------|---------|---|----|-----------|
+|22 |title1 |content1 |1  |0   |2022-09-22 |
+|---|-------|---------|---|----|-----------|
+
+2022-09-23 12:07:28 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.next() returned false
+2022-09-23 12:07:28 [http-nio-9000-exec-4] INFO  jdbc.resultset - 1. ResultSet.close() returned void
+2022-09-23 12:07:28 [http-nio-9000-exec-4] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 1
+2022-09-23 12:09:47 [http-nio-9000-exec-6] INFO  c.javalab.controller.BoardController - getBoardById 메소드 호출 
+2022-09-23 12:09:47 [http-nio-9000-exec-6] DEBUG jdbc.sqlonly -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select * from simple_board where no=22 
+
+2022-09-23 12:09:47 [http-nio-9000-exec-6] DEBUG jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select * from simple_board where no=22 
+ {executed in 15 msec}
+2022-09-23 12:09:47 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.new ResultSet returned 
+2022-09-23 12:09:47 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@4dba2118
+2022-09-23 12:09:47 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.getType() returned 1003
+2022-09-23 12:09:47 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-23 12:09:47 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.getInt(NO) returned 22
+2022-09-23 12:09:47 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:47 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.getString(TITLE) returned title1
+2022-09-23 12:09:47 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:47 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.getString(CONTENT) returned content1
+2022-09-23 12:09:47 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:47 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.getString(ID) returned 1
+2022-09-23 12:09:47 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:47 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.getInt(HIT) returned 0
+2022-09-23 12:09:47 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:47 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.getDate(REGDATE) returned 2022-09-22
+2022-09-23 12:09:47 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:47 [http-nio-9000-exec-6] INFO  jdbc.resultsettable - 
+|---|-------|---------|---|----|-----------|
+|no |title  |content  |id |hit |regdate    |
+|---|-------|---------|---|----|-----------|
+|22 |title1 |content1 |1  |0   |2022-09-22 |
+|---|-------|---------|---|----|-----------|
+
+2022-09-23 12:09:47 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.next() returned false
+2022-09-23 12:09:47 [http-nio-9000-exec-6] INFO  jdbc.resultset - 1. ResultSet.close() returned void
+2022-09-23 12:09:49 [http-nio-9000-exec-7] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 12:09:49 [http-nio-9000-exec-7] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 12:09:49 [http-nio-9000-exec-7] DEBUG jdbc.sqlonly -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select * from simple_board order by no desc 
+
+2022-09-23 12:09:49 [http-nio-9000-exec-7] DEBUG jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select * from simple_board order by no desc 
+ {executed in 10 msec}
+2022-09-23 12:09:49 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.new ResultSet returned 
+2022-09-23 12:09:49 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@6cbfd6a8
+2022-09-23 12:09:49 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.getType() returned 1003
+2022-09-23 12:09:49 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-23 12:09:49 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.getInt(NO) returned 22
+2022-09-23 12:09:49 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:49 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.getString(TITLE) returned title1
+2022-09-23 12:09:49 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:49 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.getString(CONTENT) returned content1
+2022-09-23 12:09:49 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:49 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.getString(ID) returned 1
+2022-09-23 12:09:49 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:49 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.getInt(HIT) returned 0
+2022-09-23 12:09:49 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:49 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.getDate(REGDATE) returned 2022-09-22
+2022-09-23 12:09:49 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:49 [http-nio-9000-exec-7] INFO  jdbc.resultsettable - 
+|---|-------|---------|---|----|-----------|
+|no |title  |content  |id |hit |regdate    |
+|---|-------|---------|---|----|-----------|
+|22 |title1 |content1 |1  |0   |2022-09-22 |
+|---|-------|---------|---|----|-----------|
+
+2022-09-23 12:09:49 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.next() returned false
+2022-09-23 12:09:49 [http-nio-9000-exec-7] INFO  jdbc.resultset - 1. ResultSet.close() returned void
+2022-09-23 12:09:49 [http-nio-9000-exec-7] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 1
+2022-09-23 12:09:51 [http-nio-9000-exec-8] INFO  c.javalab.controller.BoardController - boardWriteForm 메소드 호출 
+2022-09-23 12:09:54 [http-nio-9000-exec-9] INFO  c.javalab.controller.BoardController - insertBoard 메소드 호출 
+2022-09-23 12:09:54 [http-nio-9000-exec-9] DEBUG jdbc.sqlonly -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. insert into simple_board values(seq_simple_board.nextval, '2', '2', '1', 0, sysdate) 
+
+2022-09-23 12:09:54 [http-nio-9000-exec-9] DEBUG jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. insert into simple_board values(seq_simple_board.nextval, '2', '2', '1', 0, sysdate) 
+ {executed in 10 msec}
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  c.javalab.controller.BoardController - getBoardList 메소드 호출 
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  com.javalab.service.BoardServiceImpl - BoardVo(no=0, title=null, id=null, content=null, regDate=null, hit=0, uploadFile=null)
+2022-09-23 12:09:54 [http-nio-9000-exec-10] DEBUG jdbc.sqlonly -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select * from simple_board order by no desc 
+
+2022-09-23 12:09:54 [http-nio-9000-exec-10] DEBUG jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select * from simple_board order by no desc 
+ {executed in 7 msec}
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.new ResultSet returned 
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@93363e7
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.getType() returned 1003
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.getInt(NO) returned 26
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.getString(TITLE) returned 2
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.getString(CONTENT) returned 2
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.getString(ID) returned 1
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.getInt(HIT) returned 0
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.getDate(REGDATE) returned 2022-09-23
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.getInt(NO) returned 22
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.getString(TITLE) returned title1
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.getString(CONTENT) returned content1
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.getString(ID) returned 1
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.getInt(HIT) returned 0
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.getDate(REGDATE) returned 2022-09-22
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultsettable - 
+|---|-------|---------|---|----|-----------|
+|no |title  |content  |id |hit |regdate    |
+|---|-------|---------|---|----|-----------|
+|26 |2      |2        |1  |0   |2022-09-23 |
+|22 |title1 |content1 |1  |0   |2022-09-22 |
+|---|-------|---------|---|----|-----------|
+
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.next() returned false
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  jdbc.resultset - 1. ResultSet.close() returned void
+2022-09-23 12:09:54 [http-nio-9000-exec-10] INFO  com.javalab.service.BoardServiceImpl - voardList.size() : 2
+2022-09-23 12:21:29 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53s776ms).
+2022-09-23 12:51:08 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=29m9s564ms).
+2022-09-23 13:07:07 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m58s342ms).
+2022-09-23 13:07:37 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s869ms), soft-evicting connections from pool.
+2022-09-23 13:07:37 [HikariPool-1 connection closer] INFO  jdbc.connection - 1. Connection closed
+2022-09-23 13:07:37 [HikariPool-1 connection closer] INFO  jdbc.connection - 2. Connection closed
+2022-09-23 13:07:37 [HikariPool-1 connection closer] INFO  jdbc.connection - 3. Connection closed
+2022-09-23 13:07:37 [HikariPool-1 connection closer] INFO  jdbc.connection - 4. Connection closed
+2022-09-23 13:07:37 [HikariPool-1 connection closer] INFO  jdbc.connection - 5. Connection closed
+2022-09-23 13:07:37 [HikariPool-1 connection closer] INFO  jdbc.connection - 6. Connection closed
+2022-09-23 13:07:37 [HikariPool-1 connection closer] INFO  jdbc.connection - 7. Connection closed
+2022-09-23 13:07:37 [HikariPool-1 connection closer] INFO  jdbc.connection - 8. Connection closed
+2022-09-23 13:07:37 [HikariPool-1 connection closer] INFO  jdbc.connection - 9. Connection closed
+2022-09-23 13:07:37 [HikariPool-1 connection closer] INFO  jdbc.connection - 10. Connection closed
+2022-09-23 13:07:42 [HikariPool-1 connection adder] INFO  jdbc.connection - 11. Connection opened
+2022-09-23 13:07:47 [HikariPool-1 connection adder] INFO  jdbc.connection - 12. Connection opened
+2022-09-23 13:07:52 [HikariPool-1 connection adder] INFO  jdbc.connection - 13. Connection opened
+2022-09-23 13:28:52 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=21m15s263ms).
+2022-09-23 13:29:06 [HikariPool-1 connection adder] INFO  jdbc.connection - 14. Connection opened
+2022-09-23 13:29:11 [HikariPool-1 connection adder] INFO  jdbc.connection - 15. Connection opened
+2022-09-23 13:29:16 [HikariPool-1 connection adder] INFO  jdbc.connection - 16. Connection opened
+2022-09-23 13:29:21 [HikariPool-1 connection adder] INFO  jdbc.connection - 17. Connection opened
+2022-09-23 13:29:26 [HikariPool-1 connection adder] INFO  jdbc.connection - 18. Connection opened
+2022-09-23 13:38:47 [HikariPool-1 connection adder] INFO  jdbc.connection - 19. Connection opened
+2022-09-23 13:38:47 [HikariPool-1 connection adder] INFO  jdbc.connection - 20. Connection opened
+2022-09-23 13:38:49 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m26s847ms).
+2022-09-23 13:38:54 [Thread-4] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 23 12:06:05 KST 2022]; parent: Root WebApplicationContext
