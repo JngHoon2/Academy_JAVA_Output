@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.javalab.dao.SigninDao">
+  <insert id="addUser" parameterType="User">
+		insert into user_tbl values(#{id}, #{pwd}, #{name}, #{email}, #{role}, sysdate);
+  </insert>
+</mapper>
+<!-- mapper가 연결자 역할을 하는 거임. -->

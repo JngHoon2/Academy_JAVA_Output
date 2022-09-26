@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- LoginDao 인터페이스 userMapper.xml을 연결시켜 주는 역할 -->
+<mapper namespace="com.javalab.dao.LoginDao">
+
+	<select id="getUserById" parameterType="User" resultType="User">
+		select
+		* from user_tbl where id=#{id} and pwd=#{pwd}
+	</select>
+
+	<insert id="insertUser" parameterType="User">
+		insert into user_tbl(
+		id,
+		pwd,
+		name,
+		email,
+		role_id, /* role -> role_id */
+		joindate)
+		values(
+		#{id},
+		#{pwd},
+		#{name},
+		#{email},
+		#{roleId},
+		sysdate)
+	</insert>
+
+	<!-- 권한(Role) 조회 -->
+	<select id="getRoles" resultType="Role">
+		select role_id, role_name from role_tbl
+	</select>
+	
+	<!-- 아이디 중복 체크 -->
+	<select id="idCheck" parameterType="String" resultType="int">
+		select count(id) from user_tbl where id=#{param1}
+	</select>   
+   
+</mapper>

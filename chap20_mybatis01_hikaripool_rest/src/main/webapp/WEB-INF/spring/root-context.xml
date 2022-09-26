@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!-- 다음 base-package에 있는 클래스들을 빈으로 생성 -->
+	<context:component-scan
+		base-package="com.javalab.dao,
+					  com.javalab.service
+					  com"></context:component-scan>
+
+	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+		<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
+		<property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@58.148.65.116:1521:orcl" />
+		<property name="username" value="board" />
+		<property name="password" value="1234" />
+		<!-- <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/> -->
+		<!-- <property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:orcl"/> -->
+		<!-- <property name="username" value="board"/> -->
+		<!-- <property name="password" value="1234"/> -->
+	</bean>
+
+	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource"
+		destroy-method="close">
+		<constructor-arg ref="hikariConfig" />
+	</bean>
+
+	<!-- [매퍼 인터페이스 설정 방법.1 - 특정한 인터페이스만 매퍼인터페이스로 인식 가능 옵션] -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<!-- 매퍼 인터페이스가 들어있는 경로.그 지정된 경로 안의 모든 인터페이스들은 매퍼 인터페이스 자격 -->
+		<property name="basePackage" value="com.javalab.dao" />
+	</bean>
+
+	<!-- [매퍼 인터페이스 설정 방법.2 - 베이스 패키지 하위의 모든 인터페이스를 매퍼인터페이스로 인식] -->
+	<!-- <mybatis-spring:scan base-package="com.javalab.dao"/> -->
+
+	<!-- [SqlSessionFactoryBean] mybatis main config - SqlMapConfig.xml(typeAliases) 
+		and mapper file -->
+	<bean id="sqlSessionFactory"
+		class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation"
+			value="classpath:/config/sqlMapConfig.xml" /> <!-- 별명 파일 -->
+		<!-- 런타임 시 SqlSessionFactory에 MyBatis mapper 파일들의 경로가 설정된다. ~/mapper/**/*.xml 
+			일괄 등록해도 됨 -->
+		<property name="mapperLocations"
+			value="classpath:/mapper/oracle/*Mapper.xml" />
+	</bean>
+
+	<bean id="sqlSession"
+		class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory" />
+	</bean>
+
+
+</beans>
