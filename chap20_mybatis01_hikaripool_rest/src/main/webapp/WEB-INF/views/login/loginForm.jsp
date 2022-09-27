@@ -85,7 +85,7 @@
             <td width="200"><p>&nbsp;</p></td>
             <td width="400">
                <input type="button" id="btnLogin" value="로그인">
-               <input type="button" value="회원가입" onclick="goUrl('<c:url value="/user/userInsert.do" />');" />
+               <input type="button" value="회원가입" onclick="goUrl('<c:url value="/join/join.do" />');" />
             </td>
          </tr>
       </table>
