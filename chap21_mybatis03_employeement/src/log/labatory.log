@@ -3872,3 +3872,438 @@ like '%'||''||'%')
 2022-09-30 16:38:47 [http-nio-9000-exec-7] INFO  jdbc.resultset - 21. ResultSet.close() returned void
 2022-09-30 16:38:47 [http-nio-9000-exec-7] INFO  c.j.controller.EmployeeController - Pagedto : PageDto(startPage=1, endPage=2, prev=false, next=false, total=20, cri=Criteria(pageNum=2, amount=10, searchText=))
 2022-09-30 16:38:58 [Thread-4] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 30 16:02:43 KST 2022]; parent: Root WebApplicationContext
+2022-09-30 18:08:32 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2022-09-30 18:08:32 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Fri Sep 30 18:08:32 KST 2022]; root of context hierarchy
+2022-09-30 18:08:32 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+2022-09-30 18:08:33 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022-09-30 18:08:33 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-09-30 18:08:34 [main] INFO  jdbc.connection - 1. Connection opened
+2022-09-30 18:08:34 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-09-30 18:08:34 [HikariPool-1 connection adder] INFO  jdbc.connection - 2. Connection opened
+2022-09-30 18:08:34 [HikariPool-1 connection adder] INFO  jdbc.connection - 3. Connection opened
+2022-09-30 18:08:34 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2154 ms
+2022-09-30 18:08:34 [main] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+2022-09-30 18:08:34 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 30 18:08:34 KST 2022]; parent: Root WebApplicationContext
+2022-09-30 18:08:34 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
+2022-09-30 18:08:34 [HikariPool-1 connection adder] INFO  jdbc.connection - 4. Connection opened
+2022-09-30 18:08:35 [HikariPool-1 connection adder] INFO  jdbc.connection - 5. Connection opened
+2022-09-30 18:08:35 [HikariPool-1 connection adder] INFO  jdbc.connection - 6. Connection opened
+2022-09-30 18:08:35 [HikariPool-1 connection adder] INFO  jdbc.connection - 7. Connection opened
+2022-09-30 18:08:35 [HikariPool-1 connection adder] INFO  jdbc.connection - 8. Connection opened
+2022-09-30 18:08:35 [HikariPool-1 connection adder] INFO  jdbc.connection - 9. Connection opened
+2022-09-30 18:08:35 [HikariPool-1 connection adder] INFO  jdbc.connection - 10. Connection opened
+2022-09-30 18:08:35 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022-09-30 18:08:36 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardList.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.getListPagingAndSearching(com.javalab.vo.Criteria,org.springframework.ui.Model)
+2022-09-30 18:08:36 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardView.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.getBoardById(int,com.javalab.vo.Criteria,org.springframework.ui.Model)
+2022-09-30 18:08:36 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardWrite.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.BoardController.insertBoard(com.javalab.vo.BoardVo,com.javalab.vo.Criteria,org.springframework.web.servlet.mvc.support.RedirectAttributes) throws java.io.IOException
+2022-09-30 18:08:36 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardCount.do],methods=[GET]}" onto public int com.javalab.controller.BoardController.getTotalBoardCount(com.javalab.vo.Criteria,org.springframework.ui.Model)
+2022-09-30 18:08:36 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardWrite.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.boardWriteForm(org.springframework.ui.Model)
+2022-09-30 18:08:36 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardModify.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.updateBoardForm(com.javalab.vo.BoardVo,com.javalab.vo.Criteria,org.springframework.ui.Model)
+2022-09-30 18:08:36 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardModify.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.BoardController.boardModify(com.javalab.vo.BoardVo,com.javalab.vo.Criteria,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2022-09-30 18:08:36 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/board/boardDelete.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.BoardController.boardDelete(com.javalab.vo.BoardVo,com.javalab.vo.Criteria,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2022-09-30 18:08:36 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/emp/list.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.EmployeeController.getemployeeList(com.javalab.vo.Criteria,org.springframework.ui.Model)
+2022-09-30 18:08:36 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.javalab.controller.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+2022-09-30 18:08:36 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/login.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.LoginController.login(com.javalab.vo.UserVO,javax.servlet.http.HttpSession,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+2022-09-30 18:08:36 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/logout.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.LoginController.logout(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+2022-09-30 18:08:36 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login/login.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.LoginController.loginForm(org.springframework.ui.Model)
+2022-09-30 18:08:36 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/idCheck.do],methods=[GET]}" onto public int com.javalab.controller.UserController.idCheck(com.javalab.vo.UserVO,org.springframework.ui.Model)
+2022-09-30 18:08:36 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/join.do],methods=[GET]}" onto public java.lang.String com.javalab.controller.UserController.joinForm(com.javalab.vo.Criteria,org.springframework.ui.Model)
+2022-09-30 18:08:36 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/user/join.do],methods=[POST]}" onto public java.lang.String com.javalab.controller.UserController.insertUser(com.javalab.vo.UserVO,org.springframework.ui.Model) throws java.io.IOException
+2022-09-30 18:08:36 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 30 18:08:34 KST 2022]; parent: Root WebApplicationContext
+2022-09-30 18:08:36 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 30 18:08:34 KST 2022]; parent: Root WebApplicationContext
+2022-09-30 18:08:36 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2022-09-30 18:08:36 [main] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization completed in 1761 ms
+2022-09-30 18:08:36 [http-nio-9000-exec-1] INFO  c.javalab.controller.HomeController - Welcome home! The client locale is ko_BE.
+2022-09-30 18:08:37 [http-nio-9000-exec-2] INFO  c.javalab.controller.HomeController - Welcome home! The client locale is ko_KR.
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  c.j.controller.EmployeeController - getemployeeList(from EmployeeController) 메소드 실행!
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  c.j.service.EmployeeServiceImpl - getEmployeeList(from EmployeeServiceImpl) 메소드 실행!
+2022-09-30 18:08:37 [http-nio-9000-exec-3] DEBUG jdbc.sqlonly -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select a.employee_id, a.first_name, a.last_name, a.email, a.phone_number, a.hire_date, a.salary, 
+a.job_id, a.job_title, a.department_id, a.department_name, a.location_id, a.state_province, 
+a.city, a.country_id, a.country_name from( select /*+ INDEX_DESC(employees EMP_EMP_ID_PK) */ 
+rownum rn, e.employee_id, e.first_name, e.last_name, e.email, e.phone_number, e.hire_date, 
+e.salary, e.job_id, j.job_title, e.department_id, d.department_name, d.location_id, l.state_province, 
+l.city, l.country_id, c.country_name from employees e left outer join jobs j on e.job_id = 
+j.job_id left outer join departments d on e.department_id = d.department_id left outer join 
+locations l on d.location_id = l.location_id left outer join countries c on l.country_id = 
+c.country_id where 1=1 and (e.first_name like '%'||''||'%' or e.last_name like '%'||''||'%') 
+and rownum <= 1 * 10 )a where rn > (1 - 1) * 10 
+
+2022-09-30 18:08:37 [http-nio-9000-exec-3] DEBUG jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select a.employee_id, a.first_name, a.last_name, a.email, a.phone_number, a.hire_date, a.salary, 
+a.job_id, a.job_title, a.department_id, a.department_name, a.location_id, a.state_province, 
+a.city, a.country_id, a.country_name from( select /*+ INDEX_DESC(employees EMP_EMP_ID_PK) */ 
+rownum rn, e.employee_id, e.first_name, e.last_name, e.email, e.phone_number, e.hire_date, 
+e.salary, e.job_id, j.job_title, e.department_id, d.department_name, d.location_id, l.state_province, 
+l.city, l.country_id, c.country_name from employees e left outer join jobs j on e.job_id = 
+j.job_id left outer join departments d on e.department_id = d.department_id left outer join 
+locations l on d.location_id = l.location_id left outer join countries c on l.country_id = 
+c.country_id where 1=1 and (e.first_name like '%'||''||'%' or e.last_name like '%'||''||'%') 
+and rownum <= 1 * 10 )a where rn > (1 - 1) * 10 
+ {executed in 164 msec}
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.new ResultSet returned 
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@52fb7e3d
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getType() returned 1003
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getLong(EMPLOYEE_ID) returned 100
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(FIRST_NAME) returned 스티븐
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(LAST_NAME) returned 킹
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(EMAIL) returned SKING
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(PHONE_NUMBER) returned 515.123.4567
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getDate(HIRE_DATE) returned 1987-01-08
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getLong(SALARY) returned 24000
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(JOB_ID) returned AD_PRES
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(JOB_TITLE) returned 사장
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getInt(DEPARTMENT_ID) returned 90
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(DEPARTMENT_NAME) returned Executive
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(STATE_PROVINCE) returned Washington
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(CITY) returned Seattle
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(COUNTRY_NAME) returned United States of America
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getLong(EMPLOYEE_ID) returned 102
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(FIRST_NAME) returned 렉스
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(LAST_NAME) returned 데이안
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(EMAIL) returned LDEHAAN
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(PHONE_NUMBER) returned 515.123.4569
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getDate(HIRE_DATE) returned 1992-03-08
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getLong(SALARY) returned 17000
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(JOB_ID) returned AD_VP
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(JOB_TITLE) returned 관리 부사장
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getInt(DEPARTMENT_ID) returned 90
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(DEPARTMENT_NAME) returned Executive
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(STATE_PROVINCE) returned Washington
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(CITY) returned Seattle
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(COUNTRY_NAME) returned United States of America
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getLong(EMPLOYEE_ID) returned 101
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(FIRST_NAME) returned 니나
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(LAST_NAME) returned 코커
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(EMAIL) returned NKOCHHAR
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(PHONE_NUMBER) returned 515.123.4568
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getDate(HIRE_DATE) returned 1990-02-08
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getLong(SALARY) returned 17000
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(JOB_ID) returned AD_VP
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(JOB_TITLE) returned 관리 부사장
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getInt(DEPARTMENT_ID) returned 90
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(DEPARTMENT_NAME) returned Executive
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(STATE_PROVINCE) returned Washington
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(CITY) returned Seattle
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(COUNTRY_NAME) returned United States of America
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getLong(EMPLOYEE_ID) returned 200
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(FIRST_NAME) returned 제니퍼
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(LAST_NAME) returned 할른
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(EMAIL) returned JWHALEN
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(PHONE_NUMBER) returned 515.123.4444
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getDate(HIRE_DATE) returned 1998-08-08
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getLong(SALARY) returned 4400
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(JOB_ID) returned AD_ASST
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(JOB_TITLE) returned 관리 보조역
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getInt(DEPARTMENT_ID) returned 10
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(DEPARTMENT_NAME) returned Administration
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(STATE_PROVINCE) returned Washington
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(CITY) returned Seattle
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(COUNTRY_NAME) returned United States of America
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getLong(EMPLOYEE_ID) returned 205
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(FIRST_NAME) returned 셀리
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(LAST_NAME) returned 히긴스
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(EMAIL) returned SHIGGINS
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(PHONE_NUMBER) returned 515.123.8080
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getDate(HIRE_DATE) returned 1991-05-08
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getLong(SALARY) returned 12000
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(JOB_ID) returned AC_MGR
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(JOB_TITLE) returned 회계 관리자
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getInt(DEPARTMENT_ID) returned 110
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(DEPARTMENT_NAME) returned Accounting
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(STATE_PROVINCE) returned Washington
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(CITY) returned Seattle
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(COUNTRY_NAME) returned United States of America
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getLong(EMPLOYEE_ID) returned 206
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(FIRST_NAME) returned 윌리암
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(LAST_NAME) returned 게이츠
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(EMAIL) returned WGIETZ
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(PHONE_NUMBER) returned 515.123.8181
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getDate(HIRE_DATE) returned 2002-06-08
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getLong(SALARY) returned 8300
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(JOB_ID) returned AC_ACCOUNT
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(JOB_TITLE) returned 회계사
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getInt(DEPARTMENT_ID) returned 110
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(DEPARTMENT_NAME) returned Accounting
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(STATE_PROVINCE) returned Washington
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(CITY) returned Seattle
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(COUNTRY_NAME) returned United States of America
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getLong(EMPLOYEE_ID) returned 149
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(FIRST_NAME) returned 엘레니
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(LAST_NAME) returned 즐롯키
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(EMAIL) returned EZLOTKEY
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(PHONE_NUMBER) returned 011.44.1344.429018
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getDate(HIRE_DATE) returned 1997-04-08
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getLong(SALARY) returned 10500
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(JOB_ID) returned SA_MAN
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(JOB_TITLE) returned 영업관리자
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getInt(DEPARTMENT_ID) returned 80
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(DEPARTMENT_NAME) returned Sales
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(STATE_PROVINCE) returned Oxford
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(CITY) returned Oxford
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(COUNTRY_NAME) returned United Kingdom
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getLong(EMPLOYEE_ID) returned 178
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(FIRST_NAME) returned 킴벌리
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(LAST_NAME) returned 그랜트
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(EMAIL) returned KGRANT
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(PHONE_NUMBER) returned 011.44.1644.429263
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getDate(HIRE_DATE) returned 1997-03-08
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getLong(SALARY) returned 7000
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(JOB_ID) returned SA_REP
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(JOB_TITLE) returned 영업담당자
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getInt(DEPARTMENT_ID) returned 0
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned true
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(DEPARTMENT_NAME) returned void
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned true
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(STATE_PROVINCE) returned void
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned true
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(CITY) returned void
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned true
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(COUNTRY_NAME) returned void
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned true
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getLong(EMPLOYEE_ID) returned 176
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(FIRST_NAME) returned 조나단
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(LAST_NAME) returned 테일러
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(EMAIL) returned JTAYLOR
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(PHONE_NUMBER) returned 011.44.1644.429265
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getDate(HIRE_DATE) returned 2001-07-08
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getLong(SALARY) returned 8600
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(JOB_ID) returned SA_REP
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(JOB_TITLE) returned 영업담당자
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getInt(DEPARTMENT_ID) returned 80
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(DEPARTMENT_NAME) returned Sales
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(STATE_PROVINCE) returned Oxford
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(CITY) returned Oxford
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(COUNTRY_NAME) returned United Kingdom
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getLong(EMPLOYEE_ID) returned 174
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(FIRST_NAME) returned 엘렌
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(LAST_NAME) returned 아벨
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(EMAIL) returned EABEL
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(PHONE_NUMBER) returned 011.44.1644.429267
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getDate(HIRE_DATE) returned 2021-05-08
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getLong(SALARY) returned 11000
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(JOB_ID) returned SA_REP
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(JOB_TITLE) returned 영업담당자
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getInt(DEPARTMENT_ID) returned 80
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(DEPARTMENT_NAME) returned Sales
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(STATE_PROVINCE) returned Oxford
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(CITY) returned Oxford
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getString(COUNTRY_NAME) returned United Kingdom
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultsettable - 
+|------------|-----------|----------|---------|-------------------|-----------|-------|-----------|----------|--------------|----------------|------------|---------------|--------|-----------|-------------------------|
+|employee_id |first_name |last_name |email    |phone_number       |hire_date  |salary |job_id     |job_title |department_id |department_name |location_id |state_province |city    |country_id |country_name             |
+|------------|-----------|----------|---------|-------------------|-----------|-------|-----------|----------|--------------|----------------|------------|---------------|--------|-----------|-------------------------|
+|100         |스티븐        |킹         |SKING    |515.123.4567       |1987-01-08 |24000  |AD_PRES    |사장        |90            |Executive       |[unread]    |Washington     |Seattle |[unread]   |United States of America |
+|102         |렉스         |데이안       |LDEHAAN  |515.123.4569       |1992-03-08 |17000  |AD_VP      |관리 부사장    |90            |Executive       |[unread]    |Washington     |Seattle |[unread]   |United States of America |
+|101         |니나         |코커        |NKOCHHAR |515.123.4568       |1990-02-08 |17000  |AD_VP      |관리 부사장    |90            |Executive       |[unread]    |Washington     |Seattle |[unread]   |United States of America |
+|200         |제니퍼        |할른        |JWHALEN  |515.123.4444       |1998-08-08 |4400   |AD_ASST    |관리 보조역    |10            |Administration  |[unread]    |Washington     |Seattle |[unread]   |United States of America |
+|205         |셀리         |히긴스       |SHIGGINS |515.123.8080       |1991-05-08 |12000  |AC_MGR     |회계 관리자    |110           |Accounting      |[unread]    |Washington     |Seattle |[unread]   |United States of America |
+|206         |윌리암        |게이츠       |WGIETZ   |515.123.8181       |2002-06-08 |8300   |AC_ACCOUNT |회계사       |110           |Accounting      |[unread]    |Washington     |Seattle |[unread]   |United States of America |
+|149         |엘레니        |즐롯키       |EZLOTKEY |011.44.1344.429018 |1997-04-08 |10500  |SA_MAN     |영업관리자     |80            |Sales           |[unread]    |Oxford         |Oxford  |[unread]   |United Kingdom           |
+|178         |킴벌리        |그랜트       |KGRANT   |011.44.1644.429263 |1997-03-08 |7000   |SA_REP     |영업담당자     |[null]        |[null]          |[unread]    |[null]         |[null]  |[unread]   |[null]                   |
+|176         |조나단        |테일러       |JTAYLOR  |011.44.1644.429265 |2001-07-08 |8600   |SA_REP     |영업담당자     |80            |Sales           |[unread]    |Oxford         |Oxford  |[unread]   |United Kingdom           |
+|174         |엘렌         |아벨        |EABEL    |011.44.1644.429267 |2021-05-08 |11000  |SA_REP     |영업담당자     |80            |Sales           |[unread]    |Oxford         |Oxford  |[unread]   |United Kingdom           |
+|------------|-----------|----------|---------|-------------------|-----------|-------|-----------|----------|--------------|----------------|------------|---------------|--------|-----------|-------------------------|
+
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.next() returned false
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.close() returned void
+2022-09-30 18:08:37 [http-nio-9000-exec-3] INFO  c.j.service.EmployeeServiceImpl - getTotalEmployees(from EmployeeServiceImpl) 메소드 실행!
+2022-09-30 18:08:37 [http-nio-9000-exec-3] DEBUG jdbc.sqlonly -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select count(*) from employees e where 1=1 and (e.first_name like '%'||''||'%' or e.last_name 
+like '%'||''||'%') 
+
+2022-09-30 18:08:38 [http-nio-9000-exec-3] DEBUG jdbc.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select count(*) from employees e where 1=1 and (e.first_name like '%'||''||'%' or e.last_name 
+like '%'||''||'%') 
+ {executed in 18 msec}
+2022-09-30 18:08:38 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.new ResultSet returned 
+2022-09-30 18:08:38 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@3590618f
+2022-09-30 18:08:38 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getType() returned 1003
+2022-09-30 18:08:38 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.next() returned true
+2022-09-30 18:08:38 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.getInt(COUNT(*)) returned 20
+2022-09-30 18:08:38 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.wasNull() returned false
+2022-09-30 18:08:38 [http-nio-9000-exec-3] INFO  jdbc.resultsettable - 
+|---------|
+|count(*) |
+|---------|
+|20       |
+|---------|
+
+2022-09-30 18:08:38 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.next() returned false
+2022-09-30 18:08:38 [http-nio-9000-exec-3] INFO  jdbc.resultset - 1. ResultSet.close() returned void
+2022-09-30 18:08:38 [http-nio-9000-exec-3] INFO  c.j.controller.EmployeeController - Pagedto : PageDto(startPage=1, endPage=2, prev=false, next=false, total=20, cri=Criteria(pageNum=1, amount=10, searchText=))
+2022-09-30 18:09:16 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 30 18:08:34 KST 2022]; parent: Root WebApplicationContext
+2022-09-30 18:09:16 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Fri Sep 30 18:08:32 KST 2022]; root of context hierarchy
+2022-09-30 18:09:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-09-30 18:09:16 [HikariPool-1 connection closer] INFO  jdbc.connection - 1. Connection closed
+2022-09-30 18:09:16 [HikariPool-1 connection closer] INFO  jdbc.connection - 2. Connection closed
+2022-09-30 18:09:16 [HikariPool-1 connection closer] INFO  jdbc.connection - 3. Connection closed
+2022-09-30 18:09:16 [HikariPool-1 connection closer] INFO  jdbc.connection - 4. Connection closed
+2022-09-30 18:09:16 [HikariPool-1 connection closer] INFO  jdbc.connection - 5. Connection closed
+2022-09-30 18:09:16 [HikariPool-1 connection closer] INFO  jdbc.connection - 6. Connection closed
+2022-09-30 18:09:16 [HikariPool-1 connection closer] INFO  jdbc.connection - 7. Connection closed
+2022-09-30 18:09:16 [HikariPool-1 connection closer] INFO  jdbc.connection - 8. Connection closed
+2022-09-30 18:09:16 [HikariPool-1 connection closer] INFO  jdbc.connection - 9. Connection closed
+2022-09-30 18:09:16 [HikariPool-1 connection closer] INFO  jdbc.connection - 10. Connection closed
+2022-09-30 18:09:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-09-30 18:09:19 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2022-09-30 18:09:20 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Fri Sep 30 18:09:20 KST 2022]; root of context hierarchy
+2022-09-30 18:09:20 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+2022-09-30 18:09:21 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1025 ms
+2022-09-30 18:09:21 [main] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+2022-09-30 18:09:21 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 30 18:09:21 KST 2022]; parent: Root WebApplicationContext
+2022-09-30 18:09:21 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
+2022-09-30 18:09:21 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022-09-30 18:09:22 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/]}" onto public java.lang.String com.javalab.controller.HomeController.home(org.springframework.ui.Model)
+2022-09-30 18:09:22 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 30 18:09:21 KST 2022]; parent: Root WebApplicationContext
+2022-09-30 18:09:22 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 30 18:09:21 KST 2022]; parent: Root WebApplicationContext
+2022-09-30 18:09:22 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2022-09-30 18:09:22 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+2022-09-30 18:09:22 [main] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization completed in 1580 ms
+2022-09-30 18:09:22 [http-nio-9000-exec-1] INFO  c.javalab.controller.HomeController - start
+2022-09-30 18:09:24 [http-nio-9000-exec-2] INFO  c.javalab.controller.HomeController - start
