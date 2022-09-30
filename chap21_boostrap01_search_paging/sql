@@ -1,0 +1,48 @@
+drop table role_tbl cascade constraints;
+
+create table role_tbl(
+role_id varchar2(20) constraint role_pk primary key,
+role_name varchar2(20) not null
+);
+
+insert into role_tbl(role_id, role_name) values('admin', '관리자');
+insert into role_tbl(role_id, role_name) values('user', '일반 사용자');
+
+commit;
+
+   -- user_tbl 수정
+   -- 기존 테이블에  role_id 추가  
+   alter table user_tbl add role_id varchar(20);
+   
+   -- 추가된 role_id에 외래키 제약 조건 추가
+   alter table user_tbl add constraint role_id_fk9 foreign key(role_id) 
+                              references role_tbl(role_id);
+   -- role 컬럼 삭제
+   alter table user_tbl drop column role ;
+   commit;
+
+drop table user_tbl cascade constraints;
+   
+  create table role_tbl(
+       role_id varchar2(20) constraint role_pk primary key,
+       role_name varchar2(20) not null  
+    ); 
+   insert into role_tbl(role_id, role_name) values('admin', '관리자');    
+   insert into role_tbl(role_id, role_name) values('user', '일반사용자');     
+    commit;    
+    
+    
+    create table user_tbl(
+    id varchar2(20),
+       pwd  varchar2(20),  
+       name  varchar2(50), 
+       email  varchar2(100), 
+       role_id   varchar2(50),  
+       joindate  date,
+       constraint user_tbl_pk primary key(id),
+       constraint user_tbl_role_fk foreign key(role_id) references role_tbl(role_id)
+   );
+    -- 샘플데이터 필요 : 
+    insert into user_tbl(id, pwd, name, email, role_id, joindate) values('1', '2', '홍범도', 'a@a.com',  'admin', sysdate);
+    
+    commit;

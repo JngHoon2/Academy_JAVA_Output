@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<!-- 다음 base-package에 있는 클래스들을 빈으로 생성 -->
+	<context:component-scan base-package="com.javalab.service"></context:component-scan>
+									
+	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+   	    <property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"/>
+	    <property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@58.148.65.116:1521:orcl"/>
+	    <property name="username" value="board"/>
+	    <property name="password" value="1234"/>
+	</bean>
+	
+	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+	    <constructor-arg ref="hikariConfig" />
+	</bean>		
+
+	<!-- [매퍼 인터페이스(Dao 인터페이스) 설정 방법.1 - 특정한 인터페이스만 매퍼인터페이스로 인식 가능 옵션] -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<!-- 매퍼 인터페이스가 들어있는 경로.그 지정된 경로 안의 모든 인터페이스들은 매퍼 인터페이스 자격 -->
+		<property name="basePackage" value="com.javalab.dao" /> 
+		<!-- basePackage 경로에 있는 인터페이스들 중에서 @Mapper 어노테이션이 있는 인터페이스만 매퍼 인터페이스로 인정 -->
+		<property name="annotationClass" value="org.apache.ibatis.annotations.Mapper" />
+	</bean>
+
+	<!-- [매퍼 인터페이스(Dao 인터페이스) 설정 방법.2 - 베이스 패키지 하위의 모든 인터페이스를 매퍼인터페이스로 인식] -->
+	<!-- <mybatis-spring:scan base-package="com.javalab.dao"/> -->
+
+	<!-- [SqlSessionFactoryBean] mybatis main config - SqlMapConfig.xml(typeAliases) and mapper file -->
+	<!-- 쿼리문을 데이터베이스로 전달하고 값을 vo로 전달해줌 -->
+	<!-- <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"> -->
+	<bean id="sqlSessionFactory" class="com.javalab.util.RefreshableSqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:/config/sqlMapConfig.xml" /> <!-- 별명 파일 -->
+		<!-- SQL 쿼리문(mapper 파일)이 있는 파일의 경로 설정  ~/mapper/**/*.xml 일괄 등록해도 됨-->
+		<property name="mapperLocations" value="classpath:/mapper/oracle/*Mapper.xml" />
+	</bean>
+
+	<!-- thread safe : 속도, 안정성 향상 됨 -->
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory" />
+	</bean>
+
+		
+</beans>

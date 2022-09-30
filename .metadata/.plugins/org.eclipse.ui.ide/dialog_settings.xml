@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/Users/tuan/Documents/works/chap21_boostrap01_search_paging"/>
+		<item value="/Users/tuan/Documents/works/chap20_mybatis01_hikaripool_rest"/>
 		<item value="/Users/tuan/Documents/works/chap18_spring_03_lombok01"/>
 		<item value="/Users/tuan/Documents/works/chap18_spring_03_lombok"/>
 		<item value="/Users/tuan/Documents/works/chap18_spring_02_paramsend"/>
