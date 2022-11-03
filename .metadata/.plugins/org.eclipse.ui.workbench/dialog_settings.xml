@@ -42,6 +42,7 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="/Users/tuan/Desktop/chap23_mybatis_hr2.zip"/>
 			<item value="/Users/tuan/Desktop/parkjinhyeonBungsin.zip"/>
 			<item value="/Users/tuan/Desktop/chap20_mybatis03_search_pagingzip.zip"/>
 			<item value="/Users/tuan/Desktop/chap20_mybatis01_hikaripool_rest.zip"/>

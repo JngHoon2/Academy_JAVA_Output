@@ -1,0 +1,13 @@
+ ALTER SESSION SET "_ORACLE_SCRIPT"=true; 
+
+SELECT DBMS_METADATA.GET_DDL('TABLE', 'MEMBERS') FROM DUAL;
+
+create table user_tbl(   
+     id        varchar2(20)  
+    pwd      varchar2(20)  
+    name    varchar2(50)  
+    email             varchar2(100) 
+    role              varchar2(50)  
+    joindate          date,
+    constraint user_tbl_pk primary key(id)
+)

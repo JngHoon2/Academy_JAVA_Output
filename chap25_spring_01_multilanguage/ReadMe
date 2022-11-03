@@ -1,0 +1,145 @@
+[chap24_spring_01_multilanguage 특이사항]
+
+ - 스프링 다국어 버전(국제화)
+ - 탑레벨 패키지 구조를 com.javalab.controller
+  
+1. 목적 
+ - 스프링을 이용한 다국어 버전 만들기
+ 
+2. 핵심 
+ 
+ 
+[진행단계]
+
+1. 다국어 메시지 파일 생성
+ - src/main/resources 폴더 아래에 message 폴더 생성하고 그 아래에 생성
+   
+   message 폴더에서 마우스 우클릭 > new > file 
+   
+   메시지 파일 형태 : messageSource + 언더바(_) + 언어코드.properties
+    
+  1) 영문 : messageSource_en.properties
+  2) 한글 : messageSource_ko.properties
+ 
+2. 메시지 소스 등록, 사용자의 언어정도 읽어들여서 그에 맞는 메시지(메뉴명)를 읽어들임
+
+ 1) 1.번에서 만든 메시지 파일들을 읽어오는 MessageSource 클래스를 빈(Bean)으로 등록
+  - servlet-context.xml에서 다음 코드 추가 
+  
+	<!-- Locale Configuration Start -->
+	
+	<!-- MessageSource Registration -->
+ 	<beans:bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<beans:property name="basenames">
+			<beans:list>
+				<beans:value>message.messageSource</beans:value>
+			</beans:list>
+		</beans:property>
+	</beans:bean>
+	
+ 2) 사용자의 언어코드 감지하고 적용시키기, 언어코드 변경시 인터셉트하기 
+ 
+  (1) 사용자의 언어코드 감지하고 해당 메시지를 적용시키는 빈(Bean)
+  	   	
+	<!-- LocaleResolver Registration -->
+ 	<beans:bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+	</beans:bean>
+	
+	
+	(2) jsp에서 <a href="login.do?lang=en"> 형태로 언어 요청을 해오면
+             언어코드 LocaleResolver에서 "en"을 감지하고 영어 메시지를 적용시킨다.
+             이때 언어의 변화를 감지하는 역할을 하는 빈이 바로 LocaleChangeInterceptor.
+	   (localeChangeInterceptor의 속성으로 paramName의 value="lang"로 해야 함.)
+  	
+	<!-- LocaleChangeInterceptor Registration -->
+	<mvc:interceptors>
+		<beans:bean id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+			<beans:property name="paramName" value="lang"/>
+		</beans:bean>
+	</mvc:interceptors>
+	
+	<!-- Locale Configuration End -->
+	
+	  
+ 
+ 
+ 
+ 
+ 
+ 
+2.  
+ 
+ 1) 메시지 파일은 Locale 정보에서 언어코드를 얻어온 후에   ".properties" 이며,
+     파일명은 해당 언어의 Locale 정보를 이용해 작성해준다.(유니코드) 
+  ex) messageSource_en.properties
+ 
+ 2) src/main/resources 폴더에 message 패키지 생성
+ 
+ 3) message라는 패키지에서 마우스 우클릭 후, Other > General > File 선택 후
+       파일 이름을 입력하고 Finish 클릭하기! 영어 메시지 파일을 먼저 만들꺼라서,  
+       파일명을  messageSource_en.properties 할것.
+      영문 내용 타이핑
+          
+ 4) 한글 메시지파일 생성 하기
+  - c:\filetest/unicode 폴더 생성   
+  - messageSource_ko.txt 파일 만들기
+  - 영어 메시지 파일 내용을 복사, 붙여넣기 한 뒤 아래와 같이 값들을 한글로 바꿔서 써준다.
+  - [한글 파일 작성]
+  
+ 5) [유니코드 변환]한글 등 아시아권의 언어의 경우 반드시 유니코드로 변환해서 등록해야 한다.
+       자바 JDK의 bin에 들어있는 native2ascii.exe 를 이용해서 변환
+  - CMD 창에서 위치로 이동
+  - > native2ascii messageSource_ko.txt messageSource_ko.properties [엔터]
+  - 생성된 properties 파일을  message 폴더에 붙여넣기
+  - txt파일도 복사 붙여넣기      
+
+3. 환경설정파일 servlet-context.xml
+	<!-- Locale Configuration--> 
+	<!-- MessageSource Registration -->
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>message.messageSource</value>
+				<!-- 
+				<value>message.messageSource_en.properties</value>
+				<value>message.messageSource_ko.properties</value>
+				 -->
+			</list>
+		</property>
+	</bean>
+	
+4. LocaleResolver 등록
+ - 웹 브라우저가 서버에 어떠한 요청을 보내게되면, 기본 브라우저의 Locale 정보가 HTTP 
+     요청 메시지 헤더에 자동으로 설정된 상태로 전송이 되게 된다.
+     
+ - 이 때, 스프링은 LocaleResolver 를 통해서 클라이언트의 Locale 정보를 추출하고,
+     추출한 Locale 정보에 해당하는 언어의 메시지를 적용시켜 보여준다.
+     
+ - 스프링은 4 개의 LocaleResolver 를 지원하는데, 만약 스프링 설정 파일에 
+   LocaleResolver가 따로 등록된게 아니라면 기본값으로 AcceptHeaderLocaleResolver가 
+     적용된다.
+ 
+ 1) 스프링 LocaleResolver 중에서 SessionLocaleResolver 를 등록해보자.
+ 
+ 2) servlet-contex.xml 수정
+ 
+  - 특정 언어로 화면을 보다가 다른 언어로 변경해서 보고 싶을 때는
+	( ex. 영어로 된 화면을 보다가 한국어로 된 화면으로 변경하고 싶을 때 )
+  -	스프링이 제공하는 LocaleChangeInterceptor 클래스를 사용한다.
+	이 클래스는 HandlerInterceptor 인터페이스를 구현한 클래스로,
+	아래와 같이 스프링설정파일에 인터셉터로 등록해야한다.
+  
+	<!-- LocaleChangeInterceptor Registration -->
+	<mvc:interceptors>
+		<beans:bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+			<beans:property name="paramName" value="lang"/>
+		</beans:bean>
+	</mvc:interceptors>
+	
+5. JSP 수정
+
+ 1) loginForm.jsp 파일 수정
+  - <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+  
+  - <title><spring:message code="message.user.login.title"/></title>	
+	

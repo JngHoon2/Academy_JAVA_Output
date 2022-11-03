@@ -24,7 +24,7 @@ public class EmployeesController {
 	@RequestMapping("/")
 	public String home() {
 		log.info("employeesController/home() execute!");
-		return "redirect:/employeesList";
+		return "redirect:/emp/employeesList";
 	}
 	
 	@RequestMapping("/employeesList")
