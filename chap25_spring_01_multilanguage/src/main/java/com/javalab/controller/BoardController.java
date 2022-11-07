@@ -66,6 +66,16 @@ public class BoardController {
 	public String boardWrite(BoardVO vo, Model model) throws IOException{  // 수정
 		log.info("boardWriteForm post 메소드");
 		
+		/** 간단한 File Upload 추가 **/
+		/*
+		MultipartFile uploadFile = vo.getUploadFile();
+		if(!uploadFile.isEmpty()){
+			String fileName=uploadFile.getOriginalFilename();
+			uploadFile.transferTo(new File("C:/filetest/upload/" + fileName));
+		}
+		*/
+		/** File Upload 추가 **/		
+		
 		boardService.insertBoard(vo);	// 저장
 		
 		// 저장후 목록 출력 컨트롤러 호출, redirect하면 사용자 화면의 주소창이 변경됨.

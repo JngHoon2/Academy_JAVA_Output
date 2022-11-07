@@ -42,6 +42,27 @@
 	
 	<!-- Locale Configuration Start -->
 	
+	<!-- MessageSource Registration -->
+	<!-- 메시지 소스를 읽어들여서 저장하게 될 메시지 소스 빈 객체  -->
+ 	<beans:bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<beans:property name="basenames">
+			<beans:list>
+				<beans:value>message.messageSource</beans:value>
+			</beans:list>
+		</beans:property>
+	</beans:bean>
+	
+	<!-- LocaleResolver Registration -->
+	<!-- 사용자의 locale정보를 읽어들여서 그에 맞는 언어의 메시지를 적용한다. -->
+ 	<beans:bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+	</beans:bean>	
+	<!-- LocaleChangeInterceptor Registration -->
+	<!-- 클라이언트에서 lang=ko 형태로 요청이 오면 이 객체가 인터셉트해서 국가 코드를 ko인 메시지 소스를 읽어들일 수 있게 해준다. -->
+	<mvc:interceptors>
+		<beans:bean id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+			<beans:property name="paramName" value="lang"/>
+		</beans:bean>
+	</mvc:interceptors>
 	
 	<!-- Locale Configuration End -->
 

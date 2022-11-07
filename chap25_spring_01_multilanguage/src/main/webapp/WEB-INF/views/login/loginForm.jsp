@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %> 
 
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 
@@ -8,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>로그인</title>
+<title><spring:message code="message.user.login.title"></spring:message></title>
 
   	<style type="text/css">
 		.backColor{
@@ -58,32 +59,49 @@
 
 </head>
 <body>
+
 	<form name="frmLogin" id="frmLogin" method="post" action="${contextPath}/login/login.do">
-		<h1 style="text-align: center">로그인</h1>
-		<table align="center" border="0">
-			<tr>
-				<td width="200"><p align="right">아이디</td>
-				<td width="400"><input type="text" name="id" id="id" value="${userVo.id}"></td>
-			</tr>
-			<tr>
-				<td width="200"><p align="right">비밀번호</td>
-				<td width="400"><input type="password" name="pwd" id="pwd" value="${userVo.pwd}"></td>
-			</tr>
-			<c:if test="${loginErrMsg}">
-				<tr id="loginError">
-					<td colspan="2">
-						<p id="login_error">아이디와 비밀번호가 맞지 않습니다.</p>
+		
+		<div>
+			<h1 style="text-align: center"><spring:message code="message.user.login.title"></spring:message></h1>
+		</div>
+		<div align="center">
+			<a href="login.do?lang=en">
+			<spring:message code="message.user.login.language.en"></spring:message>
+			</a>
+			&nbsp;&nbsp;&nbsp;
+			<a href="login.do?lang=ko">
+				<spring:message code="message.user.login.language.ko"></spring:message>
+			</a>
+		</div>		
+		<div>
+			<table align="center" border="0">
+				<tr>
+					<td width="200"><p align="right">
+						<spring:message code="message.user.login.id"></spring:message>
+					</td>
+					<td width="400"><input type="text" name="id" id="id" value="${userVo.id}"></td>
+				</tr>
+				<tr>
+					<td width="200"><p align="right">
+						<spring:message code="message.user.login.password"></spring:message>
+					</td>
+					<td width="400"><input type="password" name="pwd" id="pwd" value="${userVo.pwd}"></td>
+				</tr>
+				<c:if test="${loginErrMsg}">
+					<tr id="loginError">
+						<td colspan="2">
+							<p id="login_error">아이디와 비밀번호가 맞지 않습니다.</p>
+						</td>
+					</tr>
+				</c:if>			
+				<tr>
+					<td colspan="2" style="text-align: center;">
+						<input type="submit" id="btnLogin" value="<spring:message code="message.user.login.loginBtn"></spring:message>" />
 					</td>
 				</tr>
-			</c:if>			
-			<tr>
-				<td width="200"><p>&nbsp;</p></td>
-				<td width="400">
-					<input type="button" id="btnLogin" value="로그인">
-					<input	type="reset" value="다시입력">
-				</td>
-			</tr>
-		</table>
+			</table>
+		</div>
 	</form>
 </body>
 </html>

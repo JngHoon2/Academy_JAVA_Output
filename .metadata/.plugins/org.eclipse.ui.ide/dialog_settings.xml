@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/Users/tuan/Documents/works/chap25_spring_01_multilanguage"/>
 		<item value="/Users/tuan/Documents/works/chap21_boostrap01_search_paging"/>
 		<item value="/Users/tuan/Documents/works/chap20_mybatis01_hikaripool_rest"/>
 		<item value="/Users/tuan/Documents/works/chap18_spring_03_lombok01"/>
@@ -51,5 +52,27 @@
 		<item key="DIALOG_WIDTH" value="525"/>
 		<item key="DIALOG_HEIGHT" value="528"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+	<section name="org.springsource.ide.eclipse.commons.quicksearch.ui.QuickSearchDialog.DIALOG_SETTINGS">
+		<item key="LAST_QUERY" value="&lt;div&gt;&#x0D;&#x0A;         &lt;h1 style=&quot;text-align: center&quot;&gt;&#x0D;&#x0A;         &lt;spring:message code=&quot;message.user.login.title&quot;&gt;&lt;/spring:message&gt;&lt;/h1&gt;&#x0D;&#x0A;      &lt;/div&gt;&#x0D;&#x0A;      &lt;div align=&quot;center&quot;&gt;&#x0D;&#x0A;         &lt;a href=&quot;login.do?lang=en&quot;&gt;&#x0D;&#x0A;         &lt;spring:message code=&quot;message.user.login.language.en&quot;&gt;&lt;/spring:message&gt;&#x0D;&#x0A;         &lt;/a&gt;&#x0D;&#x0A;         &amp;nbsp;&amp;nbsp;&amp;nbsp;&#x0D;&#x0A;         &lt;a href=&quot;login.do?lang=ko&quot;&gt;&#x0D;&#x0A;            &lt;spring:message code=&quot;message.user.login.language.ko&quot;&gt;&#x0D;&#x0A;            &lt;/spring:message&gt;&#x0D;&#x0A;         &lt;/a&gt;&#x0D;&#x0A;      &lt;/div&gt;    &#x0D;&#x0A;&lt;div&gt;&#x0D;&#x0A;&#x09;&lt;form name=&quot;frmLogin&quot; id=&quot;frmLogin&quot; method=&quot;post&quot; action=&quot;${contextPath}/login/login.do&quot;&gt;&#x0D;&#x0A;&#x09;&#x09;&lt;h1 style=&quot;text-align: center&quot;&gt;로그인&lt;/h1&gt;&#x0D;&#x0A;&#x09;&#x09;&lt;table align=&quot;center&quot; border=&quot;0&quot;&gt;&#x0D;&#x0A;&#x09;&#x09;&#x09;&lt;tr&gt;&#x0D;&#x0A;&#x09;&#x09;&#x09;&#x09;&lt;td width=&quot;200&quot;&gt;&lt;p align=&quot;right&quot;&gt;아이디&lt;/td&gt;&#x0D;&#x0A;&#x09;&#x09;&#x09;&#x09;&lt;td width=&quot;400&quot;&gt;&lt;input type=&quot;text&quot; name=&quot;id&quot; id=&quot;id&quot; value=&quot;${userVo.id}&quot;&gt;&lt;/td&gt;&#x0D;&#x0A;&#x09;&#x09;&#x09;&lt;/tr&gt;&#x0D;&#x0A;&#x09;&#x09;&#x09;&lt;tr&gt;&#x0D;&#x0A;&#x09;&#x09;&#x09;&#x09;&lt;td width=&quot;200&quot;&gt;&lt;p align=&quot;right&quot;&gt;비밀번호&lt;/td&gt;&#x0D;&#x0A;&#x09;&#x09;&#x09;&#x09;&lt;td width=&quot;400&quot;&gt;&lt;input type=&quot;password&quot; name=&quot;pwd&quot; id=&quot;pwd&quot; value=&quot;${userVo.pwd}&quot;&gt;&lt;/td&gt;&#x0D;&#x0A;&#x09;&#x09;&#x09;&lt;/tr&gt;&#x0D;&#x0A;&#x09;&#x09;&#x09;&lt;c:if test=&quot;${loginErrMsg}&quot;&gt;&#x0D;&#x0A;&#x09;&#x09;&#x09;&#x09;&lt;tr id=&quot;loginError&quot;&gt;&#x0D;&#x0A;&#x09;&#x09;&#x09;&#x09;&#x09;&lt;td colspan=&quot;2&quot;&gt;&#x0D;&#x0A;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;&lt;p id=&quot;login_error&quot;&gt;아이디와 비밀번호가 맞지 않습니다.&lt;/p&gt;&#x0D;&#x0A;&#x09;&#x09;&#x09;&#x09;&#x09;&lt;/td&gt;&#x0D;&#x0A;&#x09;&#x09;&#x09;&#x09;&lt;/tr&gt;&#x0D;&#x0A;&#x09;&#x09;&#x09;&lt;/c:if&gt;&#x09;&#x09;&#x09;&#x0D;&#x0A;&#x09;&#x09;&#x09;&lt;tr&gt;&#x0D;&#x0A;&#x09;&#x09;&#x09;&#x09;&lt;td width=&quot;200&quot;&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/td&gt;&#x0D;&#x0A;&#x09;&#x09;&#x09;&#x09;&lt;td width=&quot;400&quot;&gt;&#x0D;&#x0A;&#x09;&#x09;&#x09;&#x09;&#x09;&lt;input type=&quot;button&quot; id=&quot;btnLogin&quot; value=&quot;로그인&quot;&gt;&#x0D;&#x0A;&#x09;&#x09;&#x09;&#x09;&#x09;&lt;input&#x09;type=&quot;reset&quot; value=&quot;다시입력&quot;&gt;&#x0D;&#x0A;&#x09;&#x09;&#x09;&#x09;&lt;/td&gt;&#x0D;&#x0A;&#x09;&#x09;&#x09;&lt;/tr&gt;&#x0D;&#x0A;&#x09;&#x09;&lt;/table&gt;&#x0D;&#x0A;&#x09;&lt;/form&gt;&#x0D;&#x0A;&#x09;&lt;/div&gt;"/>
+		<item key="PATH_FILTER" value=""/>
+		<item key="CASE_SENSITIVE" value="true"/>
+		<item key="KEEP_OPEN" value="false"/>
+		<list key="COLUMN_WIDTHS">
+			<item value="40"/>
+			<item value="400"/>
+			<item value="136"/>
+		</list>
+		<list key="SASH_WEIGHTS">
+			<item value="833"/>
+			<item value="166"/>
+		</list>
+		<section name="DialogBoundsSettings">
+			<item key="DIALOG_HEIGHT" value="500"/>
+			<item key="DIALOG_WIDTH" value="600"/>
+			<item key="DIALOG_X_ORIGIN" value="420"/>
+			<item key="DIALOG_Y_ORIGIN" value="117"/>
+			<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+		</section>
 	</section>
 </section>
