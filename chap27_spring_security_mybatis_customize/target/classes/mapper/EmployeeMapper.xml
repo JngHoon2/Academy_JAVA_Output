@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+	<!-- 매퍼 인터페이스 : 서비스 Layer와 쿼리문이 보관된 매퍼.XML 연결 역할 -->
+	<mapper namespace="com.kunil.security.dao.EmployeesDAO">
+	 
+	<!-- 사원 조회 -->
+	<select id="getEmployeeList" parameterType="Criteria" resultType="EmployeeCommonDto">
+		select a.employee_id, a.first_name, a.last_name, a.email, a.phone_number, a.hire_date, a.salary,
+	        a.job_id, a.department_id, a.department_name,
+	        a.location_id, a.state_province, a.city,
+	        a.country_id, a.country_name
+		from(
+		      select /*+ INDEX_DESC(employees EMP_EMP_ID_PK) */  rownum rn,
+		      e.employee_id, e.first_name, e.last_name, e.email, e.phone_number, e.hire_date, e.salary,
+		      e.job_id, j.job_title, e.department_id, d.department_name,
+		      d.location_id, l.state_province, l.city,
+		      l.country_id, c.country_name
+		      from employees e left outer join jobs j on e.job_id = j.job_id
+			      left outer join departments d on e.department_id = d.department_id
+			      left outer join locations l on d.location_id = l.location_id
+			      left outer join countries c on l.country_id = c.country_id
+		      where 1=1
+		<if test="searchText != null">
+			and (e.first_name like '%'||#{searchText}||'%' or e.last_name like '%'||#{searchText}||'%')
+		</if>	
+		<![CDATA[  		
+		      and rownum <= #{pageNum} * #{amount}
+		)a
+		where rn > (#{pageNum} - 1) * #{amount}
+	    ]]> 
+	</select>	 
+	 
+	 <select id="getMember" parameterType="int" resultType="Employee">
+	 	select employee_id, 
+			first_name, 
+			last_name, 
+			email, 
+			phone_number, 
+			hire_date, 
+			job_id, 
+			salary, 
+			commission_pct, 
+			manager_id, 
+			department_id  
+	 	from employees 
+ 		where employee_id = #{param1}		 
+	 </select>
+
+	<!-- 전체 사원수(페이징시 필요) -->
+	<select id = "getTotalEmployees" parameterType="Criteria" resultType="int">
+		select count(*)
+		from employees e
+		where 1=1
+		<if test="searchText != null">
+			and (e.first_name like '%'||#{searchText}||'%' 
+				 or e.last_name like '%'||#{searchText}||'%')
+		</if>		
+	</select>
+
+</mapper>

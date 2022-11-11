@@ -1,0 +1,78 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 제한 설정 
+		auto-config : 로그인, 로그아웃 등의 기본 설정을 자동으로 해줌. 이코드있으면 중복으로 선언하지 말것.
+		use-expressions : 표현식 - permitAll(), hasRole(String), authenticated()
+	-->
+    <http auto-config="true" use-expressions="true"> 
+    
+    	<!-- 사용자가 브라우저 히스토리를 악용할 수 있기 때문에 브라우저가 웹페이지 컨텐츠를 
+    		캐싱하지 않도록 설정 -->
+   		<headers>
+			<cache-control />
+		</headers>
+    
+        <intercept-url pattern="/secured/**" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')"/>
+        <!-- <intercept-url pattern="/secured/**" access="isAuthenticated()"/>      -->   
+        <intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/>
+
+        <!-- [1] 기본설정, 스프링 시큐리티  진입점, 시큐리티가 기본 제공하는 화면 -->
+		<!-- <form-login 
+		login-processing-url="/login"
+		default-target-url="/welcome" /> -->
+        
+        <!-- [2] 커스터마이징, 스프링 시큐리티 진입점, 사용자가 커스터마이징한 로그인 프로세스
+        	login-page="/login" : 로그인 페이지(개발자가 별도로 커스터마이징하려면 적어놓기만 하면됨.)  
+        	login-processing-url : 시큐리티는 url을 가로채, CustomProvider의 authenticate() 메소드를 
+        							호출해 주는 역할
+			default-target-url : 로그인 성공후에 이동할 페이지
+			username-parameter : 로그인한 페이지에서 아이디 컴포넌트의 name 속성        							 
+			password-parameter : 로그인한 페이지에서 비밀번호 컴포넌트의 name 속성        
+			authentication-failure-url : 로그인 실패시 이동할 페이지 경로							 
+		-->
+        <!-- <form-login login-page="/login" 
+        			login-processing-url="/lalala"
+       			    default-target-url="/welcome"
+       			    username-parameter="username" 
+            		password-parameter="password" 
+           		    authentication-failure-url="/loginError" /> -->
+          
+      	<!-- <logout logout-success-url="/logout" 
+			    delete-cookies="JSESSIONID" />  --> 		
+			    
+	    <csrf disabled="true"/>	
+       		
+     	<!-- <access-denied-handler error-page="/access-denied" /> -->
+     	
+   	    <session-management>
+		    <concurrency-control max-sessions="1" 
+							     error-if-maximum-exceeded="true" />
+   	    </session-management>
+   	    
+	    <!-- error-if-maximum-exceeded="true" : 중복 로그인 방지 
+	    	 max-sessions : 최대 세션 허용 개수-->
+     	
+    </http>
+    
+    <authentication-manager erase-credentials="true">
+          <authentication-provider ref="customProvider" />
+    </authentication-manager> 
+	
+	<!-- 실제로 인증권 권한을 실시하는 역할. 최종적으로 사용자 인증/권한이 담긴 토큰을 만들어냄. -->
+   	<beans:bean id="customProvider" 
+				class="com.kunil.security.service.CustomProvider">
+       	  <beans:property name="dataSource" ref="dataSource" />
+	</beans:bean>  
+	
+	<!-- hasUsername()메소드를 갖고 있음 즉 users 테이블에 특정 사용자가 있는지 체크,  -->
+    <beans:bean id="authJdbcService" 
+    	  		class="com.kunil.security.service.AuthJdbcService">
+          <beans:property name="dataSource" ref="dataSource" />
+    </beans:bean>  
+
+</beans:beans>

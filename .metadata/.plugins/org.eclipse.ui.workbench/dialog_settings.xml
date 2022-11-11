@@ -17,10 +17,12 @@
 		</list>
 	</section>
 	<section name="NewWizardAction">
-		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="com.springsource.sts.wizard.template"/>
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.wst.xml.ui.internal.wizards.NewXMLWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.springframework.ide.eclipse.beans.ui.wizards.category"/>
-			<item value="org.springsource.ide.eclipse.boot.wizards.category"/>
+			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory"/>
+			<item value="org.eclipse.jst.ws.ui.new"/>
+			<item value="org.eclipse.wst.XMLCategory"/>
+			<item value="org.eclipse.ui.Examples"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.preferences.keysPreferencePage">
@@ -42,6 +44,7 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="/Users/tuan/Desktop/zzz.zip"/>
 			<item value="/Users/tuan/Desktop/chap23_mybatis_hr2.zip"/>
 			<item value="/Users/tuan/Desktop/parkjinhyeonBungsin.zip"/>
 			<item value="/Users/tuan/Desktop/chap20_mybatis03_search_pagingzip.zip"/>
@@ -69,5 +72,7 @@
 		<item key="DIALOG_WIDTH" value="700"/>
 		<item key="DIALOG_HEIGHT" value="650"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+	<section name="FileSystemImportWizard">
 	</section>
 </section>

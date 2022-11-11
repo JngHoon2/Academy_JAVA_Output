@@ -1,0 +1,15 @@
+2022-09-30 11:08:21 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+2022-09-30 11:08:21 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Fri Sep 30 11:08:21 KST 2022]; root of context hierarchy
+2022-09-30 11:08:21 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/root-context.xml]
+2022-09-30 11:08:22 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 917 ms
+2022-09-30 11:08:22 [main] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization started
+2022-09-30 11:08:22 [main] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 30 11:08:22 KST 2022]; parent: Root WebApplicationContext
+2022-09-30 11:08:22 [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring/appServlet/servlet-context.xml]
+2022-09-30 11:08:23 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022-09-30 11:08:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.javalab.controller.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+2022-09-30 11:08:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 30 11:08:22 KST 2022]; parent: Root WebApplicationContext
+2022-09-30 11:08:23 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 30 11:08:22 KST 2022]; parent: Root WebApplicationContext
+2022-09-30 11:08:23 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2022-09-30 11:08:24 [main] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'appServlet': initialization completed in 1614 ms
+2022-09-30 11:08:24 [http-nio-9000-exec-2] INFO  c.javalab.controller.HomeController - Welcome home! The client locale is ko_KR.
+2022-09-30 11:08:31 [Thread-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Sep 30 11:08:22 KST 2022]; parent: Root WebApplicationContext

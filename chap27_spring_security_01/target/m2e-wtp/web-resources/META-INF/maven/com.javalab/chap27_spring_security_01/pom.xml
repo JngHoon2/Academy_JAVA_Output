@@ -251,11 +251,16 @@
 
         <!-- logback 로그 관련(콘솔+파일) -->
         <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version>
-            <scope>runtime</scope>
-        </dependency>  		
+	        <groupId>org.slf4j</groupId>
+	         <artifactId>slf4j-api</artifactId>
+	          <version>1.7.26</version>
+	    </dependency>
+	
+	    <dependency>
+	        <groupId>ch.qos.logback</groupId>
+	        <artifactId>logback-classic</artifactId>
+	        <version>1.1.7</version>
+	    </dependency>		
 		
 		<!-- SQL Log 출력 -->
 		<dependency>

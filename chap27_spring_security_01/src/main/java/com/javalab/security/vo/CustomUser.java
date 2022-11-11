@@ -28,32 +28,9 @@ public class CustomUser implements UserDetails{
 	private boolean credentialsNonExpired = true;
 	private boolean enabled = true;
 	
-	
-	@Override
-	public Collection<? extends GrantedAuthority> getAuthorities() {
-		// TODO Auto-generated method stub
-		return null;
+	public CustomUser(Users users) {
+		this.username = users.getUsername();
+		this.password = users.getPassword();
+		this.enabled = users.getEnabled() == 1 ? true : false;
 	}
-	@Override
-	public boolean isAccountNonExpired() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	@Override
-	public boolean isAccountNonLocked() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	@Override
-	public boolean isCredentialsNonExpired() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	@Override
-	public boolean isEnabled() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	
-	
 }
