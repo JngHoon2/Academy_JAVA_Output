@@ -1,0 +1,54 @@
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<security:http auto-config="false" >
+		<security:intercept-url pattern="/emp/**" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')" />
+		<security:intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" />
+
+		<!-- 스프링 시큐리티 진입점 -->
+		<!-- login-page : 로그인 페이지의 URL -->
+		<!-- login-processing-url = 로그인폼의 action값과 동일해야 함.(security를 통해 인증) -->
+		<!-- default-target-url = 로그인 성공시 이동 URL -->
+		<!-- username-parameter : 로그인폼의 name 속성과 같도록 -->
+		<security:form-login 
+			login-page="/login" 
+			login-processing-url="/lalala"
+			username-parameter="user_id" 
+			password-parameter="user_pwd"
+			default-target-url="/index"
+			authentication-failure-url="/loginError" 
+		/>
+
+		<security:logout 
+			logout-url="/logout"
+			logout-success-url="/login" 
+			delete-cookies="JSESSIONID" 
+		/>
+		
+		<!-- 접근 권한 없을때 컨트롤러에 /access-denied 요청함. -->
+		<security:access-denied-handler 
+			error-page="/access-denied" 	
+		/>
+		
+		<security:session-management>
+			<security:concurrency-control max-sessions="1" error-if-maximum-exceeded="true" />
+		</security:session-management>
+
+
+	</security:http>
+
+	<!-- 인증요청을 받고 Authentication(화면의 id/pw)을 채움.  -->
+	<!-- userDetailService를 통해서 DB의 user info & role(권한) 갖고와서 비교. 실제 인증 작업 진행 -->
+	<security:authentication-manager erase-credentials="true">
+		<security:authentication-provider ref="customProvider" />
+	</security:authentication-manager>
+
+	<beans:bean id="customProvider" class="com.kunil.security.service.CustomProvider">
+		<beans:property name="dataSource" ref="dataSource" />
+	</beans:bean>
+
+
+</beans:beans>

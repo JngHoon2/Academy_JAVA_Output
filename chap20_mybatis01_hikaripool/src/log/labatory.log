@@ -2,3 +2,4 @@
 2022-11-12 04:27:44 [HikariPool-4 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=3h36m7s68ms).
 2022-11-12 06:10:12 [HikariPool-4 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=1h42m27s686ms).
 2022-11-12 16:14:45 [HikariPool-4 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=10h4m32s469ms).
+2022-11-12 16:15:46 [Thread-4] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing WebApplicationContext for namespace 'appServlet-servlet': startup date [Fri Nov 11 11:21:49 KST 2022]; parent: Root WebApplicationContext
