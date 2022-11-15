@@ -21,7 +21,8 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<!-- 컨트롤러 경로 설정, 이 경로의 @Controller 어노테이션 있는 클래스는 모두 컨트롤러로 인식 -->
-	<context:component-scan base-package="com.kunil.security.controller" />
+	<context:component-scan base-package="com.magicoh.springmvc.controller" />
+	
+	
 	
 </beans:beans>
