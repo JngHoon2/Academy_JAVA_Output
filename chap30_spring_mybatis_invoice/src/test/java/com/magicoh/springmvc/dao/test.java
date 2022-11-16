@@ -16,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"file:src/main/webapp/WEB-INF/spring/applocation-context.xml"})
+@ContextConfiguration(locations={"file:src/main/webapp/WEB-INF/spring/application-context.xml"})
 @Slf4j
 @RequiredArgsConstructor
 public class test {
@@ -32,7 +32,7 @@ public class test {
 		assertNotNull(this.dao);
 	}
 	
-	@Test
+	@Test 
 	public void testInsertUser() {
 		CustomUser cu = new CustomUser();
 		cu.setUser_id("java10");

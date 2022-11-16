@@ -39,7 +39,8 @@ public interface IProductMapperDao
 	//Client
 	public List<Client> selectClientList();
 	public List<Client> selectClientsByName(String client);
-	public Client selectClient(int client_id);	
+	public Client selectClient(int client_id);
+	public void insertClient(Client client);
 	
 	//Invoice
 	public List<InvoiceCommonDto> getInvoiceList();

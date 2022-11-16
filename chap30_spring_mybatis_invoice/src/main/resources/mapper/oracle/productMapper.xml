@@ -227,6 +227,27 @@
 		ORDER BY client_name ASC
 	</select>
 	
+	<insert id = "insertClient" parameterType="Client">
+		insert into client(
+			client_id,
+			client_name,
+			address,
+			postal_code,
+			phone,
+			fax,
+			email,
+			isactive)
+		values(
+			seq_client.nextval,
+			#{client_name},
+			#{address},
+			#{postal_code},
+			#{phone},
+			#{fax},
+			#{email},
+			#{isactive})
+	</insert>
+	
 
 	<!-- Invoice -->
 	<!-- ResultMap for invoiceHeaderMap -->
