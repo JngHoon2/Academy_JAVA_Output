@@ -5,7 +5,10 @@
 <div class="container">
 	<div>
 		<p>
-		    <button type="button" class="btn btn-success" onclick="location.href='${pageContext.request.contextPath}/exceptionTest'"><i class="fa fa-plus"></i> 예외처리 테스트</button>
+		    <button type="button" class="btn btn-success" onclick="location.href='${pageContext.request.contextPath}/write_view'">
+		    	<i class="fa fa-plus"></i> 
+		    	글작성
+		    </button>
 		</p>
 	</div>
 

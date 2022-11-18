@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.javalab.invoice.dao.IQnaBbsMapperDao"> <!-- namespace 생성 양식 : 패키지명.인터페이스명  -->
+
+	<!-- Category -->
+	<select id="selectQnaBbsList" parameterType="QnaBbs" resultType="QnaBbs"> 
+		SELECT NO, TITLE, CONTENT, WRITER, HIT, REGDATE
+		FROM BBS
+		WHERE 1 = 1
+		<if test="title != null and title != ''">
+			AND title LIKE '%'||#{title}||'%'
+		</if>
+		<if test="writer != null and writer != ''">
+			AND writer LIKE '%'||#{writer}||'%'
+		</if>
+		ORDER BY NO DESC
+	</select>
+	
+	<!-- 게시물 등록 -->
+	<insert id = "insertBoard" parameterType="QnaBbs">
+		insert into bbs(
+			no, 
+			title, 
+			content, 
+			writer, 
+			hit, 
+			regdate) 
+		values(
+			seq_bbs_no.nextval, 
+			#{title}, 
+			#{content}, 
+			#{writer}, 
+			0, 
+			sysdate)
+	</insert>	
+	
+	<select id="getBoardById" parameterType="int" resultType="QnaBbs"> 
+		SELECT *
+		FROM BBS
+		WHERE NO = #{param1}
+	</select>	
+	
+</mapper>

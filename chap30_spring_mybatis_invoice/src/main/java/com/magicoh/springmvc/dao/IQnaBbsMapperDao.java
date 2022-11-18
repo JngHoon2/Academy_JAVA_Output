@@ -20,4 +20,5 @@ import com.magicoh.springmvc.dto.QnaBbs;
 public interface IQnaBbsMapperDao
 {
 	public List<QnaBbs> selectQnaBbsList();
+	public void insertQnaBbsList();
 }

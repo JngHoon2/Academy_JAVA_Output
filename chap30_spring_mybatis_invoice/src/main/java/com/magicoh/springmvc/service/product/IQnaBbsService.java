@@ -8,6 +8,7 @@ import com.magicoh.springmvc.dto.QnaBbs;
 public interface IQnaBbsService
 {
 	public List<QnaBbs> getQnaBbsList();
+	public void insertQna();
 	
 //	public List<Product> getProductsByName(String product_name);
 //	public List<Product> getProductsByName2(Product product);

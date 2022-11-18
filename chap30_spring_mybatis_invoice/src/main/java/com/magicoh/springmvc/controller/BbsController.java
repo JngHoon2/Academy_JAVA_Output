@@ -46,10 +46,10 @@ public class BbsController
 	 * @param e
 	 * @return
 	 */
-	@RequestMapping(value = "/exceptionTest")
+	@RequestMapping(value = "/write_view")
 	public String test() throws SQLException {
-		log.info("BbsController test() throw new IOException().......");
-		//throw new IOException("occured IOException...");
-		throw new SQLException("occured SQLException...");
+		log.info("write_view open");
+		
+		return "/shared/write_view";
 	}
 }

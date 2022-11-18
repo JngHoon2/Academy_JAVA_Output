@@ -14,4 +14,8 @@
 		ORDER BY NO DESC
 	]]>
 	</select>
+	
+	<select id="insertQnaBbsList" resultType="void"> 
+		insert into bbs(no, title, content, writer, regdate) values(#{no}, #{title}, #{content}, #{writer}, sysdate)
+	</select>
 </mapper>

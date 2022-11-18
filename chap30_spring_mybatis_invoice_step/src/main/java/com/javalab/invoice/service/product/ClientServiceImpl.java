@@ -1,0 +1,41 @@
+package com.javalab.invoice.service.product;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.javalab.invoice.dao.IProductMapperDao;
+import com.javalab.invoice.dto.Client;
+
+@Service
+public class ClientServiceImpl implements IClientService
+{
+	@Autowired
+	private IProductMapperDao bbsMapper;
+
+	@Override
+	public List<Client> getClientList()
+	{
+		List<Client> bbsList = bbsMapper.selectClientList();
+		return bbsList;
+	}
+
+	@Override
+	public Client getClient(int client_id)
+	{
+		Client client = bbsMapper.selectClient(client_id);
+		return client;
+	}
+
+	@Override
+	public List<Client> getClientsByName(String client) {
+		List<Client> clientList = bbsMapper.selectClientsByName(client);
+		return clientList;
+	}	
+	
+	@Override
+	public void insertClient(Client client) {
+		bbsMapper.insertClient(client);		
+	}	
+}

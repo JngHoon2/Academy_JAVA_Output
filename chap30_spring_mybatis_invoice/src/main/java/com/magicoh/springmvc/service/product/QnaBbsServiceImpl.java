@@ -24,5 +24,8 @@ public class QnaBbsServiceImpl implements IQnaBbsService
 
 	}
 
-
+	@Override
+	public void insertQna() {
+		this.mapperDao.insertQnaBbsList();
+	}
 }

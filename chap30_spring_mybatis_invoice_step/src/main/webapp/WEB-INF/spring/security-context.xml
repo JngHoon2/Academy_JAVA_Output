@@ -1,0 +1,64 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/security
+		http://www.springframework.org/schema/security/spring-security-4.2.xsd
+        http://www.springframework.org/schema/jee 
+        http://www.springframework.org/schema/jee/spring-jee.xsd
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<http auto-config="true" use-expressions="true">
+		<headers> 
+			<cache-control />	
+		</headers>
+
+		<!-- active using csrf security tocken -->
+		<csrf disabled="false" />
+
+		<!-- Permission setting for access path(url) -->
+		<intercept-url pattern="/product/**" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')" />
+		<intercept-url pattern="/sales/**" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')" />
+		<intercept-url pattern="/user/**" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')" />
+		<intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/resources/**" access="permitAll" />
+		<intercept-url pattern="/**" access="permitAll" />
+
+		<!-- login-page=/login 로그인폼 페이지(컨트롤러의 "/login" url 매핑 메소드에서 처리) -->
+		<!-- login-processing-url= 로그인폼의 action값과 동일해야 함.(security가 authenticate메소드 호출해줌) -->
+		<!-- default-target-url = 로그인 성공시 이동 URL -->
+		<form-login 
+			login-page="/login" 
+			login-processing-url="/lalala"
+			username-parameter="user_id" 
+			password-parameter="user_pwd"
+			default-target-url="/home"
+			authentication-failure-url="/loginError" 
+		/>
+
+		<logout 
+			logout-url="/logout"
+			logout-success-url="/login" 
+			delete-cookies="JSESSIONID" 
+		/>
+
+		<access-denied-handler 
+			error-page="/access-denied" 
+		/>
+		<session-management>
+			<concurrency-control max-sessions="1" error-if-maximum-exceeded="true" />
+		</session-management>
+
+	</http>
+
+	<!-- 인증요청을 받고 Authentication(화면의 id/pw)을 채움.  -->
+	<!-- userDetailService를 통해서 DB의 user info & role(권한) 갖고와서 비교. 실제 인증 작업 진행 -->
+	<authentication-manager erase-credentials="true">
+		<authentication-provider ref="customProvider" />
+	</authentication-manager>
+
+	<beans:bean id="customProvider" class="com.javalab.invoice.service.user.CustomProvider">
+		<beans:property name="dataSource" ref="dataSource" />
+	</beans:bean>
+
+</beans:beans>
