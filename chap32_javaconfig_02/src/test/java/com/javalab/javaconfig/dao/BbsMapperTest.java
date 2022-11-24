@@ -42,7 +42,7 @@ public class BbsMapperTest {
 	}
 
 	
-	@Test @Ignore
+	@Test
 	public void testDataSource() {
 		assertNotNull(dataSource);
 		
@@ -51,7 +51,7 @@ public class BbsMapperTest {
 		log.info("----------------------------------------------------------");
 	}
 
-	@Test @Ignore
+	@Test 
 	public void testSqlSession() {
 		assertNotNull(sqlSessionFactory);
 		
@@ -60,7 +60,7 @@ public class BbsMapperTest {
 		log.info("----------------------------------------------------------");
 	}	
 	
-	@Test @Ignore
+	@Test 
 	public void testConnection() {	
 		try(SqlSession session = sqlSessionFactory.openSession();
 			Connection conn = session.getConnection()){
@@ -71,7 +71,7 @@ public class BbsMapperTest {
 		}
 	}	
 	
-	@Test @Ignore
+	@Test 
 	public void testGetBbsList() {	
 		assertNotNull(qnaBbsMapperDao);
 		log.info("qnaBbsMapperDao : " + qnaBbsMapperDao);	// MapperProxy@58fb7731		
@@ -84,14 +84,14 @@ public class BbsMapperTest {
 		bbsList.stream().forEach(b -> log.info("QnaBbs : " + b.toString()));
 	}	
 	
-	@Test @Ignore
+	@Test 
 	public void testGetBbs() {	
-		int no = 21;
+		int no = 1;
 		QnaBbs bbs = qnaBbsMapperDao.getBbsByNo(no); 
 		log.info("QnaBbs : " + bbs.toString());
 	}		
 	
-	@Test @Ignore
+	@Test 
 	public void testInsertBbs() {	
 		// 저장할 객체 생성
 		QnaBbs bbs = new QnaBbs();
@@ -110,11 +110,11 @@ public class BbsMapperTest {
 		bbsList.stream().forEach(b -> log.info("QnaBbs : " + b.toString()));
 	}	
 	
-	@Test  @Ignore
+	@Test  
 	public void testUpdateBbs() {	
 		// 수정할 객체 생성
 		QnaBbs bbs = new QnaBbs();
-		bbs.setNo(21);
+		bbs.setNo(1);
 		bbs.setTitle("제목21-1");
 		bbs.setContent("내용21-1");
 		bbs.setWriter("writer21-1");

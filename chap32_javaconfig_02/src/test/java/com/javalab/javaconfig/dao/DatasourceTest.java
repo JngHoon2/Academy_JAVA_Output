@@ -36,7 +36,7 @@ public class DatasourceTest {
 	}
 
 	
-	@Test  @Ignore
+	@Test 
 	public void testDataSource() {
 		assertNotNull(dataSource);
 		
@@ -45,7 +45,7 @@ public class DatasourceTest {
 		log.info("----------------------------------------------------------");
 	}
 
-	@Test @Ignore
+	@Test 
 	public void testSqlSession() {
 		assertNotNull(sqlSessionFactory);
 		

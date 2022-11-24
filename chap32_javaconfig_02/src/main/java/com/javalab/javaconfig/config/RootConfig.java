@@ -27,7 +27,7 @@ import com.zaxxer.hikari.HikariDataSource;
  */
 @Configuration
 //@ComponentScan(basePackages = {"com.javalab.javaconfig.service"})
-//@MapperScan(basePackages={"com.javalab.javaconfig.dao"})
+@MapperScan(basePackages={"com.javalab.javaconfig.dao"})
 //@PropertySource(value="classpath:/database.properties")
 public class RootConfig {
 
@@ -45,7 +45,7 @@ public class RootConfig {
       //hikariConfig.setDriverClassName("oracle.jdbc.OracleDriver");
       //hikariConfig.setJdbcUrl("jdbc:oracle:thin:@localhost:1521:xe");
       hikariConfig.setDriverClassName("net.sf.log4jdbc.sql.jdbcapi.DriverSpy"); // log4jdbc.log42j 설정후
-      hikariConfig.setJdbcUrl("jdbc:log4jdbc:oracle:thin:@localhost:1521:orcl"); // log4jdbc.log42j 설정후
+      hikariConfig.setJdbcUrl("jdbc:log4jdbc:oracle:thin:@localhost:1521:xe"); // log4jdbc.log42j 설정후
       hikariConfig.setUsername("ums");
       hikariConfig.setPassword("1234");
 
@@ -55,10 +55,10 @@ public class RootConfig {
    
    @Bean
     public SqlSessionFactory sqlSessionFactory() throws Exception {
-        SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
-        sqlSessionFactory.setDataSource(dataSource());
-        return (SqlSessionFactory)sqlSessionFactory.getObject();
-      /*
+//        SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
+//        sqlSessionFactory.setDataSource(dataSource());
+//        return (SqlSessionFactory)sqlSessionFactory.getObject();
+      
       System.out.println("RootConfig : >>>>>>>>>>> sqlSessionFactory()");
       
       SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
@@ -71,10 +71,10 @@ public class RootConfig {
       //DataSource setting
       sqlSessionFactoryBean.setDataSource(this.dataSource());
       //mapper xml route setting[파일 준비되면 주석해제할것]
-      //sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver()
-      //   .getResources("classpath:/mapper/oracle/*Mapper.xml"));
+      sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver()
+         .getResources("classpath:/mapper/oracle/*Mapper.xml"));
       return sqlSessionFactoryBean.getObject();      
-      */
+      
     }
    
    /**
