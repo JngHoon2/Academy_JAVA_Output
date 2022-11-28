@@ -28,6 +28,9 @@ public class Board implements Serializable {
 	@Temporal(TemporalType.DATE)
 	private Date regDate = new Date();
 	
+	@Temporal(TemporalType.DATE)
+	private Date modifiedDate = new Date();
+	
 	public int getCategory_no() {
 		return category_no;
 	}

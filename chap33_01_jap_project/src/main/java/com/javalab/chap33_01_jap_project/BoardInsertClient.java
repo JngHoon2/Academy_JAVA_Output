@@ -24,9 +24,9 @@ public class BoardInsertClient {
 			
 			// [2] 저장할 객체 생성
 			Board board = new Board();
-			board.setTitle("JPA 제목-1");
-			board.setWriter("관리자-1");
-			board.setContent("JPA 관련 게시물의 내용입니다.-1");
+			board.setTitle("JPA 제목-2");
+			board.setWriter("관리자-2");
+			board.setContent("JPA 관련 게시물의 내용입니다.-2");
 
 			// [3] 글등록(영속화-영속컨텍스트 즉, 영속영역에 저장)
 			// 영속컨텍스트는 트랜잭션 범위 안에서 유지가 된다.
